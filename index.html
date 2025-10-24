@@ -875,16 +875,7 @@
         <div id="dashboard" class="section active">
             <h2 style="margin-bottom: 20px; color: #2d5f4f;">👋 Welcome to Your Studio</h2>
 
-            <!-- Premium Banner (FREE VERSION) -->
-            <div id="premium-banner" class="premium-banner" style="display: none;">
-                <div style="flex: 1;">
-                    <h3 style="margin: 0 0 10px 0; color: #fff;">📤 Professional Exports</h3>
-                    <p style="margin: 0; opacity: 0.95;">Export audio, photos and drawings in professional format</p>
-                </div>
-                <button onclick="showUpgradeModal()" style="padding: 12px 24px; background: white; color: #d4af37; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 16px; white-space: nowrap;">
-                    ⬆️ Upgrade
-                </button>
-            </div>
+            <!-- PWA VERSION: No Premium banner - all features are free -->
 
             <!-- Esercizi Completati -->
             <div class="card" style="margin-bottom: 30px;">
@@ -7558,8 +7549,8 @@
         // ==================== FREEMIUM SYSTEM ====================
 
         // Premium Status Management
-        // Initialize from localStorage (will be updated by RevenueCat)
-        let isPremium = localStorage.getItem('isPremium') === 'true';
+        // PWA VERSION: Always Premium (all features free)
+        let isPremium = true;
 
         // FREE VERSION LIMITS
         const FREE_LIMITS = {
