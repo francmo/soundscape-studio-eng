@@ -864,6 +864,7 @@
         <button class="nav-button active" onclick="showSection('dashboard')">🏠 Dashboard</button>
         <button class="nav-button" onclick="showSection('exercises')">🔔 Soundscape Exercises</button>
         <button class="nav-button" onclick="showMapSection()">🗺️ Soundscape Map</button>
+        <button class="nav-button" onclick="showSection('spectrogram')">🎵 Spectrogram</button>
         <button class="nav-button" onclick="showSection('toolkit')">🔧 Toolkit</button>
         <button class="nav-button" onclick="showSection('library')">📚 Library</button>
         <button class="nav-button" onclick="showSection('export')">📤 Export</button>
@@ -2004,6 +2005,120 @@
             <div class="section-footer">
                 <div class="footer-buttons">
                     <a href="https://wa.me/?text=%F0%9F%8E%B5%20SOUNDSCAPE%20STUDIO%20-%20Important%20Update!%20%F0%9F%8E%B5%0A%0A%E2%80%A2%20%F0%9F%93%8A%20Professional%20exports%20(Excel%2C%20Word%2C%20PDF)%0A%E2%80%A2%20%F0%9F%97%BA%EF%B8%8F%20GIS%20exports%20(KML%2C%20GeoJSON%2C%20CSV)%0A%E2%80%A2%20%F0%9F%92%BE%20Unlimited%20complete%20backup%0A%E2%80%A2%20%F0%9F%8E%B5%20Audio%20archive%20ZIP%20export%0A%E2%80%A2%20%E2%99%BE%EF%B8%8F%20Unlimited%20markers%0A%0A%F0%9F%94%97%20Access%20now%3A%0A%F0%9F%87%AE%F0%9F%87%B9%20Italian%3A%20https%3A%2F%2Fsoundscape-studio-ita.netlify.app%0A%F0%9F%87%AC%F0%9F%87%A7%20English%3A%20https%3A%2F%2Fsoundscape-studio-eng.netlify.app%0A%0A%F0%9F%92%A1%20Use%20directly%20from%20browser%2C%20iOS%20and%20Android%20apps%20coming%20soon!%0A%0A%F0%9F%99%8F%20Help%20me%20improve%3A%20test%20the%20app%20and%20let%20me%20know%20what%20you%20think!" class="footer-btn whatsapp" target="_blank">
+                        📱 Share on WhatsApp
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoundscape-project-studio.netlify.app" class="footer-btn facebook" target="_blank">
+                        📘 Share on Facebook
+                    </a>
+                    <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
+                        💰 Support with Donation
+                    </a>
+                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                        ✉️ Send Feedback
+                    </a>
+                </div>
+                <div class="footer-credits">
+                    <p><strong>Created and developed by Francesco Mariano</strong></p>
+                    <p>Gruppo Apuano Sperimentale</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECTROGRAM SECTION -->
+        <div id="spectrogram" class="section">
+            <h2 style="margin-bottom: 20px; color: #2d5f4f;">🎵 Spectrogram</h2>
+
+            <!-- Instructions -->
+            <div class="card" style="background: #fffbe6; border-left: 4px solid #f4a261; margin-bottom: 20px;">
+                <p style="color: #2d5f4f; font-weight: 600; margin-bottom: 8px;">🎼 Visualize audio spectrum:</p>
+                <p style="color: #666; font-size: 14px;">
+                    1. Select a saved audio from your exercises<br>
+                    2. Press Play to start playback<br>
+                    3. Watch the real-time spectrogram<br>
+                    4. Analyze the frequencies of your soundscape
+                </p>
+            </div>
+
+            <!-- Audio Selector -->
+            <div class="card" style="margin-bottom: 20px;">
+                <h4 style="color: #2d5f4f; margin-bottom: 15px;">🎧 Select Audio</h4>
+                <select id="spectrogramAudioSelector" style="width: 100%; padding: 10px; border-radius: 6px; border: 2px solid #e0e0e0; margin-bottom: 15px; font-size: 14px;">
+                    <option value="">No audio available</option>
+                </select>
+                <p id="spectrogramNoAudio" style="color: #999; font-style: italic; font-size: 14px; display: none;">
+                    You haven't saved any audio yet. Complete an exercise or add a marker with audio to visualize it here.
+                </p>
+            </div>
+
+            <!-- Spectrogram Visualizer -->
+            <div class="card" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 20px; margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                    <label style="font-weight: 600; color: #00d4ff; font-size: 16px; text-shadow: 0 0 10px rgba(0,212,255,0.5);">
+                        📊 Spectrum Analyzer
+                    </label>
+                    <span id="spectrogramPlaybackStatus" style="font-size: 12px; color: #888; background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 12px;">
+                        Waiting...
+                    </span>
+                </div>
+                <canvas id="spectrogramPlaybackCanvas" width="800" height="300" style="width: 100%; height: 200px; border-radius: 8px; background: #0a0a15; box-shadow: inset 0 2px 10px rgba(0,0,0,0.5); margin-bottom: 15px;"></canvas>
+
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-size: 11px; color: #666;">
+                        <span style="color: #00d4ff;">20 Hz - 10 kHz</span>
+                    </div>
+                    <div id="spectrogramFrequencyPeak" style="font-size: 11px; color: #00d4ff;">
+                        Peak: -- Hz
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playback Controls -->
+            <div class="card" style="margin-bottom: 20px;">
+                <h4 style="color: #2d5f4f; margin-bottom: 15px;">🎮 Playback Controls</h4>
+
+                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                    <button id="spectrogramPlayBtn" onclick="playSpectrogramAudio()" class="btn" style="flex: 1; background: #4a9d7f; color: white; font-weight: 600;" disabled>
+                        ▶️ Play
+                    </button>
+                    <button id="spectrogramPauseBtn" onclick="pauseSpectrogramAudio()" class="btn" style="flex: 1; background: #f4a261; color: white; font-weight: 600;" disabled>
+                        ⏸️ Pause
+                    </button>
+                    <button id="spectrogramStopBtn" onclick="stopSpectrogramAudio()" class="btn" style="flex: 1; background: #d9534f; color: white; font-weight: 600;" disabled>
+                        ⏹️ Stop
+                    </button>
+                </div>
+
+                <!-- Progress Bar -->
+                <div style="margin-bottom: 10px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span id="spectrogramCurrentTime" style="font-size: 12px; color: #666;">00:00</span>
+                        <span id="spectrogramDuration" style="font-size: 12px; color: #666;">00:00</span>
+                    </div>
+                    <div style="width: 100%; height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden;">
+                        <div id="spectrogramProgressBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #4a9d7f 0%, #00d4ff 100%); transition: width 0.1s linear;"></div>
+                    </div>
+                </div>
+
+                <!-- Volume Control -->
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 14px; color: #2d5f4f;">🔊</span>
+                    <input type="range" id="spectrogramVolume" min="0" max="100" value="70" style="flex: 1;" onchange="updateSpectrogramVolume(this.value)">
+                    <span id="spectrogramVolumeValue" style="font-size: 12px; color: #666; min-width: 35px;">70%</span>
+                </div>
+            </div>
+
+            <!-- Audio Info -->
+            <div id="spectrogramAudioInfo" class="card" style="display: none; background: #f8f9f5;">
+                <h4 style="color: #2d5f4f; margin-bottom: 10px;">ℹ️ Audio Information</h4>
+                <div id="spectrogramAudioInfoContent" style="font-size: 13px; color: #666; line-height: 1.6;">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="section-footer">
+                <div class="footer-buttons">
+                    <a href="https://wa.me/?text=%F0%9F%8E%B5%20SOUNDSCAPE%20STUDIO%20-%20Aggiornamento%20Importante!%20%F0%9F%8E%B5%0A%0A%E2%80%A2%20%F0%9F%93%8A%20Export%20professionali%20(Excel%2C%20Word%2C%20PDF)%0A%E2%80%A2%20%F0%9F%97%BA%EF%B8%8F%20Export%20GIS%20(KML%2C%20GeoJSON%2C%20CSV)%0A%E2%80%A2%20%F0%9F%92%BE%20Backup%20completo%20illimitato%0A%E2%80%A2%20%F0%9F%8E%B5%20Export%20archivio%20audio%20ZIP%0A%E2%80%A2%20%E2%99%BE%EF%B8%8F%20Markers%20illimitati%0A%0A%F0%9F%94%97%20Accedi%20ora%3A%0A%F0%9F%87%AE%F0%9F%87%B9%20Italiano%3A%20https%3A%2F%2Fsoundscape-studio-ita.netlify.app%0A%F0%9F%87%AC%F0%9F%87%A7%20English%3A%20https%3A%2F%2Fsoundscape-studio-eng.netlify.app%0A%0A%F0%9F%92%A1%20Usa%20direttamente%20dal%20browser%2C%20App%20iOS%20e%20Android%20in%20uscita%20a%20breve!%0A%0A%F0%9F%99%8F%20Aiutami%20a%20migliorare%3A%20testa%20l'app%20e%20fammi%20sapere%20cosa%20ne%20pensi!" class="footer-btn whatsapp" target="_blank">
                         📱 Share on WhatsApp
                     </a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsoundscape-project-studio.netlify.app" class="footer-btn facebook" target="_blank">
@@ -8891,6 +9006,479 @@ Notes: ${marker.notes || 'None'}
                 statusEl.style.display = 'none';
             }, 3000);
         }
+
+        // ==================== SPECTROGRAM PLAYBACK SECTION ====================
+
+        // Variables for spectrogram playback
+        let spectrogramPlaybackAudioContext = null;
+        let spectrogramPlaybackAnalyser = null;
+        let spectrogramPlaybackSource = null;
+        let spectrogramPlaybackDataArray = null;
+        let spectrogramPlaybackAnimationId = null;
+        let spectrogramPlaybackCanvas = null;
+        let spectrogramPlaybackCtx = null;
+        let spectrogramPlaybackImageData = null;
+        let spectrogramCurrentAudio = null;
+        let spectrogramAudioBuffer = null;
+        let spectrogramStartTime = 0;
+        let spectrogramPauseTime = 0;
+        let spectrogramIsPlaying = false;
+        let spectrogramIsPaused = false;
+
+        // Initialize spectrogram playback on page load
+        function initSpectrogramPlayback() {
+            console.log('🎵 Initializing Spectrogram Playback...');
+
+            // Get canvas
+            spectrogramPlaybackCanvas = document.getElementById('spectrogramPlaybackCanvas');
+            if (!spectrogramPlaybackCanvas) {
+                console.error('❌ Spectrogram canvas not found');
+                return;
+            }
+            spectrogramPlaybackCtx = spectrogramPlaybackCanvas.getContext('2d');
+
+            // Load available audio files
+            loadSpectrogramAudioList();
+
+            // Setup audio selector change handler
+            const audioSelector = document.getElementById('spectrogramAudioSelector');
+            if (audioSelector) {
+                audioSelector.addEventListener('change', onSpectrogramAudioSelected);
+            }
+
+            console.log('✅ Spectrogram Playback initialized');
+        }
+
+        // Load list of saved audio files from exercises and markers
+        async function loadSpectrogramAudioList() {
+            const selector = document.getElementById('spectrogramAudioSelector');
+            const noAudioMsg = document.getElementById('spectrogramNoAudio');
+
+            if (!selector) return;
+
+            // Clear existing options
+            selector.innerHTML = '<option value="">-- Select an audio --</option>';
+
+            let audioCount = 0;
+
+            // Load from exercises
+            const exercisesDB = await openDB('exercisesDB', 1);
+            const exercisesTx = exercisesDB.transaction('exercises', 'readonly');
+            const exercisesStore = exercisesTx.objectStore('exercises');
+            const allExercises = await exercisesStore.getAll();
+
+            for (const ex of allExercises) {
+                if (ex.audioBlob) {
+                    const option = document.createElement('option');
+                    option.value = `exercise_${ex.id}`;
+                    option.textContent = `📝 ${ex.category || 'Exercise'} - ${new Date(ex.date).toLocaleDateString()}`;
+                    option.dataset.type = 'exercise';
+                    option.dataset.id = ex.id;
+                    selector.appendChild(option);
+                    audioCount++;
+                }
+            }
+
+            // Load from markers
+            const markersDB = await openDB('markersDB', 1);
+            const markersTx = markersDB.transaction('markers', 'readonly');
+            const markersStore = markersTx.objectStore('markers');
+            const allMarkers = await markersStore.getAll();
+
+            for (const marker of allMarkers) {
+                if (marker.audioBlob) {
+                    const option = document.createElement('option');
+                    option.value = `marker_${marker.id}`;
+                    option.textContent = `📍 ${marker.category || 'Marker'} - ${marker.notes || new Date(marker.timestamp).toLocaleDateString()}`;
+                    option.dataset.type = 'marker';
+                    option.dataset.id = marker.id;
+                    selector.appendChild(option);
+                    audioCount++;
+                }
+            }
+
+            // Show/hide no audio message
+            if (audioCount === 0) {
+                noAudioMsg.style.display = 'block';
+                selector.disabled = true;
+            } else {
+                noAudioMsg.style.display = 'none';
+                selector.disabled = false;
+            }
+
+            console.log(`📊 Loaded ${audioCount} audio files for spectrogram`);
+        }
+
+        // Handle audio selection
+        async function onSpectrogramAudioSelected(event) {
+            const value = event.target.value;
+            if (!value) return;
+
+            const option = event.target.selectedOptions[0];
+            const type = option.dataset.type;
+            const id = parseInt(option.dataset.id);
+
+            console.log(`🎵 Loading audio: ${type} #${id}`);
+
+            // Stop current playback
+            stopSpectrogramAudio();
+
+            // Load audio blob
+            let audioBlob = null;
+            let audioInfo = {};
+
+            if (type === 'exercise') {
+                const db = await openDB('exercisesDB', 1);
+                const tx = db.transaction('exercises', 'readonly');
+                const store = tx.objectStore('exercises');
+                const exercise = await store.get(id);
+
+                if (exercise && exercise.audioBlob) {
+                    audioBlob = exercise.audioBlob;
+                    audioInfo = {
+                        category: exercise.category,
+                        date: new Date(exercise.date).toLocaleString(),
+                        duration: exercise.duration || 'N/A',
+                        location: exercise.location || 'N/A'
+                    };
+                }
+            } else if (type === 'marker') {
+                const db = await openDB('markersDB', 1);
+                const tx = db.transaction('markers', 'readonly');
+                const store = tx.objectStore('markers');
+                const marker = await store.get(id);
+
+                if (marker && marker.audioBlob) {
+                    audioBlob = marker.audioBlob;
+                    audioInfo = {
+                        category: marker.category,
+                        date: new Date(marker.timestamp).toLocaleString(),
+                        notes: marker.notes || 'N/A',
+                        location: `${marker.lat.toFixed(6)}, ${marker.lng.toFixed(6)}`
+                    };
+                }
+            }
+
+            if (audioBlob) {
+                await loadSpectrogramAudio(audioBlob, audioInfo);
+            } else {
+                alert('❌ Audio not found');
+            }
+        }
+
+        // Load audio blob and prepare for playback
+        async function loadSpectrogramAudio(audioBlob, audioInfo) {
+            try {
+                console.log('🔄 Loading audio blob...');
+
+                // Create or resume AudioContext
+                if (!spectrogramPlaybackAudioContext) {
+                    spectrogramPlaybackAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+                } else if (spectrogramPlaybackAudioContext.state === 'suspended') {
+                    await spectrogramPlaybackAudioContext.resume();
+                }
+
+                // Create analyser
+                spectrogramPlaybackAnalyser = spectrogramPlaybackAudioContext.createAnalyser();
+                spectrogramPlaybackAnalyser.fftSize = 2048;
+                spectrogramPlaybackAnalyser.smoothingTimeConstant = 0.8;
+                spectrogramPlaybackDataArray = new Uint8Array(spectrogramPlaybackAnalyser.frequencyBinCount);
+
+                // Convert blob to array buffer
+                const arrayBuffer = await audioBlob.arrayBuffer();
+
+                // Decode audio data
+                spectrogramAudioBuffer = await spectrogramPlaybackAudioContext.decodeAudioData(arrayBuffer);
+
+                console.log(`✅ Audio loaded: ${spectrogramAudioBuffer.duration.toFixed(2)}s`);
+
+                // Update UI
+                document.getElementById('spectrogramDuration').textContent = formatTime(spectrogramAudioBuffer.duration);
+                document.getElementById('spectrogramCurrentTime').textContent = '00:00';
+                document.getElementById('spectrogramProgressBar').style.width = '0%';
+
+                // Enable play button
+                document.getElementById('spectrogramPlayBtn').disabled = false;
+                document.getElementById('spectrogramPauseBtn').disabled = true;
+                document.getElementById('spectrogramStopBtn').disabled = true;
+
+                // Show audio info
+                displaySpectrogramAudioInfo(audioInfo);
+
+                // Update status
+                document.getElementById('spectrogramPlaybackStatus').textContent = 'Ready';
+                document.getElementById('spectrogramPlaybackStatus').style.color = '#00d4ff';
+
+            } catch (error) {
+                console.error('❌ Error loading audio:', error);
+                alert('Error loading audio');
+            }
+        }
+
+        // Display audio information
+        function displaySpectrogramAudioInfo(info) {
+            const infoContainer = document.getElementById('spectrogramAudioInfo');
+            const infoContent = document.getElementById('spectrogramAudioInfoContent');
+
+            let html = '';
+            for (const [key, value] of Object.entries(info)) {
+                const label = key.charAt(0).toUpperCase() + key.slice(1);
+                html += `<strong>${label}:</strong> ${value}<br>`;
+            }
+
+            infoContent.innerHTML = html;
+            infoContainer.style.display = 'block';
+        }
+
+        // Play audio with spectrogram
+        async function playSpectrogramAudio() {
+            if (!spectrogramAudioBuffer) {
+                alert('Please select an audio to play first');
+                return;
+            }
+
+            try {
+                // Resume AudioContext if suspended
+                if (spectrogramPlaybackAudioContext.state === 'suspended') {
+                    await spectrogramPlaybackAudioContext.resume();
+                }
+
+                // If paused, resume from pause time
+                if (spectrogramIsPaused) {
+                    spectrogramIsPaused = false;
+                    spectrogramStartTime = spectrogramPlaybackAudioContext.currentTime - spectrogramPauseTime;
+                } else {
+                    // Create new source
+                    spectrogramPlaybackSource = spectrogramPlaybackAudioContext.createBufferSource();
+                    spectrogramPlaybackSource.buffer = spectrogramAudioBuffer;
+
+                    // Connect: source -> analyser -> destination
+                    spectrogramPlaybackSource.connect(spectrogramPlaybackAnalyser);
+                    spectrogramPlaybackAnalyser.connect(spectrogramPlaybackAudioContext.destination);
+
+                    // Set volume
+                    const volume = parseInt(document.getElementById('spectrogramVolume').value) / 100;
+                    const gainNode = spectrogramPlaybackAudioContext.createGain();
+                    gainNode.gain.value = volume;
+                    spectrogramPlaybackSource.disconnect();
+                    spectrogramPlaybackSource.connect(gainNode);
+                    gainNode.connect(spectrogramPlaybackAnalyser);
+
+                    // Handle end of playback
+                    spectrogramPlaybackSource.onended = () => {
+                        if (spectrogramIsPlaying) {
+                            stopSpectrogramAudio();
+                        }
+                    };
+
+                    // Start playback
+                    spectrogramPlaybackSource.start(0);
+                    spectrogramStartTime = spectrogramPlaybackAudioContext.currentTime;
+                }
+
+                spectrogramIsPlaying = true;
+
+                // Update UI
+                document.getElementById('spectrogramPlayBtn').disabled = true;
+                document.getElementById('spectrogramPauseBtn').disabled = false;
+                document.getElementById('spectrogramStopBtn').disabled = false;
+                document.getElementById('spectrogramPlaybackStatus').textContent = '▶️ Playing';
+                document.getElementById('spectrogramPlaybackStatus').style.color = '#00ff00';
+
+                // Start visualization
+                startSpectrogramVisualization();
+                updateSpectrogramProgress();
+
+                console.log('▶️ Playback started');
+
+            } catch (error) {
+                console.error('❌ Error playing audio:', error);
+                alert('Error during playback');
+            }
+        }
+
+        // Pause audio
+        function pauseSpectrogramAudio() {
+            if (!spectrogramIsPlaying) return;
+
+            spectrogramPauseTime = spectrogramPlaybackAudioContext.currentTime - spectrogramStartTime;
+            spectrogramIsPaused = true;
+            spectrogramIsPlaying = false;
+
+            // Stop source
+            if (spectrogramPlaybackSource) {
+                spectrogramPlaybackSource.stop();
+                spectrogramPlaybackSource = null;
+            }
+
+            // Stop visualization
+            if (spectrogramPlaybackAnimationId) {
+                cancelAnimationFrame(spectrogramPlaybackAnimationId);
+                spectrogramPlaybackAnimationId = null;
+            }
+
+            // Update UI
+            document.getElementById('spectrogramPlayBtn').disabled = false;
+            document.getElementById('spectrogramPauseBtn').disabled = true;
+            document.getElementById('spectrogramPlaybackStatus').textContent = '⏸️ Paused';
+            document.getElementById('spectrogramPlaybackStatus').style.color = '#f4a261';
+
+            console.log('⏸️ Playback paused');
+        }
+
+        // Stop audio
+        function stopSpectrogramAudio() {
+            spectrogramIsPlaying = false;
+            spectrogramIsPaused = false;
+            spectrogramPauseTime = 0;
+
+            // Stop source
+            if (spectrogramPlaybackSource) {
+                try {
+                    spectrogramPlaybackSource.stop();
+                } catch (e) {
+                    // Already stopped
+                }
+                spectrogramPlaybackSource = null;
+            }
+
+            // Stop visualization
+            if (spectrogramPlaybackAnimationId) {
+                cancelAnimationFrame(spectrogramPlaybackAnimationId);
+                spectrogramPlaybackAnimationId = null;
+            }
+
+            // Clear canvas
+            if (spectrogramPlaybackCtx && spectrogramPlaybackCanvas) {
+                spectrogramPlaybackCtx.fillStyle = '#0a0a15';
+                spectrogramPlaybackCtx.fillRect(0, 0, spectrogramPlaybackCanvas.width, spectrogramPlaybackCanvas.height);
+                spectrogramPlaybackImageData = null;
+            }
+
+            // Reset UI
+            document.getElementById('spectrogramCurrentTime').textContent = '00:00';
+            document.getElementById('spectrogramProgressBar').style.width = '0%';
+            document.getElementById('spectrogramPlayBtn').disabled = false;
+            document.getElementById('spectrogramPauseBtn').disabled = true;
+            document.getElementById('spectrogramStopBtn').disabled = true;
+            document.getElementById('spectrogramPlaybackStatus').textContent = 'Ready';
+            document.getElementById('spectrogramPlaybackStatus').style.color = '#00d4ff';
+
+            console.log('⏹️ Playback stopped');
+        }
+
+        // Update volume
+        function updateSpectrogramVolume(value) {
+            document.getElementById('spectrogramVolumeValue').textContent = value + '%';
+
+            // If playing, update gain node (would need to be implemented with persistent gain node)
+            console.log(`🔊 Volume set to ${value}%`);
+        }
+
+        // Start spectrogram visualization
+        function startSpectrogramVisualization() {
+            drawSpectrogramPlayback();
+        }
+
+        // Draw spectrogram (scrolling visualization)
+        function drawSpectrogramPlayback() {
+            if (!spectrogramIsPlaying) return;
+
+            spectrogramPlaybackAnimationId = requestAnimationFrame(drawSpectrogramPlayback);
+
+            if (!spectrogramPlaybackAnalyser || !spectrogramPlaybackDataArray || !spectrogramPlaybackCtx) return;
+
+            // Get frequency data
+            spectrogramPlaybackAnalyser.getByteFrequencyData(spectrogramPlaybackDataArray);
+
+            const width = spectrogramPlaybackCanvas.width;
+            const height = spectrogramPlaybackCanvas.height;
+
+            // Scroll existing image to the left
+            if (spectrogramPlaybackImageData) {
+                spectrogramPlaybackCtx.putImageData(spectrogramPlaybackImageData, -1, 0);
+            } else {
+                // First frame: clear canvas
+                spectrogramPlaybackCtx.fillStyle = '#0a0a15';
+                spectrogramPlaybackCtx.fillRect(0, 0, width, height);
+            }
+
+            // Calculate frequency range: 20 Hz to 10 kHz
+            const sampleRate = spectrogramPlaybackAudioContext.sampleRate || 48000;
+            const nyquist = sampleRate / 2;
+            const binCount = spectrogramPlaybackDataArray.length;
+            const hzPerBin = nyquist / binCount;
+
+            // Find bin indices for 20 Hz and 10000 Hz
+            const startBin = Math.floor(20 / hzPerBin);
+            const endBin = Math.floor(10000 / hzPerBin);
+            const usefulBins = endBin - startBin;
+
+            // Find peak frequency
+            let maxValue = 0;
+            let maxBin = 0;
+            for (let i = startBin; i < endBin; i++) {
+                if (spectrogramPlaybackDataArray[i] > maxValue) {
+                    maxValue = spectrogramPlaybackDataArray[i];
+                    maxBin = i;
+                }
+            }
+            const peakFrequency = Math.round(maxBin * hzPerBin);
+            document.getElementById('spectrogramFrequencyPeak').textContent = `Peak: ${peakFrequency} Hz`;
+
+            // Draw new column on the right edge
+            const frequencyBands = height;
+
+            for (let i = 0; i < frequencyBands; i++) {
+                // Map from screen Y to frequency bin (inverted: top = high freq)
+                const binIndex = Math.max(startBin, Math.min(endBin - 1,
+                    startBin + Math.floor((frequencyBands - i - 1) * usefulBins / frequencyBands)));
+
+                const value = spectrogramPlaybackDataArray[binIndex] || 0;
+                const normalized = value / 255;
+
+                // Get color based on intensity
+                const color = getSpectrumColor(normalized);
+
+                // Draw pixel column
+                spectrogramPlaybackCtx.fillStyle = color;
+                spectrogramPlaybackCtx.fillRect(width - 1, i, 1, 1);
+            }
+
+            // Capture the current frame for next scroll
+            spectrogramPlaybackImageData = spectrogramPlaybackCtx.getImageData(0, 0, width, height);
+        }
+
+        // Update progress bar and time
+        function updateSpectrogramProgress() {
+            if (!spectrogramIsPlaying || !spectrogramAudioBuffer) return;
+
+            const currentTime = spectrogramPlaybackAudioContext.currentTime - spectrogramStartTime;
+            const duration = spectrogramAudioBuffer.duration;
+            const progress = (currentTime / duration) * 100;
+
+            // Update UI
+            document.getElementById('spectrogramCurrentTime').textContent = formatTime(currentTime);
+            document.getElementById('spectrogramProgressBar').style.width = progress + '%';
+
+            // Continue updating
+            if (spectrogramIsPlaying && currentTime < duration) {
+                requestAnimationFrame(updateSpectrogramProgress);
+            }
+        }
+
+        // Format time as MM:SS
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds < 0) return '00:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            initSpectrogramPlayback();
+        });
 
     </script>
 
