@@ -5843,6 +5843,9 @@
                     // Stop all tracks
                     stream.getTracks().forEach(track => track.stop());
 
+                    // Show recording completed message
+                    showToast('✅ Recording completed!', 'success');
+
                     // Save marker if coordinates are set
                     if (pendingMarkerCoords) {
                         saveMarker();
@@ -6287,6 +6290,68 @@
             pendingMarkerCoords = null;
 
             alert('✅ Marker saved successfully!');
+        }
+
+        // Show toast notification
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 80px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+                color: white;
+                padding: 16px 24px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 16px;
+                z-index: 10000;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                animation: slideDown 0.3s ease-out;
+            `;
+
+            // Add animation keyframes if not already added
+            if (!document.getElementById('toastAnimationStyles')) {
+                const style = document.createElement('style');
+                style.id = 'toastAnimationStyles';
+                style.textContent = `
+                    @keyframes slideDown {
+                        from {
+                            transform: translateX(-50%) translateY(-100%);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(-50%) translateY(0);
+                            opacity: 1;
+                        }
+                    }
+                    @keyframes slideUp {
+                        from {
+                            transform: translateX(-50%) translateY(0);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateX(-50%) translateY(-100%);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(toast);
+
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.style.animation = 'slideUp 0.3s ease-out';
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        document.body.removeChild(toast);
+                    }
+                }, 300);
+            }, 3000);
         }
 
         // Create popup content for marker
@@ -9207,6 +9272,7 @@ Notes: ${marker.notes || 'None'}
         let spectrogramPlaybackAudioContext = null;
         let spectrogramPlaybackAnalyser = null;
         let spectrogramPlaybackSource = null;
+        let spectrogramPlaybackGainNode = null;
         let spectrogramPlaybackDataArray = null;
         let spectrogramPlaybackAnimationId = null;
         let spectrogramPlaybackCanvas = null;
@@ -9508,17 +9574,17 @@ Notes: ${marker.notes || 'None'}
                     spectrogramPlaybackSource = spectrogramPlaybackAudioContext.createBufferSource();
                     spectrogramPlaybackSource.buffer = spectrogramAudioBuffer;
 
-                    // Connect: source -> analyser -> destination
-                    spectrogramPlaybackSource.connect(spectrogramPlaybackAnalyser);
-                    spectrogramPlaybackAnalyser.connect(spectrogramPlaybackAudioContext.destination);
-
-                    // Set volume
+                    // Create gain node for volume control
+                    if (!spectrogramPlaybackGainNode) {
+                        spectrogramPlaybackGainNode = spectrogramPlaybackAudioContext.createGain();
+                    }
                     const volume = parseInt(document.getElementById('spectrogramVolume').value) / 100;
-                    const gainNode = spectrogramPlaybackAudioContext.createGain();
-                    gainNode.gain.value = volume;
-                    spectrogramPlaybackSource.disconnect();
-                    spectrogramPlaybackSource.connect(gainNode);
-                    gainNode.connect(spectrogramPlaybackAnalyser);
+                    spectrogramPlaybackGainNode.gain.value = volume;
+
+                    // Connect: source -> gain -> analyser -> destination
+                    spectrogramPlaybackSource.connect(spectrogramPlaybackGainNode);
+                    spectrogramPlaybackGainNode.connect(spectrogramPlaybackAnalyser);
+                    spectrogramPlaybackAnalyser.connect(spectrogramPlaybackAudioContext.destination);
 
                     // Handle end of playback
                     spectrogramPlaybackSource.onended = () => {
@@ -9627,8 +9693,11 @@ Notes: ${marker.notes || 'None'}
         function updateSpectrogramVolume(value) {
             document.getElementById('spectrogramVolumeValue').textContent = value + '%';
 
-            // If playing, update gain node (would need to be implemented with persistent gain node)
-            console.log(`🔊 Volume set to ${value}%`);
+            // Update gain node if audio is playing
+            if (spectrogramPlaybackGainNode) {
+                spectrogramPlaybackGainNode.gain.value = parseInt(value) / 100;
+                console.log(`🔊 Volume updated to ${value}%`);
+            }
         }
 
         // Start spectrogram visualization
