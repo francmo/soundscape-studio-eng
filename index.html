@@ -2754,6 +2754,15 @@
                     }
                 }, 100);
             }
+
+            // Refresh spectrogram audio list when opened
+            if (sectionId === 'spectrogram') {
+                setTimeout(() => {
+                    if (window.loadSpectrogramAudioList) {
+                        window.loadSpectrogramAudioList();
+                    }
+                }, 100);
+            }
         }
 
         // Funzione dedicata per mostrare la sezione mappa
@@ -9620,6 +9629,9 @@ Notes: ${marker.notes || 'None'}
             const secs = Math.floor(seconds % 60);
             return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
         }
+
+        // Export spectrogram functions to global scope
+        window.loadSpectrogramAudioList = loadSpectrogramAudioList;
 
         // Initialize when page loads
         window.addEventListener('DOMContentLoaded', () => {
