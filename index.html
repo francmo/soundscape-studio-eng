@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>🎧 Soundscape Studio - Professional Field Recording & Composition</title>
 
+    <!-- Open Graph meta tags for WhatsApp and Facebook preview -->
+    <meta property="og:title" content="🎵 SOUNDSCAPE STUDIO - Important Update! 🎵">
+    <meta property="og:description" content="• 📊 Professional exports (Excel, Word, PDF)
+• 🗺️ GIS exports (KML, GeoJSON, CSV)
+• 💾 Unlimited complete backup
+• 🎵 ZIP audio archive export
+• ⭐ Unlimited markers
+
+💡 Use directly from browser, iOS and Android apps coming soon!
+🙏 Help me improve: test the app and let me know what you think!">
+    <meta property="og:url" content="https://soundscape-studio-eng.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://soundscape-studio-eng.netlify.app/icon-512.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card (bonus, works on other social platforms too) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🎵 SOUNDSCAPE STUDIO - Important Update! 🎵">
+    <meta name="twitter:description" content="Professional exports, GIS, unlimited backup, unlimited markers. Use from browser!">
+    <meta name="twitter:image" content="https://soundscape-studio-eng.netlify.app/icon-512.png">
+
     <!-- Leaflet.js for interactive maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -9837,37 +9858,19 @@ Notes: ${marker.notes || 'None'}
         </div>
     </div>
 
-<!-- WhatsApp/Facebook Share Script - UTF-8 encoding fix -->
+<!-- WhatsApp/Facebook Share Script - Using Open Graph preview -->
 <script>
-// Soluzione definitiva: JavaScript con encodeURIComponent per encoding UTF-8 corretto
+// Soluzione Open Graph: condividi solo il link, WhatsApp/Facebook mostrano il preview con emoji dai meta tags
 function shareApp(platform) {
-    const shareMessage = `SOUNDSCAPE STUDIO - Important Update!
-
-* Professional exports (Excel, Word, PDF)
-* GIS exports (KML, GeoJSON, CSV)
-* Unlimited complete backup
-* ZIP audio archive export
-* Unlimited markers
-
-Access now:
-Italian: https://soundscape-project-studio.netlify.app
-English: https://soundscape-studio-eng.netlify.app
-
-Use directly from browser, iOS and Android apps coming soon!
-
-Help me improve: test the app and let me know what you think!`;
-
     const shareUrl = 'https://soundscape-studio-eng.netlify.app';
-
-    // Genera URL dinamicamente con encodeURIComponent (UTF-8 corretto)
-    const encodedMessage = encodeURIComponent(shareMessage);
     let url = '';
 
     if (platform === 'whatsapp') {
-        url = `https://wa.me/?text=${encodedMessage}`;
+        // WhatsApp: passa solo l'URL, il preview viene dai meta tag og:
+        url = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
     } else if (platform === 'facebook') {
-        const encodedUrl = encodeURIComponent(shareUrl);
-        url = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedMessage}`;
+        // Facebook: usa solo il parametro u (URL), il resto viene dai meta tag og:
+        url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
     }
 
     if (url) {
