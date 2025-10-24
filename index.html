@@ -9271,16 +9271,18 @@ Notes: ${marker.notes || 'None'}
             selector.innerHTML = '<option value="">-- Select an exercise --</option>';
 
             let count = 0;
-            const db = await openDB('exercisesDB', 1);
-            const tx = db.transaction('exercises', 'readonly');
-            const store = tx.objectStore('exercises');
-            const allExercises = await store.getAll();
+
+            // Load from database using the correct function
+            const allExercises = await getAllExercisesFromIndexedDB();
 
             for (const ex of allExercises) {
-                if (ex.audioBlob) {
+                // Check if exercise has audio files (array)
+                if (ex.audioFiles && ex.audioFiles.length > 0) {
                     const option = document.createElement('option');
                     option.value = ex.id;
-                    option.textContent = `${ex.category || 'Exercise'} - ${new Date(ex.date).toLocaleDateString()}`;
+                    const categoryName = ex.exercise?.category || ex.category || 'Exercise';
+                    const dateStr = ex.date || ex.timestamp;
+                    option.textContent = `${categoryName} - ${new Date(dateStr).toLocaleDateString()}`;
                     selector.appendChild(option);
                     count++;
                 }
@@ -9288,6 +9290,8 @@ Notes: ${marker.notes || 'None'}
 
             noMsg.style.display = count === 0 ? 'block' : 'none';
             selector.disabled = count === 0;
+
+            console.log(`📝 Loaded ${count} exercises with audio`);
         }
 
         // Load markers with audio
@@ -9298,16 +9302,15 @@ Notes: ${marker.notes || 'None'}
             selector.innerHTML = '<option value="">-- Select a marker --</option>';
 
             let count = 0;
-            const db = await openDB('markersDB', 1);
-            const tx = db.transaction('markers', 'readonly');
-            const store = tx.objectStore('markers');
-            const allMarkers = await store.getAll();
 
-            for (const marker of allMarkers) {
-                if (marker.audioBlob) {
+            // Load markers from soundscapeData (array in memory/localStorage)
+            for (const marker of soundscapeData) {
+                // Check if marker has audio by checking hasAudio flag
+                if (marker.hasAudio) {
                     const option = document.createElement('option');
                     option.value = marker.id;
-                    option.textContent = `${marker.category || 'Marker'} - ${marker.notes || new Date(marker.timestamp).toLocaleDateString()}`;
+                    const categoryName = document.querySelector(`#markerCategory option[value="${marker.category}"]`)?.textContent || marker.category || 'Marker';
+                    option.textContent = `${categoryName} - ${marker.notes || new Date(marker.timestamp).toLocaleDateString()}`;
                     selector.appendChild(option);
                     count++;
                 }
@@ -9315,6 +9318,8 @@ Notes: ${marker.notes || 'None'}
 
             noMsg.style.display = count === 0 ? 'block' : 'none';
             selector.disabled = count === 0;
+
+            console.log(`📍 Loaded ${count} markers with audio`);
         }
 
         // Handle exercise selection
@@ -9322,22 +9327,30 @@ Notes: ${marker.notes || 'None'}
             if (!exerciseId) return;
 
             const id = parseInt(exerciseId);
+            console.log(`🎵 Loading exercise audio #${id}`);
+
+            // Stop current playback
             stopSpectrogramAudio();
 
-            const db = await openDB('exercisesDB', 1);
-            const tx = db.transaction('exercises', 'readonly');
-            const store = tx.objectStore('exercises');
-            const exercise = await store.get(id);
+            // Load from database using the correct function
+            const exercise = await getExerciseFromIndexedDB(id);
 
-            if (exercise && exercise.audioBlob) {
+            if (exercise && exercise.audioFiles && exercise.audioFiles.length > 0) {
+                // Use first audio file from array
+                const audioBlob = exercise.audioFiles[0];
+                const categoryName = exercise.exercise?.category || exercise.category || 'Exercise';
+                const dateStr = exercise.date || exercise.timestamp;
+
                 const audioInfo = {
                     source: 'Exercise',
-                    category: exercise.category,
-                    date: new Date(exercise.date).toLocaleString(),
+                    category: categoryName,
+                    date: new Date(dateStr).toLocaleString(),
                     duration: exercise.duration || 'N/A',
                     location: exercise.location || 'N/A'
                 };
-                await loadSpectrogramAudio(exercise.audioBlob, audioInfo);
+                await loadSpectrogramAudio(audioBlob, audioInfo);
+            } else {
+                alert('❌ Audio not found');
             }
         }
 
@@ -9346,22 +9359,34 @@ Notes: ${marker.notes || 'None'}
             if (!markerId) return;
 
             const id = parseInt(markerId);
+            console.log(`🎵 Loading marker audio #${id}`);
+
+            // Stop current playback
             stopSpectrogramAudio();
 
-            const db = await openDB('markersDB', 1);
-            const tx = db.transaction('markers', 'readonly');
-            const store = tx.objectStore('markers');
-            const marker = await store.get(id);
+            // Find marker in soundscapeData
+            const marker = soundscapeData.find(m => m.id === id);
 
-            if (marker && marker.audioBlob) {
+            if (!marker) {
+                alert('❌ Marker not found');
+                return;
+            }
+
+            // Get audio from IndexedDB
+            const audioBlob = await getAudioFromIndexedDB(id);
+
+            if (audioBlob) {
+                const categoryName = document.querySelector(`#markerCategory option[value="${marker.category}"]`)?.textContent || marker.category || 'Marker';
                 const audioInfo = {
                     source: 'Marker',
-                    category: marker.category,
+                    category: categoryName,
                     date: new Date(marker.timestamp).toLocaleString(),
                     notes: marker.notes || 'N/A',
                     location: `${marker.lat.toFixed(6)}, ${marker.lng.toFixed(6)}`
                 };
-                await loadSpectrogramAudio(marker.audioBlob, audioInfo);
+                await loadSpectrogramAudio(audioBlob, audioInfo);
+            } else {
+                alert('❌ Audio not found');
             }
         }
 
