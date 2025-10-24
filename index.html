@@ -926,7 +926,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -987,7 +987,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -1079,7 +1079,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -1130,7 +1130,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -1474,7 +1474,7 @@
                 <div style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px;">
                     <p style="font-size: 15px; margin-bottom: 10px; color: #ffffff;"><strong>💰 Support the Project:</strong></p>
                     <p style="font-size: 14px; line-height: 1.6; color: #ffffff;">
-                        If you find this project useful, consider supporting it by using affiliate links for equipment or via PayPal donation.
+                        If you find this project useful, consider supporting it via PayPal donation.
                     </p>
                 </div>
             </div>
@@ -1855,7 +1855,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -2013,7 +2013,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -2312,7 +2312,7 @@
                     <a href="https://www.paypal.com/paypalme/francescomariano" class="footer-btn paypal" target="_blank">
                         💰 Support with Donation
                     </a>
-                    <a href="mailto:artistmentalhealth@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
+                    <a href="mailto:soundscapestudiopro@gmail.com?subject=Feedback%20Soundscape%20Studio" class="footer-btn feedback">
                         ✉️ Send Feedback
                     </a>
                 </div>
@@ -8992,31 +8992,50 @@ Notes: ${ex.notes || 'None'}
                     for (let index = 0; index < ex.audioFiles.length; index++) {
                         const audioBlob = ex.audioFiles[index];
 
-                        // Validate that audioBlob is actually a Blob
-                        if (!audioBlob || !(audioBlob instanceof Blob)) {
-                            console.warn(`⚠️ Skipping invalid audio ${index + 1}: not a Blob`);
+                        // Validate that audioBlob exists and has data
+                        if (!audioBlob) {
+                            console.warn(`⚠️ Skipping audio ${index + 1}: null or undefined`);
+                            continue;
+                        }
+
+                        // Check if it's a Blob or Blob-like object (has size and type properties)
+                        if (!(audioBlob instanceof Blob) && (!audioBlob.size || audioBlob.size === undefined)) {
+                            console.warn(`⚠️ Skipping audio ${index + 1}: not a Blob and no size property`);
+                            console.log('Audio object:', audioBlob);
                             continue;
                         }
 
                         // Skip empty blobs
                         if (audioBlob.size === 0) {
-                            console.warn(`⚠️ Skipping empty audio ${index + 1}`);
+                            console.warn(`⚠️ Skipping audio ${index + 1}: empty (0 bytes)`);
                             continue;
                         }
 
-                        // Get file extension from blob type
-                        const fileExt = audioBlob.type === 'audio/webm' ? 'webm' :
-                                       audioBlob.type === 'audio/wav' ? 'wav' :
-                                       audioBlob.type === 'audio/mp4' ? 'm4a' : 'webm';
+                        // If it's not a Blob but has data, try to convert it
+                        let finalBlob = audioBlob;
+                        if (!(audioBlob instanceof Blob)) {
+                            console.log(`🔄 Converting audio ${index + 1} to Blob...`);
+                            try {
+                                finalBlob = new Blob([audioBlob], { type: audioBlob.type || 'audio/webm' });
+                            } catch (convErr) {
+                                console.warn(`⚠️ Failed to convert audio ${index + 1} to Blob:`, convErr);
+                                continue;
+                            }
+                        }
 
-                        console.log(`Adding exercise audio ${index + 1}/${ex.audioFiles.length} (${fileExt}, ${(audioBlob.size / 1024).toFixed(1)} KB)...`);
+                        // Get file extension from blob type
+                        const fileExt = finalBlob.type === 'audio/webm' ? 'webm' :
+                                       finalBlob.type === 'audio/wav' ? 'wav' :
+                                       finalBlob.type === 'audio/mp4' ? 'm4a' : 'webm';
+
+                        console.log(`Adding exercise audio ${index + 1}/${ex.audioFiles.length} (${fileExt}, ${(finalBlob.size / 1024).toFixed(1)} KB)...`);
 
                         // Convert Blob to ArrayBuffer using FileReader (compatible with all browsers)
                         const arrayBuffer = await new Promise((resolve, reject) => {
                             const reader = new FileReader();
                             reader.onload = () => resolve(reader.result);
                             reader.onerror = reject;
-                            reader.readAsArrayBuffer(audioBlob);
+                            reader.readAsArrayBuffer(finalBlob);
                         });
                         zip.file(`${folderName}/audio-${index + 1}.${fileExt}`, arrayBuffer);
                         totalAudioCount++;
