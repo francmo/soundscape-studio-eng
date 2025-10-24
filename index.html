@@ -9850,27 +9850,66 @@ Notes: ${marker.notes || 'None'}
         </div>
     </div>
 
-<!-- WhatsApp/Facebook Share Script - Using Open Graph preview -->
+<!-- WhatsApp/Facebook Share Script - Complete solution with emoji support -->
 <script>
-// Soluzione Open Graph: condividi solo il link, WhatsApp/Facebook mostrano il preview con emoji dai meta tags
-function shareApp(platform) {
-    const shareUrl = 'https://soundscape-studio-eng.netlify.app';
-    let url = '';
+// Soluzione completa: Web Share API + fallback per emoji sia nel messaggio che nell'anteprima
+async function shareApp(platform) {
+    const shareMessage = `🎵 SOUNDSCAPE STUDIO - Important Update! 🎵
 
-    if (platform === 'whatsapp') {
-        // WhatsApp: passa solo l'URL, il preview viene dai meta tag og:
-        url = `https://wa.me/?text=${encodeURIComponent(shareUrl)}`;
-    } else if (platform === 'facebook') {
-        // Facebook: usa solo il parametro u (URL), il resto viene dai meta tag og:
-        url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+• 📊 Professional exports (Excel, Word, PDF)
+• 🗺️ GIS exports (KML, GeoJSON, CSV)
+• 💾 Unlimited complete backup
+• 🎵 ZIP audio archive export
+• ⭐ Unlimited markers
+
+🔗 Access now:
+🇮🇹 https://soundscape-project-studio.netlify.app
+🇬🇧 https://soundscape-studio-eng.netlify.app
+
+💡 Use from browser, iOS/Android apps coming!
+🙏 Help me improve: test the app!`;
+
+    const shareUrl = 'https://soundscape-studio-eng.netlify.app';
+    const shareTitle = '🎧 Soundscape Studio';
+
+    // SOLUTION 1: Web Share API (native for PWA/Mobile) - perfect emoji in both text and preview
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: shareTitle,
+                text: shareMessage, // Text WITH emoji shown above the box
+                url: shareUrl // URL to generate preview from og: meta tags
+            });
+            console.log('✅ Share successful via Web Share API');
+            return;
+        } catch (err) {
+            if (err.name === 'AbortError') {
+                console.log('ℹ️ Share cancelled by user');
+                return;
+            } else {
+                console.error('❌ Web Share API error:', err);
+                // Continue with fallback
+            }
+        }
     }
 
-    if (url) {
-        window.open(url, '_blank', 'noopener,noreferrer');
+    // SOLUTION 2: Fallback wa.me with encodeURIComponent (for desktop)
+    const encodedMessage = encodeURIComponent(shareMessage);
+    let fallbackUrl = '';
+
+    if (platform === 'whatsapp') {
+        fallbackUrl = `https://wa.me/?text=${encodedMessage}`;
+    } else if (platform === 'facebook') {
+        const encodedUrl = encodeURIComponent(shareUrl);
+        fallbackUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedMessage}`;
+    }
+
+    if (fallbackUrl) {
+        window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
     }
 }
 
-// Esponi la funzione globalmente per onclick
+// Expose function globally for onclick
 window.shareApp = shareApp;
 </script>
 
