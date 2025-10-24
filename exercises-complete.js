@@ -5,1077 +5,560 @@
 var fieldRecordingExercises = {
   'ascolto-base': [
     {
-      title: "\ud83d\udcdd Personal Acoustic Catalog",
-      description: "Document every sound element you perceive in the present moment",
-      prompt: "Dedicate a few minutes a trascrivere meticolosamente every fonte sonora che raggiunge le tue orecchie. Se lavori in gruppo, condividete poi le liste ad alta voce, notando le differenze individuali. L'ascolto \u00e8 profondamente soggettivo: every persona percepir\u00e0 e annoter\u00e0 suoni diversi, e tutte le risposte sono ugualmente valide, indipendentemente dalla lunghezza dell'elenco. Ripeti questo esercizio in different acoustic contexts per allenare sistematicamente la tua capacit\u00e0 di ascolto attivo.",
+      title: "📝 Personal Acoustic Catalog",
+      description: "Document every sound entering your awareness",
+      prompt: "Here's where we start—something straightforward yet powerful. Spend a few minutes writing down every sound you can hear right now. If you're in a group, share your lists aloud afterward and notice how wildly they differ. Listening is deeply subjective: we each perceive and prioritize different acoustic elements, and every response is valid, no matter how long or short. Try this in different spaces—home, park, café, subway—and you'll sharpen your awareness with each iteration.",
       duration: "10-15 min",
       examples: [
-        "\ud83d\udccd Example at home: refrigerator humming, clock ticking, footsteps upper floor, ventilation",
-        "\ud83c\udf33 Example outdoors: rustling leaves, distant voices, car engines, bird chirping",
-        "\ud83c\udfe2 Example in the office: tastiere, telefoni, ventilatore PC, conversations belowvoce"
+        "📍 At home: fridge hum, clock ticking, footsteps upstairs, HVAC whoosh",
+        "🌳 Outdoors: rustling leaves, distant voices, car engines, bird calls",
+        "🏢 In an office: keyboard clicks, phones, PC fan, hushed conversations"
       ]
     },
     {
-      title: "\ud83c\udff7\ufe0f Systematic Classification",
-      description: "Organize your sound inventory according to multiple criteria",
-      prompt: "Resume l'elenco appena compilato e applica diversi sistemi di codifica. Per prima cosa, assegna a every suono una lettera: 'N' per natural origin, 'U' per human origin, 'T' per technological origin. Qual \u00e8 la tipologia dominante in your environment? Successivamente, marca con una 'X' i suoni che tu stesso hai generato. Count: sei pi\u00f9 produttore o ricevitore di suoni? Infine, classifica la temporalit\u00e0: 'C' per continuous, 'R' per repetitive, 'U' per unique.",
+      title: "🏷️ Systematic Classification",
+      description: "Organize your sound inventory using multiple criteria",
+      prompt: "Take your list from the first exercise and code it. First pass: assign each sound a letter—'N' for natural origin, 'H' for human, 'T' for technological. Which category dominates your environment? Second pass: mark every sound you created with an 'X.' Are you mostly a producer or a receiver of sound? Third pass: classify temporality—'C' for continuous, 'R' for repetitive, 'U' for unique or one-off.",
       duration: "15 min",
       examples: [
-        "\ud83d\udca1 Street traffic = T + others + C (technological, produced by others, continuous)",
-        "\ud83d\udde3\ufe0f Your voice = U + X + U (human, produced by you, unique)",
-        "\ud83c\udf0a Fountain in the park = N + others + C (natural, continuous)"
+        "💡 Street traffic = T + others + C (tech, made by others, continuous)",
+        "🗣️ Your voice = H + X + U (human, made by you, unique)",
+        "🌊 Park fountain = N + others + C (natural, continuous)"
       ]
     },
     {
-      title: "\ud83d\udcca Maptura dell'Intensit\u00e0",
-      description: "Visualize the soundscape according to volume and emotional preference",
-      prompt: "Take un sheet bianco e dividilo mentalmente in due zone: la met\u00e0 superiore rappresenta i suoni loud, quella inferiore i suoni quiet. Trascrivi every elemento acustico che percepisci posizionandolo verticalmente secondo la sua intensit\u00e0 percepita. Dopo aver completato questa prima mappa, prendi un secondo sheet e ripeti l'operazione, questa volta usando la parte superiore per i suoni pleasant e quella inferiore per quelli unpleasant. Confronta le due mappe: c'\u00e8 correlazione tra volume e gradevolezza in your environment?",
+      title: "📊 Intensity Mapping",
+      description: "Visualize the soundscape by volume and emotional preference",
+      prompt: "Take a blank sheet. Mentally divide it in two: upper half for loud sounds, lower half for quiet ones. List every sound you hear, positioning it vertically by perceived intensity. Then take a second sheet and repeat—but this time, upper half for pleasant sounds, lower half for unpleasant. Compare the two maps: is there a correlation between loudness and enjoyment in your environment?",
       duration: "20 min",
       examples: [
-        "\ud83d\udd0a Loud sounds: traffic, ambulance siren, jackhammer, children's shouts",
-        "\ud83d\udd09 Quiet sounds: refrigerator humming, rustling leaves, breath, wristwatch",
-        "\ud83d\ude0a Piacevoli: canto uccelli, risate lontane, fontana / \ud83d\ude23 Sgradevoli: motosega, horns, allarme auto"
+        "🔊 Loud: traffic, ambulance siren, jackhammer, kids yelling",
+        "🔉 Quiet: fridge hum, leaf rustle, breathing, wristwatch tick",
+        "😊 Pleasant: birdsong, distant laughter, fountain / 😣 Unpleasant: chainsaw, honking, car alarm"
       ]
     },
     {
-      title: "\ud83c\udfaf Radial Spatial Mapping",
-      description: "Create a geographical representation of your acoustic environment",
-      prompt: "Turn il sheet in orizzontale. Draw un cerchio di medie dimensioni al centro: questo sei tu. All'interno del cerchio annota all suoni che produci direttamente (voce, footsteps, respiro, movimento vestiti). Attorno al cerchio, distribuisci tutti gli altri suoni secondo la loro distanza effettiva e direzione rispetto a te. Usa la posizione sul sheet per indicare se provengono da right, left, front, behind. Pi\u00f9 far \u00e8 il suono, pi\u00f9 distante dal cerchio centrale lo posizionerai.",
+      title: "🎯 Radial Spatial Mapping",
+      description: "Create a geographic representation of your acoustic environment",
+      prompt: "Turn your paper landscape. Draw a medium-sized circle in the center: that's you. Inside the circle, write every sound you produce directly (voice, footsteps, breathing, clothing rustle). Around the circle, distribute all other sounds according to their actual distance and direction from you. Use position on the page to indicate whether they come from right, left, front, back. The farther the sound, the farther from the central circle you'll place it.",
       duration: "15 min",
       examples: [
-        "\ud83e\uddcd Centro: respiro, heartbeat percepito, rustling vestiti, deglutizione",
-        "\u27a1\ufe0f Destra near: voce collega, tastiera, ventilatore / Destra far: traffic strada",
-        "\u2b06\ufe0f Sopra: footsteps upper floor, aereo in quota / \u2b07\ufe0f Sotto: impianto riscaldamento basement"
+        "🧍 Center: breathing, heartbeat, clothing rustle, swallowing",
+        "➡️ Right near: colleague's voice, keyboard, fan / Right far: street traffic",
+        "⬆️ Above: footsteps upstairs, plane overhead / ⬇️ Below: heating system in basement"
       ]
     },
     {
-      title: "\ud83d\udd22 Selective Counting",
-      description: "Adright l'attenzione concentrata su categorie sonore specifiche",
-      prompt: "Choose una tipologia sonora particolare e conta quante occorrenze percepisci in a time interval definito. Potrebbe trattarsi di stridii di freni, barking canini, passaggi di motociclette, colpi di horns, porte che si chiudono. Focalizzando l'attenzione su pattern specifici acquisisci una conoscenza intima e strutturata del paesaggio sonoro complessivo. Ripeti l'esercizio con categorie diverse per costruire un profilo statistico del tuo ambiente.",
-      duration: "20 min",
+      title: "⏱️ Temporal Acoustic Inventory",
+      description: "Count discrete sound events in a set timeframe",
+      prompt: "Set a timer for exactly one minute. Close your eyes or look down. The moment the timer starts, begin counting individual sound events—not continuous drones, but discrete occurrences: a footstep, a door closing, a cough. When the timer rings, write down your count. Now repeat in a different acoustic context (another room, outside, at rush hour). How do the counts compare? In which environment did you perceive more discrete events? Did the nature of the sounds change the difficulty of counting?",
+      duration: "10 min (2 rounds)",
       examples: [
-        "\ud83d\ude97 In 15 minuti a un incrocio: 23 frenate, 7 horns, 3 motociclette, 12 chiusure portiere",
-        "\ud83d\udc15 In parco pubblico: 5 cani diversi riconoscibili, 18 barking totali, 3 guaiti acuti",
-        "\ud83d\udd14 Centro storico: 4 campanili distinguibili, segnatura every 15 minuti, 1 concerto mezzogiorno"
+        "🏠 Quiet room: 8 events (3 creaks, 2 door slams from neighbor, 1 car passing, 2 bird calls)",
+        "🚇 Subway platform: 47 events (footsteps, announcements, brake squeals, conversations, bag zips)",
+        "🌃 Late-night bedroom: 3 events (1 car, 1 distant siren, 1 house settling creak)"
       ]
     },
     {
-      title: "\ud83d\udc5e Footwear Library",
-      description: "Sviluppa capacit\u00e0 di riconoscimento delle tipologie di footsteps",
-      prompt: "Position yourself in un angolo di strada o corridoio trafficato. Chiudi gli occhi e concentrati esclusivamente sui footsteps delle persone che transitano. How many tipologie differenti di scarpe can you distinguere? Tacchi alti, suole gommose, scarpe da ginnastica, anfibi, ciabatte, scarpe eleganti in cuoio producono signature acustiche uniche. Se lavori in gruppo, create piccole improvvisazioni sonore in cui every partecipante porta calzature diverse e sperimenta ritmi, velocit\u00e0 e dinamiche di movimento.",
+      title: "🔍 Single-Sound Anchoring",
+      description: "Focus on one sound for an extended period",
+      prompt: "Choose a single sustained sound in your environment—fridge hum, distant traffic, HVAC, birdsong, wind. Commit to listening to it, and only it, for as long as you can maintain focus. Describe its texture, fluctuations, timbral evolution. Does it change? Does your perception of it change? How long can you hold your attention before your mind wanders or another sound intrudes? This is meditation, essentially—anchoring awareness on an acoustic object.",
+      duration: "5-10 min",
+      examples: [
+        "🌬️ Wind through trees: initial whoosh, micro-silences, shifts in pitch as gusts vary",
+        "❄️ Refrigerator: steady low hum, periodic compressor clicks, subtle harmonic overtones",
+        "🚗 Distant highway: composite drone, individual vehicles briefly emerging then dissolving back into texture"
+      ]
+    },
+    {
+      title: "🚶 Walking Sound Inventory",
+      description: "Catalog sounds produced by a single pedestrian in motion",
+      prompt: "Go outside. Stand still and silent. Wait for a single person to walk past you. As they approach, pass, and recede, list every sound they generate: footsteps, clothing rustle, bag jostling, keys jingling, breathing, phone notification. How many discrete sound sources does a single moving human body produce? How does distance affect what you hear? How does pace? Try this with different types of pedestrians: jogger, elderly person with cane, parent pushing stroller.",
       duration: "15 min",
       examples: [
-        "\ud83d\udc60 Tacchi alti: click-clack ritmico, frequenza alta, risonanza su marmo",
-        "\ud83d\udc5f Sneakers: suono attutito, strisciamento gomma, respiro della suola",
-        "\ud83d\udc5e Scarpe eleganti: footsteps decisi, cuoio su asfalto, risonanza media, precisione ritmica"
+        "👟 Jogger: rhythmic footfalls, breathing, synthetic jacket swish, earbud leak, shoe sole squeak",
+        "👠 Business person: heel clicks, phone conversation, briefcase clasp, keys, accelerating pace",
+        "🦽 Person with mobility aid: cane tap, slower footsteps, labored breathing, pause mid-stride"
       ]
     },
     {
-      title: "\ud83d\udcfb Continuous Tone Memory",
-      description: "Allena la memoria tonale attraverso un riferimento costante",
-      prompt: "Identify un suono continuous presente in your environment (humming elettrico, ventilation, impianto di condizionamento). Riproducilo canticchiando fino a trovare l'altezza esatta. Fissa questa nota nella tua memoria tonale, poi fai un giro del quartiere di at least 15-20 minuti. Al ritorno, before rientrare nell'ambiente originale, canta nuovamente la nota che ricordi. Solo after verifica: stai ancora cantando l'altezza corretta oppure la tua memoria tonale si \u00e8 spostata during la passeggiata?",
-      duration: "30 min",
+      title: "🎧 Ears vs. Eyes Inventory",
+      description: "Compare auditory and visual event detection",
+      prompt: "Stand in a public space. For one minute, keep your eyes closed and count every sound event you perceive. Record the number. Then, for one minute, keep your ears plugged (or covered with noise-canceling headphones in transparency mode off) and count every visual event you perceive. Which sense detected more discrete events? Which sense felt more overwhelming? Which felt safer? What does this reveal about how you navigate the world?",
+      duration: "10 min",
       examples: [
-        "\u26a1 Ronzio elettrico da 50Hz (circa Sol#1): after 20 min outdoors ero salito di un semitono",
-        "\ud83d\udca8 Ventilatore da soffitto (La3): memoria perfetta after passeggiata breve",
-        "\ud83c\udfe2 Impianto condizionamento (Re2): after esposizione a traffic intenso ero sceso di 2 semitoni"
+        "👂 Ears only (busy street): 52 events (footsteps, voices, horns, brakes, rustles, doors)",
+        "👁️ Eyes only (same street): 31 events (people passing, cars, bikes, gestures, signs swaying)",
+        "🤔 Insight: Ears may detect events outside field of vision or behind obstacles—more omnidirectional awareness"
       ]
-    },
+    }
+  ],
+
+  'consapevolezza': [
     {
-      title: "\ud83c\udfea Geography of Commercial Silence",
-      description: "Map i livelli acustici degli spazi commerciali",
-      prompt: "Enter in diversi negozi della tua zona e valuta il livello sonoro di ciascuno. Which tipo di esercizio commerciale offre l'ambiente pi\u00f9 silenzioso? Which il pi\u00f9 rumoroso? Esiste correlazione tra tipo merceologico e paesaggio sonoro? Le librerie sono pi\u00f9 silenziose dei negozi di elettronica? I bar sono pi\u00f9 rumorosi delle farmacie? Costruisci una classifica e rifletti sulle strategie acustiche, intenzionali o casuali, di every categoria commerciale.",
-      duration: "45 min",
+      title: "🌅 Awakening Soundscape",
+      description: "Document the first sounds you hear each morning",
+      prompt: "Before you even open your eyes, before you move, before you think—what do you hear? For one full week, keep a notebook by your bed. The instant you wake, before touching your phone, write down the first three sounds that enter your consciousness. Do patterns emerge? Do certain sounds recur? Does the acoustic texture of your awakening change day to day, or remain stable? This exercise trains you to notice the acoustic threshold between sleep and waking.",
+      duration: "5 min daily for 1 week",
       examples: [
-        "\ud83d\udcda Libreria indipendente: 35dB, sussurri, pagine sfogliate, silenzio reverenziale",
-        "\ud83d\udd0a Negozio elettronica: 75dB, musica pop commerciale, demo TV, conversations forzate",
-        "\u2615 Caffetteria artigianale: 65dB, macchina espresso, conversations, belowfondo musicale jazz"
+        "🐦 Monday: birdsong, distant traffic hum, partner breathing",
+        "🚚 Tuesday: garbage truck hydraulics, dog barking, alarm clock from next apartment",
+        "☔ Wednesday: rain on window, gutter drip, wind gust"
       ]
     },
     {
-      title: "\ud83e\ude9c Staircase Asymmetry",
-      description: "Analyze le differenze acustiche tra salita e discesa",
-      prompt: "Find una scala frequentata (stazione metro, centro commerciale, edificio pubblico) e osserva il traffic pedonale. Position yourself a met\u00e0 scala e ascolta attentamente. Le persone che salgono producono lo stesso tipo di suono di quelle che scendono? Analyze ritmo, peso del passo, breathing, uso del corrimano. La fatica della salita modifica il paesaggio sonoro? La prudenza della discesa genera signature diverse? Record le differenze e crea una descrizione dettagliata dell'asimmetria acustica.",
-      duration: "20 min",
+      title: "🌙 Pre-Sleep Acoustic Scan",
+      description: "Listen to your environment just before falling asleep",
+      prompt: "Tonight, as you lie in bed preparing for sleep, resist the urge to scroll or read. Instead, perform a slow acoustic scan of your environment. What sounds persist after you turn off lights and devices? What sounds are always there but usually masked? Listen for the room tone, the building's hum, the neighborhood's baseline. Let your ears adjust to the quiet. Note what you hear. This is the acoustic signature of rest.",
+      duration: "10 min",
       examples: [
-        "\u2b06\ufe0f Salita: footsteps pi\u00f9 lenti, respiro pi\u00f9 udibile, maggior uso del corrimano, peso su avampiede",
-        "\u2b07\ufe0f Discesa: footsteps pi\u00f9 rapidi, calcagno percussivo, scivolamenti occasionali, minor uso del corrimano",
-        "\ud83d\udc65 Confronto: la salita ha ritmo 60bpm, la discesa 90bpm con maggior variabilit\u00e0 dinamica"
+        "🏠 House settling: creaks, HVAC cycling, appliance hums, distant freeway drone",
+        "🏙️ Urban apartment: muffled neighbor TV, street traffic fading, elevator ding, radiator hiss",
+        "🌲 Rural home: wind, insect chorus, animal calls, absolute silences between events"
       ]
     },
     {
-      title: "\ud83d\udeb6 Guided Listening Walk",
-      description: "Esperienza di ascolto profondo in movimento collettivo",
-      prompt: "Organizza una camminata silenziosa con un gruppo, mantenendo distanza di 3-4 metri tra i partecipanti, disposti in fila indiana. Percorrete un tracciato di 20-30 minuti senza parlare, concentrando tutta l'attenzione sull'ambiente acustico. Al ritorno, every partecipante risponde a domande precise: qual \u00e8 stato il suono pi\u00f9 forte? Il pi\u00f9 debole? Il pi\u00f9 acuto? Quali suoni erano in movimento? Quali provenivano dall'alto? Qual \u00e8 stato il suono pi\u00f9 sgradevole? Il pi\u00f9 bello? Il pi\u00f9 far? Il pi\u00f9 interessante dal punto di vista compositivo?",
-      duration: "60 min",
+      title: "📴 Silence Census",
+      description: "Identify and measure moments of true silence in your day",
+      prompt: "For 24 hours, carry a small notebook. Every time you perceive what feels like silence—even momentarily—note the time and location. At the end of the day, review your log. How many moments of silence did you experience? Were any of them true silence, or just relative quiet? What does 'silence' mean in your daily life? Is it the absence of sound, or the absence of unwanted sound?",
+      duration: "Full day observation",
       examples: [
-        "\ud83d\udd0a Pi\u00f9 forte: camion spazzatura alle 6:30 / \ud83d\udd09 Pi\u00f9 debole: ali di farfalla su fiore",
-        "\ud83c\udfb5 Pi\u00f9 acuto: allarme antifurto auto / \ud83d\udd3b Pi\u00f9 grave: tuono far",
-        "\u2728 Pi\u00f9 interessante: dialogo ritmico tra due picchi che si chiamavano da alberi opposti"
+        "🛁 7:15 AM, bathroom, door closed: running water stops, brief pause, fan hum remains—not true silence",
+        "🚗 12:40 PM, car at red light, engine off: nearby construction—not true silence",
+        "🌳 6:10 PM, park bench, deep in trees: wind stopped, no voices, no machines—closest to true silence (8 seconds)"
       ]
     },
     {
-      title: "\ud83c\udfaf Sequential Sensory Focusing",
-      description: "Sposta sistematicamente l'attenzione tra diverse zone dello spazio acustico",
-      prompt: "Siediti in un ambiente sonoro complesso. Dedicate 2 minuti a ascoltare SOLO i suoni alla tua left, ignorando completamente right, fronte, retro. Poi 2 minuti solo right. Poi solo front. Poi solo behind. Poi solo above. Poi solo below. Infine 2 minuti di ascolto globale integrando tutto. Questo esercizio di scanning sistematico sviluppa controllo attenzionale volontario e rivela quanto dell'ambiente acustico normalmente ignoriamo.",
+      title: "🔇 Personal Silence Threshold",
+      description: "Determine your minimum detectable sound level",
+      prompt: "Enter the quietest space you have access to. Sit still. Breathe as quietly as possible. Wait. As your ears adjust, you'll begin to perceive sounds you normally don't notice. Write them down. Then, listen for sounds that emerge only when you hold your breath. What is the quietest sound you can perceive in this space? Can you hear your own heartbeat? Your pulse in your ears? This is your current silence threshold—the floor of your acoustic awareness.",
       duration: "15 min",
       examples: [
-        "\u2b05\ufe0f Solo left 2 min: finestra, traffic, uccelli su albero, 8 elementi distinti",
-        "\u27a1\ufe0f Solo right 2 min: porta ingresso, near, frigo, 6 elementi",
-        "\ud83c\udf10 Globale finale: integrazione difficile, sovraccarico, selezione automatica riprende"
+        "🫀 Internal sounds: heartbeat, pulse, breathing, swallowing, joint creaks, eyelid blinks",
+        "🔌 Electronic hum: LED bulb buzz, phone vibration motor standby, electrical outlet 50/60 Hz tone",
+        "🌬️ Micro-environment: air pressure shifts, distant HVAC rumble, building structure resonance"
       ]
     },
     {
-      title: "\u23f3 Immediate Memory Persistence",
-      description: "Quanto dell'ultimo minuto acustico can you ricordare?",
-      prompt: "Listen attentamente il tuo ambiente per esattamente 1 minuto. Appena scade il minuto, scrivi immediatamente all suoni che ricordi in ordine cronologico. Quanti ne ricordi? Li ricordi nell'ordine corretto? I suoni loud o inattesi sono pi\u00f9 memorabili dei costanti? Ripeti questo esercizio sviluppa memoria acustica a breve termine, fondamentale per field recording professionale.",
-      duration: "20 min (multipli tentativi)",
-      examples: [
-        "\ud83d\udcdd Tentativo 1: ricordati 6 suoni su circa 15 effettivi, bias verso inizi e fine del minuto",
-        "\ud83d\udcdd Tentativo 3: miglioramento a 10 suoni, ordine cronologico ancora incerto",
-        "\ud83d\udcdd Tentativo 5: 12 suoni, ordine corretto per 8, eventi salienti 100% catturati"
-      ]
-    },
-    {
-      title: "\ud83c\udfa8 Acoustic Textures",
-      description: "Identify e categorizza le qualit\u00e0 tattili dei suoni",
-      prompt: "I suoni hanno texture \"tattili\" metaforiche: ruvidi, lisci, vellutati, taglienti, viscosi, cristallini, ovattati, granulari. Listen il tuo ambiente e assegna texture tattili a every suono. Il traffic \u00e8 ruvido? Il vento \u00e8 vellutato? Il chirping \u00e8 cristallino? Una siren \u00e8 tagliente? Questa sinestesia tattile-uditiva rivela come percepiamo qualit\u00e0 multisensoriali anche in stimoli puramente acustici.",
-      duration: "25 min",
-      examples: [
-        "\ud83e\udea8 Ruvido: motore diesel, paper vetrata, ghiaia calpestata",
-        "\ud83e\uddc8 Liscio: tono sinusoidale puro, acqua calma, scivolamento seta",
-        "\ud83d\udd2a Tagliente: siren, grido acuto, vetro rotto, feedback audio"
-      ]
-    },
-    {
-      title: "\ud83c\udf0a Hidden Rhythms",
-      description: "Scopri pattern temporali periodici nel paesaggio sonoro",
-      prompt: "Molti suoni ambientali hanno ciclicit\u00e0 nascoste: semafori che cambiano every 45 secondi, campane every quarto d'ora, aerei che passano every 3 minuti (rotte aeree), treni every 12 minuti. Durante 30 minuti di ascolto attento, identifica all pattern ciclici e cronometra i loro periodi. Quanti ritmi simultanei coesistono? Il paesaggio sonoro \u00e8 una poliritmia complessa.",
+      title: "🎛️ Voluntary Acoustic Reduction",
+      description: "Systematically remove sound sources from your environment",
+      prompt: "In your home, identify every controllable sound source: appliances, devices, HVAC, lights. One by one, turn them off. After each shutdown, pause and listen to the resulting soundscape. How many layers of sound exist in your 'normal' environment? How deep can you go? When you've silenced everything possible, what remains? Document the step-by-step acoustic stripping process. Then reverse it—turn everything back on in sequence, listening to each layer's reintroduction.",
       duration: "30 min",
       examples: [
-        "\ud83d\udea6 Semaforo: ciclo 90 secondi (40s verde, 5s giallo, 45s rosso)",
-        "\ud83d\udd14 Campane chiesa: every 15 minuti (quarti) + every ora (rintocchi pieni)",
-        "\u2708\ufe0f Aerei: media 1 every 4 min 20s (rotta commerciale overhead)"
+        "Layer 1 removed (TV off): conversation and traffic become foreground",
+        "Layer 2 removed (HVAC off): fridge hum and outdoor birds emerge",
+        "Layer 3 removed (lights off): electrical hum drops, only ambient environmental sounds remain",
+        "Baseline: wind, distant traffic, neighbor activity—sounds beyond your control"
       ]
     },
     {
-      title: "\ud83d\udc65 Divergent Collective Listening",
-      description: "Confronta le percezioni individuali di uno stesso ambiente",
-      prompt: "Con 3-5 persone, ascoltate tutti lo stesso ambiente per 5 minuti, poi separatamente scrivete una descrizione dettagliata. Confrontate: quanto divergono le descrizioni? Alcune persone notano uccelli, altre traffic, altre dettagli architettonici? Quali bias personali emergono? L'ascolto \u00e8 profondamente soggettivo e questa divergenza \u00e8 affascinante quanto istruttiva.",
-      duration: "30 min",
+      title: "🌆 Dusk Acoustic Transition",
+      description: "Track soundscape changes from day to night",
+      prompt: "Choose a single outdoor location. Arrive 30 minutes before sunset. Record (audio or notes) the soundscape every 5 minutes as daylight fades. What sounds disappear? What sounds emerge? When does the shift happen—gradually or suddenly? Is there an acoustic 'dusk,' a transition zone where day and night sounds overlap? Repeat at dawn to compare.",
+      duration: "60 min (sunset or sunrise)",
       examples: [
-        "\ud83c\udfb5 Persona A (musicista): focus su pattern ritmici, altezze, aspetti musicali",
-        "\ud83c\udfd7\ufe0f Persona B (ingegnere): focus su sorgenti meccaniche, identificazione macchine",
-        "\ud83c\udf3f Persona C (naturalista): focus esclusivo su fauna, ignora totalmente elementi urbani"
+        "🌇 Sunset park: birds quiet around -15 min, children leave around -10 min, insects begin +5 min, traffic thickens +20 min",
+        "🏙️ Sunset city street: pedestrian voices shift to bar/restaurant noise, fewer delivery trucks, more car stereos",
+        "🌄 Sunrise forest: insect silence breaks around -30 min, first birdsong -20 min, crescendo at true sunrise"
+      ]
+    },
+    {
+      title: "🍽️ Meal Acoustic Ritual",
+      description: "Pay attention to sounds during eating and preparation",
+      prompt: "Choose one meal today. From the moment you begin preparation to the moment you finish eating, notice every sound. Knife on cutting board. Water boiling. Pan sizzle. Chewing. Swallowing. Utensil scrape on plate. These are intimate, quotidian sounds we rarely attend to. Make them the focus. What rhythms emerge? What textures? How does the acoustic character of the meal change from prep to consumption to cleanup?",
+      duration: "Duration of one meal",
+      examples: [
+        "🍳 Breakfast: coffee grinder burr whirr, kettle whistle, toast pop, butter knife scrape, cereal crunch, spoon clink",
+        "🥘 Dinner prep: vegetable chop rhythm, oil sizzle, timer beep, pot lid clatter, plate stack",
+        "🍷 Eating: chewing texture, liquid gulp, utensil contact, conversation pauses, satisfaction sigh"
+      ]
+    },
+    {
+      title: "🛏️ Bed Acoustic Micro-Environment",
+      description: "Explore the soundscape of your sleeping space",
+      prompt: "Lie in your bed during the day, fully awake. Move slowly. Listen. What sounds does the bed itself make? Mattress compression. Sheet rustle. Pillow compacting. Frame creak. Now stay perfectly still. What sounds exist in the space around the bed? HVAC vent. Window draft. Wall shared with neighbor. This is your nightly acoustic micro-environment, usually experienced semi-consciously. Bring full awareness to it.",
+      duration: "15 min",
+      examples: [
+        "🛌 Bed sounds: memory foam slow release hiss, spring squeak, headboard wall tap, blanket static",
+        "🪟 Room sounds: curtain sway, window seal whistle, radiator tick, floor settle under weight shift",
+        "🏚️ Building sounds: pipe knock, neighbor footsteps, elevator cable, HVAC duct resonance"
       ]
     }
   ],
-  'movimento-suono': [
+
+  'movimento': [
     {
-      title: "\ud83d\udeb6\u200d\u2642\ufe0f Tassonomia del Movimento Sonoro",
-      description: "Classifica i suoni secondo la loro cinematica relativa",
-      prompt: "I suoni si dividono in tre categorie cinematiche fondamentali: suoni fermi nello spazio che tu oltrefootsteps (campanili, sirene di fabbrica, impianti fissi), suoni che si muovono autonomamente attraverso l'ambiente (traffic, aerei, animali), e suoni che si muovono con te (la tua voce, i tuoi footsteps, i tuoi vestiti, il tuo respiro). Durante una passeggiata di 30 minuti, compila tre liste separate per queste categorie, notando come il tuo movimento relativo modifica la percezione e le caratteristiche di ciascun suono.",
-      duration: "30 min",
+      title: "🚶‍♂️ Walking Pace Variations",
+      description: "Compare soundscapes at different walking speeds",
+      prompt: "Choose a familiar route you can walk safely without looking up constantly. Walk it three times at three different paces: very slow (stroll), normal, very fast (near-jog). Mentally note or record what sounds you perceive at each pace. Does speed change what you hear? Do certain sounds become more prominent or vanish? Does your own sound production (footfalls, breathing, clothing) change? Which pace offers the richest acoustic experience?",
+      duration: "45 min (3 walks of ~15 min each)",
       examples: [
-        "\ud83c\udfdb\ufe0f Suoni fermi: campanile chiesa, fontana piazza, siren fabbrica, trasformatore elettrico",
-        "\ud83d\ude97 Suoni mobili: auto che passa, aereo in volo, cane che corre, foglie nel vento",
-        "\ud83c\udfc3 Suoni che mi accompagnano: mio respiro, miei footsteps, rustling giacca, tintinnio chiavi"
+        "🐢 Slow walk: individual bird species distinguishable, distant conversations clear, footstep texture detailed",
+        "🚶 Normal walk: balanced perception, rhythmic stride sound, general soundscape awareness",
+        "🏃 Fast walk: breathing dominates, wind in ears increases, environmental sounds blur into texture"
       ]
     },
     {
-      title: "\ud83c\udfa4 Localizzazione Dinamica della Voce",
-      description: "Traccia una sorgente sonora mobile attraverso lo spazio",
-      prompt: "Questo esercizio richiede un gruppo. Un partecipante cammina avanti e inbehind in uno spazio ampio (parco, piazza, sala) parlando o cantando continuamente, mentre gli altri, a occhi chiusi, tentano di localizzare la voce indicandola con il braccio teso. La sorgente sonora pu\u00f2 variare il percorso: lineare, circolare, casuale, con cambi di velocit\u00e0 e direzione. Quanto \u00e8 accurata la localizzazione? Il movimento genera confusione? Where si verificano pi\u00f9 errori: front, behind, ai lati?",
-      duration: "25 min",
-      examples: [
-        "\u27a1\ufe0f Movimento lineare: accuratezza 90%, errori minimi nelle svolte",
-        "\ud83d\udd04 Movimento circolare: accuratezza 70%, confusione nei cambi di direzione rapidi",
-        "\ud83c\udfb2 Movimento casuale: accuratezza 60%, massima difficolt\u00e0 nel tracciare direzione behind la testa"
-      ]
-    },
-    {
-      title: "\ud83d\udea6 L'Incrocio Acustico",
-      description: "Immersione totale nella complessit\u00e0 sonora urbana",
-      prompt: "Choose un incrocio trafficato della tua citt\u00e0. Position yourself in un angolo sicuro, chiudi gli occhi, e dedica 15 minuti all'ascolto totale dei movimenti sonori che ti circondano. Veicoli che accelerano e frenano, pedestri che attraversano, semafori che cliccano, porte di negozi che si aprono, conversations che passano. Prova a costruire una mappa mentale tridimensionale di all flussi acustici, identificando pattern ricorrenti, momenti di pausa, esplosioni di complessit\u00e0. Questo esercizio rivela la struttura ritmica nascosta della vita urbana.",
+      title: "🔄 360° Listening Walk",
+      description: "Stop periodically and rotate to hear directional sound",
+      prompt: "During a 20-minute walk, stop every 2 minutes. Stand still. Slowly rotate your body 360°, pausing every 90° (facing four cardinal directions). At each pause, note what you hear. Do certain sounds emerge or disappear depending on which way you face? Are there acoustic 'shadows' created by buildings or terrain? How much of your acoustic environment is directional versus omnipresent?",
       duration: "20 min",
       examples: [
-        "\ud83d\udfe2 Semaforo verde: flusso continuous 10 secondi, crescendo poi decrescendo",
-        "\ud83d\udd34 Semaforo rosso: 30 secondi di accumulo, engines al minimo, tensione crescente",
-        "\ud83d\udeb6 Fase pedonale: 40 secondi, footsteps rapidi, carrozzine, cani, biciclette che zigzagano"
+        "🧭 North (facing buildings): traffic echo, HVAC exhaust, voices amplified by wall reflection",
+        "🧭 East (facing park): bird calls, leaf rustle, children on playground",
+        "🧭 South (facing street): direct traffic, car horns, bus brakes, pedestrian chatter",
+        "🧭 West (facing alley): dumpster lids, delivery truck beep, restaurant kitchen exhaust fan"
       ]
     },
     {
-      title: "\ud83d\udeb4 Velocit\u00e0 e Percezione Doppler",
-      description: "Sperimenta l'effetto Doppler a diverse velocit\u00e0",
-      prompt: "L'effetto Doppler (il cambiamento di pitch per sorgenti in movimento relativo) \u00e8 esperibile in bicicletta, auto, o anche correndo. Passa accanto a una sorgente sonora continua (fontana, campanaccio fisso, altoparlante) a velocit\u00e0 crescenti. A piedi lenti (5km/h) l'effetto \u00e8 impercettibile. Correndo (15km/h) \u00e8 sottile. In bici (25km/h) diventa evidente. In auto (50km/h) \u00e8 drammatico. Document a quale velocit\u00e0 inizi a percepire il pitch shift.",
-      duration: "45 min",
+      title: "🛤️ Identical Path, Different Focus",
+      description: "Walk the same route while focusing on different acoustic elements",
+      prompt: "Choose a 10-minute walking loop. Walk it three times, each time focusing exclusively on a different category of sound: (1) human-made sounds only, (2) natural sounds only, (3) mechanical/technological sounds only. Do not try to hear everything—filter ruthlessly. How does selective attention reshape the acoustic experience? Which category dominates your route? Which is hardest to isolate?",
+      duration: "30 min (3 walks of ~10 min each)",
       examples: [
-        "\ud83d\udeb6 5km/h a piedi: nessun Doppler percepibile",
-        "\ud83c\udfc3 15km/h corsa: shift di ~5Hz su sorgente 440Hz, appena percettibile",
-        "\ud83d\ude97 50km/h auto: shift di ~20Hz su siren, chiaramente udibile"
+        "👥 Human focus: footsteps, conversations, laughter, coughs, phone rings, singing, arguments",
+        "🌿 Natural focus: wind, birds, rustling leaves, water, animal calls, rain, insects",
+        "⚙️ Mechanical focus: engines, HVAC, construction, alarms, electronics, tools, appliances"
       ]
     },
     {
-      title: "\ud83c\udf00 Traiettorie Sonore Circolari",
-      description: "Analyze suoni che si muovono in orbita attorno a te",
-      prompt: "Position yourself al centro di uno spazio aperto (piazza, parcheggio vuoto, campo). Un collaboratore cammina/corre in cerchio attorno a te a distanza costante (10m di raggio) producendo un suono continuous (voce, campanello, fischietto). Chiudi gli occhi e traccia mentalmente la posizione. Where perdi precisione? Davanti/behind? Lati? La velocit\u00e0 di movimento influenza la localizzazione? Prova con diverse velocit\u00e0 e distanze.",
+      title: "🏙️ Urban Acoustic Gradient Walk",
+      description: "Walk from busy to quiet areas, noting the transition",
+      prompt: "Plan a route that takes you from the noisiest part of your area (main road, commercial district, construction zone) to the quietest (residential street, park, dead-end alley). Walk it continuously. Note where acoustic transitions occur. Is the change gradual or sudden? Are there threshold points where the soundscape character shifts? Can you identify acoustic 'seams' in the urban fabric?",
       duration: "30 min",
       examples: [
-        "\u27a1\ufe0f Settore frontale (90\u00b0 centrale): errore medio \u00b18\u00b0, ottima localizzazione",
-        "\u2b05\ufe0f Settori laterali: errore medio \u00b115\u00b0, discreta localizzazione",
-        "\ud83d\udd04 Settore posteriore (90\u00b0 centrale): errore medio \u00b135\u00b0, confusione right/left"
+        "🚦 Busy intersection: 85+ dB, layered traffic, horns, crosswalk signals, ventilation, crowd",
+        "🏘️ Residential side street: 55 dB, occasional car, birds, distant lawnmower, kids playing",
+        "🌳 Park interior: 45 dB, wind, birdsong, footsteps on gravel, distant traffic hum as backdrop"
       ]
     },
     {
-      title: "\ud83c\udfa2 Accelerazione e Decelerazione",
-      description: "Percepisci i cambi di velocit\u00e0 attraverso il suono",
-      prompt: "Bendato, ascolta un collaboratore che si muove cambiando velocit\u00e0: fermo, avvio lento, accelerazione, velocit\u00e0 costante, decelerazione, stop. Riesci a identificare every fase solo dal suono? I footsteps rivelano peso, ritmo, intenzione. Un'auto che passa mostra Doppler e volume che cambiano. Record vari esempi di movimento accelerato/decelerato e analizza quali parametri acustici rivelano la cinematica.",
-      duration: "25 min",
-      examples: [
-        "\ud83d\udeb6 Avvio: ritmo incerto, peso progressivo, aumento graduale volume",
-        "\ud83c\udfc3 Accelerazione: ritmo che si accorcia, dinamica crescente, pitch percussivo pi\u00f9 alto",
-        "\u23f8\ufe0f Decelerazione: allungamento ritmo, peso su tallone, respiro pi\u00f9 udibile"
-      ]
-    },
-    {
-      title: "\u2708\ufe0f Geometria del Sorvolo",
-      description: "Traccia le traiettorie tridimensionali di velivoli",
-      prompt: "Gli aerei offrono opportunit\u00e0 uniche di studiare sorgenti mobili in 3D. Sdraiati in uno spazio aperto e ascolta un aereo che passa. Senza guardare, traccia mentalmente la sua traiettoria: direzione, altitudine relativa, velocit\u00e0. Il pitch Doppler rivela se si avvicina o allontana. L'intensit\u00e0 indica distanza. Il timbro (pi\u00f9/meno filtrato da umidit\u00e0) suggerisce altitudine. Dopo il passaggio, verifica guardando: quanto eri accurato?",
-      duration: "30 min (multipli passaggi)",
-      examples: [
-        "\ud83d\udeeb Decollo: Doppler forte (salita rapida), volume crescente poi stabile, timbro che si filtra",
-        "\u2708\ufe0f Crociera: Doppler minimo (perpendicolare), volume costante, timbro molto filtrato",
-        "\ud83d\udeec Atterraggio: Doppler inverso, volume crescente continuous, timbro pi\u00f9 presente"
-      ]
-    },
-    {
-      title: "\ud83c\udfaa Rotazione Personale e Percezione",
-      description: "Esplora come il tuo movimento rotatorio modifica la percezione spaziale",
-      prompt: "In un ambiente ricco di suoni provenienti da diverse direzioni, ruota lentamente su te stesso a occhi chiusi compiendo un giro completo di 360\u00b0 in 60 secondi. Mentre ruoti, presta attenzione a come i suoni sembrano muoversi attorno a te, quando diventano pi\u00f9 loud (orientamento diretto dell'orecchio), quando si attenuano (ombra acustica della testa). Riesci a creare una mappa mentale stabile mentre il tuo frame di riferimento ruota?",
+      title: "🚴 Cycling Acoustic Experience",
+      description: "Notice how movement speed changes auditory perception",
+      prompt: "If you have access to a bicycle, ride a familiar route you've also walked. How does speed alter what you hear? Does wind noise dominate? Can you still perceive environmental sounds clearly, or do they blur? What about your own sounds—chain, gears, breathing? Compare to walking the same route. Which mode of transport offers richer acoustic detail? Which offers more sonic variety?",
       duration: "20 min",
       examples: [
-        "\ud83c\udfaf Traffico a nord: massimo volume quando orientato 0\u00b0, minimo a 180\u00b0",
-        "\ud83d\udd14 Campana a est: boost di 6-8dB quando orecchio destro punta verso sorgente",
-        "\ud83e\udded Confusione spaziale: difficile mantenere mappa mentale stabile during rotazione continua"
+        "🚴 Cycling at 15 mph: wind roar, chain rhythmic click, tire hum, breathing, muffled environmental sounds",
+        "🚶 Walking same route: clear environmental sounds, minimal self-noise, detailed acoustic texture",
+        "🛴 Skating/scooting: wheel rumble, pavement texture amplified, wind moderate, environmental sounds partially clear"
       ]
     },
     {
-      title: "\ud83d\ude82 Analisi del Passaggio Ferroviario",
-      description: "Studia la complessa evoluzione acustica di un treno in transito",
-      prompt: "Position yourself a distanza sicura da un passaggio a livello ferroviario. Document in dettaglio l'intera sequenza acustica: avviso sonoro del passaggio, campane o sirene, rumore crescente del treno in avvicinamento, massimo volume al passaggio (individua: rumore rotaie, fischio vento, vibrazioni), decadimento Doppler in allontanamento, silenzio finale. Quanto dura l'intero evento? How varia il contenuto spettrale nelle diverse fasi?",
-      duration: "45 min",
-      examples: [
-        "\ud83d\udd14 Fase 1 (60s prima): campane passaggio 75dB, ripetute every 2 secondi",
-        "\ud83d\udcc8 Fase 2 (30s prima): crescendo dal rumore di fondo, Doppler ascendente, vibrazioni terra",
-        "\ud83d\udca5 Fase 3 (transito): picco 95dB, dominanza 500-2000Hz, durata 8 secondi per 8 vagoni"
-      ]
-    },
-    {
-      title: "\ud83c\udfc3\u200d\u2640\ufe0f Eco del Movimento Personale",
-      description: "Percepire le tue riflessioni sonore mentre ti muovi",
-      prompt: "Cammina o corri in spazi con forte riverbero (tunnel, belowpasso, cortile chiuso, porticato) producendo suoni ritmici (battiti mani, footsteps accentuati, voce). Concentrati sulle riflessioni del suono che tornan inbehind. How cambiano quando acceleri o deceleri? Riesci a percepire la distanza delle pareti dall'eco? In movimento, le riflessioni creano pattern complessi. Sperimenta con diverse velocit\u00e0 e tipologie di suono emesso.",
-      duration: "30 min",
-      examples: [
-        "\ud83d\udc4f Battiti mani lenti: eco chiaro separato, ritardo ~200ms in tunnel largo 35m",
-        "\ud83c\udfc3 Corsa veloce: eco si fonde con suono diretto, percezione di \"scia\" sonora behind",
-        "\ud83d\udde3\ufe0f Voce cantata: riverbero crea armonizzazioni naturali, effetto cathedral"
-      ]
-    }
-  ],
-  'ascolto-estremo': [
-    {
-      title: "\ud83d\udd2d Il Suono Pi\u00f9 Lontano",
-      description: "Espandi i confini della tua percezione acustica",
-      prompt: "Find un luogo con buona visibilit\u00e0 acustica (collina, spazio aperto, riva del mare). Siediti comodamente, chiudi gli occhi, e inizia a espandere gradualmente il tuo raggio d'attenzione sonora. Prima i suoni vicini, poi quelli a media distanza, infine concentrati sul suono pi\u00f9 remoto che can you percepire. Cos'\u00e8? Riesci a stimarne la distanza effettiva? \u00c8 continuous o intermittente? Naturale o antropico? Prova a rimanere focalizzato su questo suono limite per a few minutes, notando come la tua percezione si affina con l'attenzione sostenuta.",
-      duration: "30 min",
-      examples: [
-        "\u2708\ufe0f Aereo in quota: stimato 10km, rombo intermittente, si muove da est a ovest",
-        "\ud83c\udf0a Onde oceaniche: 3km di distanza, continuous, variazioni every 7-8 secondi",
-        "\ud83d\udd14 Campane villaggio montano: 5km linea d'aria, rintocchi every 15 minuti, eco multipla"
-      ]
-    },
-    {
-      title: "\ud83c\udf05 Alba Sonora Completa",
-      description: "Document l'intera transizione acustica dall'oscurit\u00e0 alla luce",
-      prompt: "Svegliati prima dell'alba e posizionati in un punto di ascolto privilegiato (parco, campagna, collina). Record mentalmente o su paper l'evoluzione del paesaggio sonoro dall'oscurit\u00e0 pre-alba fino a un'ora after il sorgere del sole. How cambia la presenza degli uccelli? Quando inizia il traffic? Quali suoni notturni scompaiono? L'alba \u00e8 un momento di trasformazione acustica drammatica che rivela la struttura temporale del paesaggio sonoro.",
-      duration: "120 min",
-      examples: [
-        "\ud83c\udf11 Ore 5:00 (buio): gufi, ultimo canto notturno, silenzio profondo 25dB",
-        "\ud83c\udf04 Ore 5:30 (pre-alba): primi uccelli (pettirosso), crescendo graduale, 35dB",
-        "\u2600\ufe0f Ore 6:30 (post-alba): coro pieno, traffic inizia, dominanza diurna stabilita 55dB"
-      ]
-    },
-    {
-      title: "\ud83c\udf0a Il Suono Dietro al Suono",
-      description: "Listen strati nascosti mascherati da suoni dominanti",
-      prompt: "In un ambiente con un suono dominante forte e costante (cascata, traffic intenso, ventilatore industriale), allena la tua attenzione selettiva per penetrare quel \"muro sonoro\" e identificare suoni pi\u00f9 quiet che esistono simultaneamente ma sono mascherati. Usa concentrazione meditativa per \"guardare attraverso\" il rumore di fondo. Quanti strati can you distinguere? Questo esercizio sviluppa ascolto penetrante.",
-      duration: "40 min",
-      examples: [
-        "\ud83c\udf0a Dietro cascata 80dB: voices umane 60dB a 10m, canto uccelli 45dB, footsteps su ghiaia 50dB",
-        "\ud83d\ude97 Dietro traffic 75dB: campanelli bici 55dB, risata bambino 65dB, porta che sbatte 70dB",
-        "\ud83d\udca8 Dietro ventilatore 70dB: ticking orologio 35dB (totalmente mascherato per 5 min)"
-      ]
-    },
-    {
-      title: "\ud83e\udd87 Ascolto Notturno Estremo",
-      description: "Esplora il paesaggio sonoro in totale oscurit\u00e0",
-      prompt: "In una notte senza luna, in un luogo sicuro ma buio (parco chiuso, giardino, campagna), passa 45 minuti ad ascoltare senza alcun riferimento visivo. La deprivazione della vista amplifica drammaticamente l'acuit\u00e0 uditiva. Quali suoni emergono che di giorno ignori completamente? How cambia la tua percezione di distanza senza feedback visivo? Il buio trasforma l'ascolto in esperienza immersiva totale.",
-      duration: "45 min",
-      examples: [
-        "\ud83e\udd97 Dettagli emersi: singoli grilli distinguibili (non massa sonora), distanza stimata entro 2m",
-        "\ud83c\udf43 Micro-eventi: foglia singola che cade udibile a 5m, percezione tridimensionale precisa",
-        "\ud83d\udc63 Propri movimenti: every passo amplificato, consapevolezza acustica del corpo raddoppiata"
-      ]
-    },
-    {
-      title: "\ud83d\udd07 Il Suono pi\u00f9 Debole",
-      description: "Find la soglia inferiore della tua percezione acustica",
-      prompt: "In un ambiente molto silenzioso (meno di 30dB), cerca sistematicamente il suono pi\u00f9 debole che can you percepire. Potrebbe essere il tuo respiro, il heartbeat, il rustling dei vestiti, il ticking di un orologio far, la ventilation impercettibile. Quanto ti devi concentrare per mantenerlo in attenzione? Questo esercizio esplora i limiti inferiori della sensibilit\u00e0 uditiva umana e la relazione tra attenzione e percezione.",
-      duration: "30 min",
-      examples: [
-        "\ud83d\udc93 Battito cardiaco: percepibile in silenzio totale, circa 20-25dB, concentrazione intensa",
-        "\ud83d\udc42 Tinnito personale: humming interno orecchio, sempre presente ma normalmente ignorato",
-        "\ud83c\udf2c\ufe0f Micro-correnti aria: movimento impercettibile, udibile solo con attenzione assoluta"
-      ]
-    },
-    {
-      title: "\ud83c\udfd4\ufe0f Eco di Montagna",
-      description: "Sperimenta riflessioni acustiche a lunghissima distanza",
-      prompt: "In montagna, di fronte a una parete rocciosa distante (500m-2km), produce suoni loud (grido, battito mani amplificato, fischio) e cronometra il ritardo dell'eco. Calcola la distanza usando la velocit\u00e0 del suono (343 m/s). L'eco torna con fedelt\u00e0 o \u00e8 filtrato? Prova con diverse frequenze. Le alte frequenze si perdono pi\u00f9 delle basse? L'eco ti permette di \"vedere\" con il suono la geografia invisibile.",
-      duration: "60 min",
-      examples: [
-        "\u23f1\ufe0f Parete 1000m: eco ritorna after 5.8s, frequenze alte (>4kHz) perse completamente",
-        "\ud83d\udde3\ufe0f Grido vs fischio: grido (500Hz) eco chiaro, fischio (3kHz) molto attenuato",
-        "\ud83c\udfd4\ufe0f Echo multipli: parete complessa genera 3-4 riflessioni successive, delay diversi"
-      ]
-    },
-    {
-      title: "\ud83c\udf0c Silenzio Assoluto",
-      description: "Cerca l'ambiente pi\u00f9 silenzioso possibile",
-      prompt: "Esplora diversi ambienti cercando il silenzio pi\u00f9 profondo accessibile. Bosco fitto, cripta, camera anecoica (se disponibile), grotta profonda, biblioteca vuota di notte, chiesa antica. Misura (anche solo percettivamente) quanto can youd avvicinarti al silenzio assoluto. Nel silenzio estremo, cosa senti? Solo il tuo corpo? Il \"silenzio\" esiste davvero o \u00e8 sempre pieno di suoni sottilissimi?",
-      duration: "90 min (pi\u00f9 location)",
-      examples: [
-        "\ud83d\udcda Biblioteca notte: 28dB, ventilation impercettibile, ticking neon",
-        "\u26ea Cripta chiesa: 22dB, solo heartbeat e respiro udibili",
-        "\ud83c\udf32 Bosco neve fresca: 18dB, assorbimento totale, sensazione di ovattamento"
-      ]
-    }
-  ],
-  'produzione-imitazione': [
-    {
-      title: "\ud83d\udca7 Repertorio di Sintesi Sonora",
-      description: "Riproduci suoni specifici usando voce e corpo",
-      prompt: "Prova a creare convincenti imitazioni vocali e corporee di questi suoni comuni: goccia d'acqua che cade in una pozza, telefono che squilla (vecchio stile e smartphone), persona che cammina su ghiaia, vento tra i rami, campana di bronzo, bussare a una porta di legno, colpo secco tipo schiocco di dita amplificato, rustling di paper, piccola esplosione. Non usare parole onomatopeiche convenzionali: cerca di riprodurre fedelmente le caratteristiche fisiche di every suono. Record i tuoi tentativi e perfezionali attraverso iterazioni successive.",
-      duration: "30 min",
-      examples: [
-        "\ud83d\udca7 Goccia: lingua contro palato, rilascio d'aria, controllo del pitch per profondit\u00e0 pozza",
-        "\ud83d\udcde Telefono vecchio: trill vibrato con corde vocali tese, ritmo bi-tonale",
-        "\ud83d\udeb6 Passi su ghiaia: sfregamento mani, variazioni di peso, ritmo irregolare"
-      ]
-    },
-    {
-      title: "\ud83c\udfad Suoni Complessi Trasformativi",
-      description: "Create sequenze sonore con morfologie definite",
-      prompt: "Sfida avanzata di design sonoro: trova o crea un suono che inizia con una tessitura raschiante e termina con un tintinnio cristallino. Poi crea un suono che inizia con un tonfo sordo e finisce con un chirping acuto. Queste trasformazioni timbriche richiedono controllo fine delle tecniche di produzione vocale e corporea, oppure l'esplorazione creativa di oggetti quotidiani. L'obiettivo \u00e8 padroneggiare l'arco trasformativo completo, non solo i punti estremi.",
-      duration: "25 min",
-      examples: [
-        "\ud83c\udfbb Raschiare\u2192tintinnio: unghia su paper vetrata che scivola su bicchiere di cristallo",
-        "\ud83e\udd41 Tonfo\u2192chirping: pugno su cuscino seguito da pizzicato di elastico teso",
-        "\ud83c\udfaa Sequenza trovata: sfregare bastone su ringhiera metallica che termina con oscillazione libera"
-      ]
-    },
-    {
-      title: "\ud83c\udfa8 Disegno Gesturale del Suono",
-      description: "Traduci i suoni in tracce visive astratte",
-      prompt: "Mentre esegui o ascolti suoni, disegnali in tempo reale su un grande sheet, senza rappresentare gli oggetti che li producono ma solo la loro impressione morfologica. Un suono acuto diventa una linea sottile e alta? Un suono grave una macchia scura in basso? Un suono pulsante genera onde ripetute? Un suono che decresce si assottiglia? Questo esercizio crea una notazione personale che bypassa i simboli musicali convenzionali, rivelando come percepisci intuitivamente parametri come altezza, intensit\u00e0, durata, timbro.",
+      title: "🪜 Elevation Acoustic Shift",
+      description: "Compare soundscapes at different vertical levels",
+      prompt: "Find a location where you can experience different elevations: a building with accessible floors, a hill, a stairwell, an underpass vs. overpass. Listen at ground level, then ascend/descend and listen again. How does the soundscape change? Do certain sounds vanish? Do new ones emerge? Does elevation change sound quality (reverberation, clarity, bass content)? Which level offers the most complex acoustic experience?",
       duration: "20 min",
       examples: [
-        "\ud83d\udcc8 Sirena: linea che sale a spirale con spessore variabile secondo intensit\u00e0",
-        "\ud83c\udf0a Onde: curve ripetute con ampiezze irregolari, densit\u00e0 di tratto per la schiuma",
-        "\ud83d\udca5 Esplosione: punto denso al centro con raggi esplosivi che si diradano verso esterno"
+        "🏢 Ground floor: direct pedestrian voices, door slams, street-level traffic, trash truck",
+        "🏢 5th floor: diffuse traffic hum, wind, bird calls at ear level, reduced detail from street",
+        "🏢 Rooftop: wind dominates, HVAC units, distant traffic as wash, airplane clarity, reduced human presence"
       ]
     },
     {
-      title: "\ud83c\udf08 Sinestesia: Il Colore dei Suoni",
-      description: "Esplora le corrispondenze cross-modali tra udito e vista",
-      prompt: "I suoni evocano colori nella tua percezione? Questo fenomeno, chiamato sinestesia, \u00e8 comune anche in persone non-sinestetiche. Listen vari suoni e assegna spontaneamente un colore a ciascuno, senza razionalizzare: affidati alla prima impressione intuitiva. Un horns \u00e8 rosso o giallo? Il vento \u00e8 blu o grigio? Una campana \u00e8 oro o argento? Il chirping degli uccelli \u00e8 verde o celeste? Compila una palette sonora personale, notando se esistono pattern ricorrenti nelle tue associazioni.",
+      title: "🌧️ Weather-Dependent Walk",
+      description: "Walk the same route in different weather conditions",
+      prompt: "Choose a route you can walk repeatedly over time. Walk it in as many weather conditions as possible: sun, rain, wind, fog, snow (if applicable), extreme heat/cold. How does weather change the acoustic character? Does rain mask or reveal sounds? Does wind? Does temperature affect sound propagation? Keep a log and compare entries.",
+      duration: "20 min per walk, multiple conditions over weeks/months",
+      examples: [
+        "☀️ Sunny, calm: clear sounds, birds active, people outdoors, windows open—maximum acoustic detail",
+        "🌧️ Heavy rain: rain sound dominates, voices muffled, traffic splash, fewer people, reverb reduced",
+        "💨 Windy: wind roar, rustling leaves, objects rattling, voices carried/distorted, reduced clarity",
+        "❄️ Snow: muffled quiet, snow crunch underfoot, reduced traffic, absorption of high frequencies"
+      ]
+    },
+    {
+      title: "🕐 Hourly Route Repetition",
+      description: "Walk the same path at different times of day",
+      prompt: "Choose a short route (5-10 min). Walk it once per hour for several hours, ideally spanning morning to night. Note how the acoustic environment evolves throughout the day. When is it loudest? Quietest? Most diverse? Do certain sounds appear only at certain times? This is acoustic time-lapse—using repetition to reveal temporal patterns.",
+      duration: "5-10 min per walk, repeated hourly",
+      examples: [
+        "6 AM: near-silence, first birds, rare vehicles, sprinkler systems, newspaper delivery",
+        "12 PM: peak activity, lunch crowds, construction, delivery trucks, maximum acoustic density",
+        "6 PM: commute traffic, restaurant prep, children playing, dog walkers, voices shift from work to leisure",
+        "10 PM: reduced activity, bar/restaurant noise, occasional car, distant siren, wind becomes prominent"
+      ]
+    }
+  ],
+
+  'analisi': [
+    {
+      title: "🎼 Foreground/Background Separation",
+      description: "Distinguish between acoustic layers in a soundscape",
+      prompt: "Sit in a moderately active environment (café, park, office). Identify the foreground sounds—those that naturally draw your attention, the 'events.' Then shift focus to the background—the continuous acoustic substrate, the 'texture.' List both separately. Can you consciously toggle between perceiving one or the other? Which is easier to focus on? When you focus on background, does foreground vanish, or simply recede?",
+      duration: "15 min",
+      examples: [
+        "☕ Café foreground: espresso machine hiss, cup clink, cash register, order calls, door chime",
+        "☕ Café background: HVAC hum, general conversation wash, street traffic outside, music at low volume",
+        "🌳 Park foreground: footsteps, dog bark, child shout, bike bell, conversation",
+        "🌳 Park background: wind in trees, distant traffic hum, bird chorus, leaf rustle bed"
+      ]
+    },
+    {
+      title: "🔁 Repetition Recognition",
+      description: "Identify and count repetitive sound patterns",
+      prompt: "In your current environment, identify any sound that repeats at regular or semi-regular intervals. It could be mechanical (HVAC cycling, turn signal), natural (bird call pattern), or human (footsteps, typing rhythm). Time the interval between repetitions. How precise is it? Does it drift? Do multiple repetitive sounds coexist, creating a polyrhythm? List all repetitive sounds and their approximate intervals.",
+      duration: "10 min",
+      examples: [
+        "❄️ Refrigerator compressor: cycles every ~8 minutes, runs for ~2 minutes",
+        "🚦 Crosswalk signal: beeps every 1 second when active, silent otherwise",
+        "🔨 Construction jackhammer: 3-second bursts, 5-second pauses, irregular overall pattern",
+        "💓 Your own heartbeat (in quiet): ~1 beat per second, steady microrhythm"
+      ]
+    },
+    {
+      title: "🎚️ Dynamic Range Assessment",
+      description: "Identify the quietest and loudest sounds in your environment",
+      prompt: "Over a 15-minute observation period, note the quietest sound you can perceive and the loudest sound that occurs. Estimate (or measure with a phone SPL app) the difference in decibels. This is the dynamic range of your current soundscape. How wide is it? Does a wide range create richness or chaos? A narrow range—monotony or calm? What is the 'average' loudness between the extremes?",
+      duration: "15 min",
+      examples: [
+        "🏠 Home: Quietest = 25 dB (fridge hum), Loudest = 75 dB (blender) → 50 dB range",
+        "🏙️ City street: Quietest = 50 dB (footsteps), Loudest = 95 dB (motorcycle) → 45 dB range",
+        "🌲 Forest: Quietest = 20 dB (leaf rustle), Loudest = 70 dB (crow call) → 50 dB range"
+      ]
+    },
+    {
+      title: "🧬 Acoustic DNA",
+      description: "Define the unique sonic signature of a place",
+      prompt: "Choose a specific location you know well. Spend 20 minutes there, identifying sounds that are unique or characteristic of that place—sounds you wouldn't hear elsewhere. These are the acoustic markers that define its identity. If you were to recreate this place sonically for someone who'd never been there, which sounds would be essential? Which could you omit? What is the minimum set of sounds that conveys 'this place'?",
       duration: "20 min",
       examples: [
-        "\ud83d\udd34 Rosso: horns auto, allarme, grido acuto, siren d'emergenza",
-        "\ud83d\udd35 Blu: vento, acqua corrente, toni bassi di violoncello, humming far",
-        "\ud83d\udfe1 Giallo: campanellino, risata bambino, trillo telefono, uccellino"
+        "🏖️ Beach: waves (essential), seagull calls (essential), sand footsteps (characteristic), lifeguard whistle (optional)",
+        "🏥 Hospital: PA system (essential), EKG beep (characteristic), rolling beds (characteristic), elevator ding (common but not unique)",
+        "🏟️ Stadium: crowd roar (essential), announcer (essential), organ (characteristic), vendor calls (characteristic)"
       ]
     },
     {
-      title: "\u2b1b Geometria del Suono",
-      description: "Associa forme geometriche a texture sonore",
-      prompt: "Un suono pu\u00f2 essere rotondo o angolare? Morbido o spigoloso? Questa sinestesia geometrica rivela come percepiamo le qualit\u00e0 tattili e spaziali del suono. Cerca suoni da abbinare a forme geometriche specifiche: cerchio, triangolo, quadrato, stella, spirale, linea retta, forme irregolari. Un tamburo \u00e8 circolare? Un colpo di piatto \u00e8 triangolare o a stella? Un tono puro \u00e8 una linea perfetta? Un rumore bianco \u00e8 una nuvola informe? Create un catalogo di corrispondenze suono-forma.",
-      duration: "20 min",
+      title: "🎭 Soundscape Emotions",
+      description: "Assess the emotional character of an acoustic environment",
+      prompt: "Listen to your current soundscape and attempt to assign it an emotional quality. Is it anxious? Calm? Energetic? Melancholic? What specific sounds contribute to that quality? If you removed certain sounds, would the emotional character change? This is subjective—there's no right answer. The goal is to become aware of how soundscapes shape (or reflect) emotional states.",
+      duration: "10 min",
       examples: [
-        "\u2b55 Cerchio: gong, campana tibetana, tono sinusoidale puro, bolla che scoppia",
-        "\u25b2 Triangolo: colpo secco di piatto, battuta di mani, click metallico",
-        "\ud83c\udf00 Spirale: glissando ascendente, siren, fischio che sale, feedback controllato"
+        "😌 Calm library: soft pages turning, hushed footsteps, distant typing, occasional cough → meditative, focused",
+        "😰 Rush-hour subway: screeching brakes, crowd density, announcements, doors slamming → urgent, stressful",
+        "😊 Weekend park: children laughing, dogs, distant music, birds → joyful, relaxed",
+        "😔 Empty office at night: HVAC hum, fluorescent buzz, lone keyboard → lonely, eerie"
       ]
     },
     {
-      title: "\ud83c\udf3f Concerto Naturale Collettivo",
-      description: "Create composizioni vocali imitative di ambienti naturali",
-      prompt: "Dividetevi in gruppi di 4-6 persone. Ogni gruppo sceglie un ambiente naturale specifico (foresta temperata, spiaggia oceanica, prateria ventosa, palude notturna, deserto al tramonto) e crea un \"concerto\" di 3-5 minuti usando esclusivamente le voices per imitare all suoni caratteristici di quell'ambiente. Non limitatevi ai versi animali: includete vento, acqua, fruscii, spostamenti. Lavorate sulla stratificazione, sulle dinamiche collettive, sui momenti di densit\u00e0 e rarefazione. Eseguite poi per gli altri gruppi.",
-      duration: "45 min",
+      title: "🧩 Soundmark Identification",
+      description: "Recognize the iconic sounds of your community",
+      prompt: "R. Murray Schafer coined the term 'soundmark'—an acoustic landmark unique to a place, analogous to a visual landmark. Does your area have soundmarks? A specific church bell pattern? A factory whistle? A train horn? A market vendor's call? List any sounds that are locally significant or historically rooted. These are often the sounds residents notice when they're absent, or visitors notice when they arrive.",
+      duration: "15 min + ongoing awareness",
       examples: [
-        "\ud83c\udf32 Foresta: vento tra foglie (sussurri), picchi (click lingua), gufo (vocale scura), ruscello (sibili)",
-        "\ud83c\udfd6\ufe0f Spiaggia: onde (respiri ritmici), gabbiani (glissandi acuti), risacca (suoni granulari)",
-        "\ud83c\udf3e Prateria: vento forte (soffi), insetti (ronzii acuti), uccelli di terra (trilli brevi)"
+        "🔔 Town square clock tower: chimes every hour, familiar melody, heard across downtown",
+        "🚂 Train crossing: specific horn pattern, happens 6x daily, locals set watches by it",
+        "📢 Market call: fish vendor's rhythmic chant, Saturday mornings only, decades-old tradition",
+        "🏭 Factory shift whistle: 7 AM, 3 PM, 11 PM—punctuates the day for entire neighborhood"
       ]
     },
     {
-      title: "\ud83d\udcd6 Trasmissione Orale della Composizione",
-      description: "Insegna e impara composizioni senza notazione scritta",
-      prompt: "Un gruppo crea una breve composizione sonora (2-3 minuti) usando voce, corpo, o oggetti. Dopo averla perfezionata, la esegue per un secondo gruppo che osserva e ascolta attentamente, senza prendere note scritte. Il secondo gruppo deve poi riprodurre la composizione basandosi solo sulla memoria acustica e visiva. Quanto \u00e8 accurata la trasmissione? Quali elementi si perdono? Quali si trasformano? Quali si preservano meglio? Questo esercizio rivela come funziona la tradizione orale.",
-      duration: "40 min",
+      title: "🔊 Signal-to-Noise Ratio",
+      description: "Analyze desired vs. undesired sounds in an environment",
+      prompt: "In the context of soundscape studies, 'signal' is sound you want to hear, and 'noise' is sound you don't. These are subjective and context-dependent. In your current environment, classify every sound as signal or noise based on your current goal (working, relaxing, conversing, etc.). What's the ratio? Is the environment optimized for your purpose, or hostile to it? How could the ratio be improved?",
+      duration: "10 min",
       examples: [
-        "\u2705 Ben preservati: struttura ritmica generale, ordine delle sezioni, gesti corporei evidenti",
-        "\u26a0\ufe0f Parzialmente alterati: dinamiche precise, durate esatte, dettagli timbrici sottili",
-        "\u274c Persi: microritmi complessi, altezze precise non rinforzate, intenzioni non evidenti"
+        "💼 Trying to work in café: Signal = music (low), ambient chatter (texture); Noise = baby crying, loud phone talker, blender",
+        "🎧 Trying to enjoy music on subway: Signal = your music; Noise = everything else (announcements, wheels, conversations)",
+        "🌳 Trying to hear birds in park: Signal = bird calls; Noise = traffic, lawn mower, dogs barking, nearby conversation"
       ]
     },
     {
-      title: "\ud83d\udcac Dizionario Onomatopeico Personale",
-      description: "Inventa parole-suono per fenomeni acustici specifici",
-      prompt: "Create neologismi onomatopeici originali per questi suoni, evitando le onomatopee convenzionali della tua lingua: campana di bronzo che oscilla, starnuto umano, esplosione lontana, gatto che fa le fusa, chiaro di luna (s\u00ec, trova un suono per tradurre visivamente il chiaro di luna). Le tue parole-suono devono usare le qualit\u00e0 fonetiche della lingua per evocare le caratteristiche acustiche: consonanti dure per suoni percussivi, vocali aperte per risonanze, ripetizioni per pulsazioni.",
-      duration: "25 min",
+      title: "📐 Geometry of Sound",
+      description: "Observe how space shapes sound through reflection and absorption",
+      prompt: "Choose two contrasting spaces: one hard and reflective (tiled bathroom, concrete garage), one soft and absorptive (carpeted room, forest). In each, clap your hands or snap your fingers. Listen to the decay. How long does it take for the sound to disappear? This is reverberation time (RT60 in acoustics). How does the space shape the sound? Walk around while making intermittent sounds. Does the acoustic character change with position?",
+      duration: "15 min (7-8 min per space)",
       examples: [
-        "\ud83d\udd14 Campana: \"DONNNGG-ghelinn-ghelinn-ghel...\" (attacco forte, risonanze metalliche decrescenti)",
-        "\ud83e\udd27 Starnuto: \"AATCH-CI\u00d9\u00d9\u00d9\" (compressione, esplosione, rilascio d'aria)",
-        "\ud83c\udf19 Chiaro di luna: \"sss\u00ec\u00ec\u00eclium-sss\u00ec\u00ec\u00eclium\" (qualit\u00e0 sibilante, argentea, eterea, ondulante)"
-      ]
-    },
-    {
-      title: "\ud83d\udca7 Morfologie dell'Acqua",
-      description: "Create un vocabolario sonoro delle manifestazioni acquatiche",
-      prompt: "L'acqua produce una gamma sonora vastissima secondo velocit\u00e0, volume, superficie, ostacoli. Inventa parole onomatopeiche distinte per: gocce di pioggia su varie superfici (vetro, foglie, terra, metallo), acqua corrente di piccolo ruscello, cascata impetuosa, fiume ampio, onde oceaniche che si infrangono. Ogni parola deve catturare la texture granulare, il ritmo, il pitch generale, la densit\u00e0 del suono specifico. Record poi veri suoni d'acqua e verifica quanto le tue parole siano evocative.",
-      duration: "30 min",
-      examples: [
-        "\ud83c\udf27\ufe0f Pioggia su foglie: \"tlic-tlac-tluc\" (irregolare, pitch variabile, attutito)",
-        "\ud83c\udfde\ufe0f Cascata: \"SHHHROOAAAHHH\" (denso, continuous, con belowtoni gravi dal volume)",
-        "\ud83c\udf0a Onde: \"fSSSHHHuuuuuuhhhh-CRASH-sssss...\" (crescendo, impatto, decadimento spumoso)"
+        "🚿 Tiled bathroom: sharp clap, long reverb tail (~2 sec), bright and ringy, flutter echoes between parallel walls",
+        "🛋️ Carpeted living room: dull clap, short decay (~0.3 sec), warm and dry, sound absorbed by soft furnishings",
+        "🏛️ Cathedral: extremely long reverb (5-8 sec), sound builds and lingers, spatial vastness audible"
       ]
     }
   ],
-  'giochi-vocali': [
+
+  'registrazione': [
     {
-      title: "\ud83e\udd81 Il Richiamo del Branco",
-      description: "Gioco di riconoscimento vocale con bendaggio",
-      prompt: "Dividete i partecipanti in quattro gruppi: lupi, cavalli, mucche, galli. Ogni gruppo impara il verso caratteristico del proprio animale. Tutti vengono bendati e dispersi in uno spazio ampio. Al segnale, every persona deve trovare i membri del proprio branco usando solo i versi, senza parlare. Vince il gruppo che si riunisce per primo in formazione compatta. Il gioco sviluppa localizzazione acustica, proiezione vocale, e coordinamento sonoro in condizioni di deprivazione visiva.",
-      duration: "20 min",
+      title: "🎙️ First Field Recording",
+      description: "Capture a 5-minute environmental soundscape",
+      prompt: "Choose a location and time. Set up your recording device (phone, portable recorder, anything). Press record and leave it stationary for exactly 5 minutes. Do not move or speak. When finished, listen back on headphones. Did the microphone hear things you didn't notice in real time? Did it miss things you heard? This is the gap between human perception and mechanical capture—understanding it is essential for field recording.",
+      duration: "5 min recording + 5 min playback",
       examples: [
-        "\ud83d\udc3a Lupi: ululato lungo \"AUUUUUUH\" con armonizzazioni quando si trovano",
-        "\ud83d\udc34 Cavalli: nitriti \"IH-IH-IH-IHHH\" con variazioni dinamiche per segnalare distanza",
-        "\ud83d\udc14 Galli: \"CHICCHIRICHIII\" ripetuto, timing pi\u00f9 rapido quando vicini"
+        "🌳 Park bench at noon: captured bird details you missed, also captured wind rumble on mic you didn't hear",
+        "🏙️ Urban corner at 5 PM: captured bass traffic rumble strongly, missed quiet conversation happening nearby",
+        "🏠 Kitchen during breakfast: captured fridge hum prominently (you'd tuned it out), missed some spatial breadth"
       ]
     },
     {
-      title: "\ud83d\udde3\ufe0f Babele di Lingue Immaginarie",
-      description: "Improvvisazione di comunicazione in idiomi inventati",
-      prompt: "Prima fase: tutti camminano nello spazio salutandosi in lingue immaginarie, inventando sul momento fonemi, prosodie, ritmi che non appartengono ad alcuna lingua reale. Seconda fase: a turno, ognuno interpreta un personaggio usando la propria lingua inventata: dittatore militare che arringa, cantante d'opera in assolo, disc jockey radiofonico iperattivo, bambino di 3 anni capriccioso, orso solitario, anziano che racconta storie, persona balbuziente, leone che si sveglia. L'obiettivo \u00e8 comunicare emozioni e carattere attraverso pura prosodia, ritmo, timbro.",
-      duration: "35 min",
+      title: "🧭 Directional Recording",
+      description: "Explore microphone placement and orientation",
+      prompt: "Choose a sound source (busy street, bird in tree, running water). Make three recordings from different positions relative to the source: directly facing it, 90° to the side, and behind an obstacle (tree, wall). Keep distance constant. Listen back. How does position change the captured sound? What's gained or lost in each position? This teaches microphone perspective—the recordist's equivalent of camera angle.",
+      duration: "15 min (3 recordings of 3-5 min each)",
       examples: [
-        "\ud83d\udc68\u200d\u2708\ufe0f Dittatore: lingua con molte consonanti dure, ritmo marziale, crescendo di intensit\u00e0",
-        "\ud83c\udfb5 Cantante opera: fonemi aperti, melismi estremi, vibrato esagerato, gesti ampi",
-        "\ud83d\udc3b Orso: vocali scure, grugniti bassi, ritmo lento, pause lunghe, borbottii"
+        "🚗 Traffic, mic facing street: loud, direct, clear vehicle detail, minimal ambience",
+        "🚗 Traffic, mic perpendicular: balanced between traffic and surroundings, more spatial",
+        "🚗 Traffic, mic behind building: muffled, reverberant, traffic as texture rather than detail"
       ]
     },
     {
-      title: "\ud83c\udfa4 Eco Umano Crescente",
-      description: "Create catene di ripetizioni vocali sovrapposte",
-      prompt: "Con un gruppo di at least 6 persone, formate un cerchio. Una persona inizia con un suono breve (sillaba, nota, rumore). La seconda persona ripete esattamente quel suono, ma la prima continua ripetendolo. La terza si aggiunge, poi la quarta, fino a che tutti ripetono simultaneamente lo stesso suono creando un \"eco umano\" crescente. Poi si passa a un nuovo suono. Il risultato \u00e8 una texture corale che si costruisce organicamente.",
-      duration: "25 min",
+      title: "📏 Distance Variations",
+      description: "Record the same source from multiple distances",
+      prompt: "Choose a sound source you can approach safely (fountain, construction site, musician). Make recordings at 1 meter, 5 meters, 20 meters, and 100 meters (or maximum safe distance). Keep mic position and settings identical. Listen back. How does distance change not just loudness, but timbre, clarity, and ambient ratio? At what distance does the source become inseparable from the environment?",
+      duration: "20 min (4 recordings)",
       examples: [
-        "\ud83d\udd0a Suono 1 \"SHH\": inizia singolo, after 10s sei voices sovrapposte, texture densa",
-        "\ud83c\udf0a Suono 2 \"OOO\": inizio preciso, poi deriva microtonale, battimenti emergono",
-        "\u26a1 Difficolt\u00e0: mantenere pitch esatto, sincronizzazione breathing"
+        "⛲ Fountain at 1m: water detail, individual droplets, splashes, minimal background",
+        "⛲ Fountain at 5m: balanced, water clear but contextualized by birds and park sounds",
+        "⛲ Fountain at 20m: water blends with wind and traffic, becomes part of soundscape texture",
+        "⛲ Fountain at 100m: barely distinguishable, just a faint liquid quality in broader environmental wash"
       ]
     },
     {
-      title: "\ud83c\udf0d Catena Linguistica Globale",
-      description: "Passa un messaggio attraverso \"traduzioni\" in lingue immaginarie",
-      prompt: "How il telefono senza fili, ma every persona deve \"tradurre\" il messaggio ricevuto in una lingua immaginaria completamente nuova before passarlo. La prima persona dice una frase in lingua inventata. La seconda ascolta, interpreta emotivamente, poi ripete il \"significato\" in una NUOVA lingua inventata. E cos\u00ec via. Alla fine confrontate: il messaggio emotivo si \u00e8 preservato o trasformato completamente?",
-      duration: "30 min",
+      title: "⏰ Same Place, Different Times",
+      description: "Capture temporal variation in one location",
+      prompt: "Choose a single location. Record 3 minutes at dawn, midday, dusk, and night. Use identical mic placement. Listen to all four in sequence. How does the acoustic environment evolve over 24 hours? Which recording is richest? Which is quietest? Are there sounds unique to certain times? This is time-lapse listening—revealing patterns invisible in single snapshots.",
+      duration: "12 min recording (4× 3 min) spread over a day",
       examples: [
-        "\ud83d\ude0a Messaggio originale: tono allegro, ritmo veloce, vocali aperte",
-        "\ud83d\udd04 Dopo 5 passaggi: ancora allegro ma ritmo rallentato, consonanti diverse",
-        "\ud83c\udfad Dopo 10 passaggi: trasformato in tono misterioso, significato emotivo mutato"
+        "🌅 Dawn (6 AM): bird chorus peak, minimal human activity, cool air (affects sound propagation)",
+        "☀️ Midday (12 PM): human activity peak, birds quiet, traffic maximum, harsh acoustic quality",
+        "🌇 Dusk (6 PM): birds resume, commute traffic, insects begin, transitional acoustic texture",
+        "🌙 Night (10 PM): distant hum dominates, occasional car, wind more prominent, stark quiet gaps"
       ]
     },
     {
-      title: "\ud83c\udfba Orchestra Vocale Istantanea",
-      description: "Create sezioni orchestrali usando solo la voce",
-      prompt: "Dividete il gruppo in sezioni: bassi (voices pi\u00f9 basse, drone fondamentale), celli (toni medi, armonie), violini (voices alte, melodie), percussioni (click, pop, battiti). Un direttore improvvisa gestures: entrata sezioni, crescendo, diminuendo, fermata. Senza prove, riuscite a creare musica coesa? Il corpo diventa orchestra.",
-      duration: "40 min",
+      title: "🎚️ Gain Staging Practice",
+      description: "Learn to set recording levels correctly",
+      prompt: "Record a dynamic sound source (conversation, street, music). First, set your levels too low (peaks around -30 dB). Then too high (peaks hitting 0 dB, clipping). Then correctly (peaks around -12 to -6 dB). Listen back. What's wrong with each approach? Too low = noise floor audible when boosted. Too high = distortion. Correct = clean, with headroom for unexpected loud moments. This is fundamental recording technique.",
+      duration: "15 min (3 recordings of ~3 min)",
       examples: [
-        "\ud83c\udfbb Sezione violini: vocale \"II\" alta, vibrato naturale, seguono gesto melodico",
-        "\ud83e\udd41 Sezione percussioni: click lingua + battiti piedi, pattern ritmici complessi",
-        "\ud83c\udfb5 Risultato: brano di 3 minuti con dinamiche, sviluppo tematico, culminazione"
+        "❌ Too low: quiet, hiss when amplified, lacks punch, unusable for professional work",
+        "❌ Too high: distorted peaks, harsh, digital clipping artifacts, unpleasant",
+        "✅ Correct: clean, dynamic, no noise, no distortion, balanced and natural"
+      ]
+    },
+    {
+      title: "🎧 Monitoring vs. Reality",
+      description: "Compare what you hear in real-time vs. in headphones",
+      prompt: "While recording in a moderately complex environment (park, café, street), wear headphones connected to your recorder's monitor output. Listen to what the mic hears in real-time. How does it differ from what your ears hear without headphones? Is the perspective narrower? Are certain frequencies emphasized? This split awareness—ears vs. mic—is the field recordist's core skill.",
+      duration: "10 min",
+      examples: [
+        "🎤 Headphones reveal: wind noise you didn't feel, handling noise from holding the recorder, bass rumble from distant trucks",
+        "👂 Ears reveal: spatial breadth the mono/stereo mic can't fully capture, ability to focus on specific sounds mentally",
+        "🤔 Insight: Microphones are not ears—they hear differently. Monitoring teaches you to predict and compensate."
+      ]
+    },
+    {
+      title: "🌬️ Wind & Handling Noise",
+      description: "Learn to identify and prevent mechanical noise",
+      prompt: "Make a recording outdoors on a windy day. First, record with no wind protection. Then, use makeshift protection (cover mic with foam, cloth, or hand-cupped shield). Then, try to eliminate handling noise by mounting the recorder on a stable surface or stand instead of holding it. Compare all three. This teaches you to recognize and mitigate the most common field recording problems.",
+      duration: "15 min (3 recordings)",
+      examples: [
+        "💨 No wind protection: massive low-frequency rumble, mic overload, environmental sounds masked",
+        "🧤 Improvised protection (foam/cloth): rumble reduced, sounds clearer, still some wind artifacts",
+        "🪵 Stable mounting: minimal handling noise, clean capture, only pure environmental sound"
+      ]
+    },
+    {
+      title: "🔇 Recording Silence",
+      description: "Capture room tone and environmental baseline",
+      prompt: "In the quietest location you have access to, record 5 minutes of 'nothing'—no deliberate sound events, just the ambient baseline. Listen back critically. What did you capture? HVAC? Electrical hum? Distant traffic? This is 'room tone' or 'atmos'—the acoustic signature of a space at rest. It's essential for audio editing (filling gaps) and reveals the noise floor of both your environment and your recording gear.",
+      duration: "5 min recording + 5 min critical playback",
+      examples: [
+        "🏠 Bedroom at night: fridge hum from kitchen, HVAC cycling, recorder self-noise, distant freeway wash",
+        "🌲 Forest clearing: wind microstructure, distant bird, insect bed, rustling leaves, surprisingly complex 'silence'",
+        "📚 Library after hours: fluorescent light buzz, HVAC, building creak, pages turning in distant room, profound quiet between events"
       ]
     }
   ],
-  'registrazione-analisi': [
+
+  'progetto': [
     {
-      title: "\ud83c\udf9a\ufe0f Morfologia Comparativa",
-      description: "Documentzione sistematica di variazioni tipologiche",
-      prompt: "Choose una categoria di suoni quotidiani (porte che si chiudono, horns di automobili, aspirapolvere in funzione, campanelli di bicicletta) e registra il maggior numero possibile di variazioni distinte. L'obiettivo \u00e8 creare una collezione che mostri gli estremi morfologici della categoria: il horns pi\u00f9 acuto vs il pi\u00f9 grave, la porta pi\u00f9 cigolante vs la pi\u00f9 silenziosa, l'aspirapolvere pi\u00f9 potente vs il pi\u00f9 delicato. Analyze poi le registrazioni identificando i parametri che creano le differenze: materiali, dimensioni, meccanismi, stato di manutenzione.",
-      duration: "90 min",
+      title: "🗂️ 7-Day Soundscape Diary",
+      description: "Document the acoustic environment of your week",
+      prompt: "For seven consecutive days, make at least one field recording per day (3-5 min each) that represents your dominant acoustic environment for that day. This could be your workplace, commute, home, or a place you visited. At the end of the week, listen to all seven in sequence. What story do they tell about your life? What patterns emerge? Are there recurring sounds across days? Unique moments? This is a sonic autobiography of a week.",
+      duration: "7 days, ~5 min recording per day + 1 hour final review",
       examples: [
-        "\ud83d\udeaa 20 porte registrate: legno massello vs compensato, cardini oliati vs arrugginiti, chiusura delicata vs sbattuta",
-        "\ud83d\udcef 15 horns: range da 250Hz (camion) a 1200Hz (citycar), durata 0.3-3 secondi",
-        "\ud83e\uddf9 10 aspirapolvere: 60-80dB, timbro da humming industriale a sibilo aerodinamico"
+        "📅 Monday: office HVAC and keyboard typing (work)",
+        "📅 Tuesday: subway commute (travel)",
+        "📅 Wednesday: café ambience (lunch break)",
+        "📅 Thursday: gym sounds (personal time)",
+        "📅 Friday: home cooking and music (evening)",
+        "📅 Saturday: park with children (weekend)",
+        "📅 Sunday: quiet morning reading with bird sounds (rest)"
       ]
     },
     {
-      title: "\ud83c\udfdb\ufe0f L'Impronta Acustica dell'Architettura",
-      description: "Record la stessa sorgente in ambienti differenti",
-      prompt: "Record la tua voce (recitando lo stesso testo di 30 secondi) in una dozzina di ambienti architettonici diversi: bagno piastrellato, camera da letto con tappeti, chiesa vuota, parcheggio sotterraneo, bosco, piazza aperta, corridoio stretto, sala concerti, grotta, riva del mare. Ogni spazio imprime una firma acustica unica attraverso riflessioni, riverbero, assorbimento. Confronta le registrazioni: can you identificare gli ambienti solo ascoltando? Quali caratteristiche architettoniche producono gli effetti pi\u00f9 drammatici?",
-      duration: "120 min",
+      title: "🏛️ Historical Soundscape Recreation",
+      description: "Imagine and describe a past acoustic environment",
+      prompt: "Choose a historical period and location (your town 100 years ago, ancient Rome, 1950s New York). Research what sounds would have existed then. What would be absent (no car traffic, no planes, no electronics)? What would be present (horse hooves, street vendors, factory whistles, church bells)? Write a detailed description of a typical soundscape from that time and place. If possible, record a modern location and note what would need to be removed/added to match your historical soundscape.",
+      duration: "1-2 hours research and writing",
       examples: [
-        "\ud83d\udebf Bagno piastrellato: riverbero brillante 1.2s, riflessioni metalliche, boost 2-4kHz",
-        "\u26ea Chiesa: riverbero 4-6s, diffusione complessa, perdita di chiarezza consonanti",
-        "\ud83c\udf32 Bosco: assorbimento totale alte frequenze, suono asciutto, nessuna riflessione"
+        "🏙️ New York, 1920s: streetcars, horse carriages, factory whistles, newspaper boys, live street musicians, no amplified sound",
+        "🏰 Medieval village: church bells, blacksmith hammer, market vendors, animal sounds, wooden cart wheels, human voices only",
+        "🌾 Rural farm, 1800s: animal calls, hand tools, wind, water mill, distant church bell, near-total silence at night"
       ]
     },
     {
-      title: "\ud83c\udf99\ufe0f Signature Sonore Personali",
-      description: "Document le caratteristiche acustiche uniche di oggetti personali",
-      prompt: "Record e analizza i suoni caratteristici di 10-15 oggetti che usi quotidianamente: la tua porta d'ingresso, le tue chiavi, la tua auto, la tua tazza da caff\u00e8, le tue scarpe preferite. Dopo una settimana, rimescola le registrazioni e prova a riconoscere every oggetto solo dal suono. Quanto sei accurato? Sviluppi un \"orecchio\" per le tue signature sonore personali? Questo esercizio esplora memoria acustica e familiarit\u00e0.",
-      duration: "120 min + 7 giorni",
+      title: "🎨 Soundscape Composition",
+      description: "Create a curated sonic portrait of a place",
+      prompt: "Choose a location meaningful to you. Over multiple visits, record various sounds that characterize it—not just one long take, but individual elements (birds, footsteps, doors, machines, voices, weather). Then, using free audio software (Audacity, GarageBand, etc.), layer these sounds into a composed soundscape that captures the essence of the place. This isn't documentary realism—it's artistic distillation. What sounds are essential? What can you emphasize or fade?",
+      duration: "Several hours over multiple sessions",
       examples: [
-        "\ud83d\udeaa Porta casa: riconosciuta 100%, ciglio unique del cardine superiore, chiusura morbida",
-        "\ud83d\udd11 Chiavi: 80% accuratezza, pattern di tintinnio familiare ma simile ad altre",
-        "\u2615 Tazza ceramica: 60%, difficile distinguere da altre tazze simili solo dal suono"
+        "🏖️ Beach composition: layered waves, seagull calls, distant voices, wind, footsteps on sand—arranged to evoke memory",
+        "🌃 Night city: distant traffic wash, closer footsteps, bar music leaking out, siren passing, wind between buildings",
+        "🏡 Childhood home: specific door creak, kitchen sounds, TV in another room, wind through specific tree—intensely personal"
       ]
     },
     {
-      title: "\ud83d\udccf Analisi Spettrale Comparativa",
-      description: "Confronta il contenuto frequenziale di suoni simili",
-      prompt: "Se hai accesso a software di analisi audio (anche app gratis per smartphone), registra pi\u00f9 versioni di uno stesso tipo di suono (diverse porte, diversi horns, diverse campane) e analizzane gli spettrogrammi. Quali frequenze caratterizzano every variante? Un horns grave ha fondamentale a 250Hz, uno acuto a 800Hz? Le porte di legno hanno pi\u00f9 energia below 500Hz rispetto a quelle metalliche? L'analisi visuale rivela differenze impercettibili all'orecchio.",
-      duration: "90 min",
+      title: "📻 Sonic Postcard",
+      description: "Create a 60-second audio snapshot of a place",
+      prompt: "Record and edit a 60-second 'postcard' from a location. The goal: convey the character of the place in one minute. Choose sounds carefully—what's essential? What's cliché? What's surprising? This constraint forces curation and teaches you to identify sonic signifiers. Share it with someone unfamiliar with the place. Can they guess where it is? What do they perceive?",
+      duration: "1-2 hours (recording + editing)",
       examples: [
-        "\ud83d\udd14 Campane bronzo vs acciaio: bronzo pi\u00f9 ricco di armoniche alte, acciaio pi\u00f9 puro",
-        "\ud83d\udeaa Porte legno vs metallo: legno picco 200-400Hz, metallo 800-2kHz",
-        "\ud83d\ude97 Motori benzina vs diesel: diesel pi\u00f9 rumble <200Hz, benzina pi\u00f9 whine 500Hz-1kHz"
+        "🚇 Subway postcard: train arrival, doors, announcement, busker playing, departure—60 sec, tells complete story",
+        "🌲 Forest postcard: wind in trees, bird calls, distant stream, footsteps on trail, single moment of silence—60 sec of calm",
+        "🏙️ City postcard: traffic swell, crosswalk signal, distant siren, street vendor call, conversation snippet—60 sec of urban density"
       ]
     },
     {
-      title: "\ud83c\udf27\ufe0f Cronologia Meteorologica Sonora",
-      description: "Record lo stesso punto during diversi fenomeni meteorologici",
-      prompt: "Choose una location fissa (finestra, balcone, punto in parco) e registra l'ambiente acustico during condizioni meteorologiche diverse: sereno, pioggia leggera, pioggia intensa, temporale, vento forte, neve, nebbia. How cambia radicalmente il paesaggio sonoro? La pioggia maschera altri suoni? Il vento crea turbolenze nel microphone? La neve assorbe tutto? Create un archivio meteorologico-acustico del tuo ambiente.",
-      duration: "10-15 sessioni da 20 min",
+      title: "🗺️ Acoustic Transect",
+      description: "Document sound changes along a defined path",
+      prompt: "Choose a route (1-3 km) that crosses different acoustic zones (residential to commercial, urban to park, quiet to loud). Walk it while recording continuously, or make stop-recordings every 100 meters. The goal: document how soundscape changes across space. Create a map showing your path and annotate it with acoustic observations. Where are the thresholds? The gradients? The surprises?",
+      duration: "1-2 hours",
       examples: [
-        "\u2600\ufe0f Sereno: baseline 45dB, uccelli chiari, traffic distinto",
-        "\ud83c\udf27\ufe0f Pioggia media: 60dB, mascheramento totale di uccelli, rumore broadband",
-        "\u2744\ufe0f Neve: 30dB, assorbimento drammatico, silenzio ovattato innaturale"
+        "🏘️→🏙️ Residential to downtown: gradual increase in traffic, human density, mechanical sounds; decrease in birds, quiet gaps",
+        "🌳→🛣️ Park to highway: abrupt threshold at park edge where traffic becomes dominant, birdsong vanishes",
+        "🌊→🏘️ Beach to inland: ocean sound fades over ~200m, replaced by urban hum, seagulls persist longer than waves"
       ]
     },
     {
-      title: "\ud83c\udfd9\ufe0f Map Sonora Urbana 24h",
-      description: "Document l'evoluzione temporale di un punto urbano",
-      prompt: "Record lo stesso punto urbano (piazza, incrocio, parco) per 5 minuti every ora per 24 ore consecutive. Create poi un montaggio cronologico. How si trasforma il paesaggio sonoro? Quando il traffic \u00e8 minimo? Quando emergono uccelli? Quando inizia attivit\u00e0 umana? Il risultato \u00e8 un \"time-lapse acustico\" che rivela i ritmi circadiani della citt\u00e0.",
-      duration: "24 ore",
+      title: "🔊 Soundscape Intervention",
+      description: "Deliberately alter an environment's acoustic character",
+      prompt: "Choose a space you control (your room, office, backyard). Identify its current soundscape. Then, make deliberate changes to alter it: add a water fountain, play background music, introduce wind chimes, rearrange furniture to change reverberation, close/open windows. Record before and after. How did your intervention change the acoustic character? Did it improve it (for your purposes)? This is applied soundscape design.",
+      duration: "2-3 hours (planning, intervention, recording)",
       examples: [
-        "\ud83d\udd50 02:00: 35dB, traffic quasi nullo, eco footsteps solitari amplificato",
-        "\ud83d\udd58 09:00: 75dB, picco traffic, voices, commercio, caos massimo",
-        "\ud83d\udd56 19:00: 65dB, traffic ancora alto ma voices cambiano (tono sociale vs lavorativo)"
+        "🏡 Backyard: added small fountain, masked distant traffic with water sound, attracted birds, created focal sound point",
+        "💼 Office: added fabric panels to walls, reduced echo and HVAC harshness, improved speech clarity, felt calmer",
+        "🛏️ Bedroom: closed window (removed traffic), added white noise machine, masked neighbor sounds, improved sleep quality"
       ]
     },
     {
-      title: "\ud83c\udf9a\ufe0f Catena di Degradazione",
-      description: "Studia come il suono degrada attraverso trasmissioni successive",
-      prompt: "Record un suono originale. Riproducilo e re-registralo. Ripeti il processo 10 volte (generazione 1 \u2192 generazione 2 \u2192 generazione 3... \u2192 generazione 10). How si degrada la qualit\u00e0? Quali frequenze si perdono prima? Dopo quante generazioni diventa irriconoscibile? Questo \"gioco del telefono acustico\" mostra i limiti della trasmissione audio e introduce concetti di compressione e perdita.",
-      duration: "60 min",
+      title: "👂 Blindfold Soundwalk",
+      description: "Experience a familiar place through sound alone",
+      prompt: "Choose a safe, familiar route (your home, a quiet park path). Blindfold yourself or close your eyes. Have a trusted partner guide you safely. Walk slowly, relying entirely on sound for spatial awareness and orientation. What do you hear that you normally ignore? Can you identify where you are by sound alone? How does removing vision change your relationship to the environment? Record the walk and your verbal observations.",
+      duration: "15-20 min",
       examples: [
-        "\ud83c\udfb5 Generazione 1: voce chiara, 20-18kHz range",
-        "\ud83d\udcc9 Generazione 5: perdita above 12kHz, artefatti di compressione evidenti",
-        "\ud83d\udc80 Generazione 10: quasi irriconoscibile, solo 200-3kHz residuo, rumore >50%"
+        "🏡 Home navigation: doorways identified by acoustic change (reverberation shift), rooms by characteristic sounds (kitchen = fridge hum)",
+        "🌳 Park path: spatial awareness from wind direction, footstep surface texture, bird calls, distance to traffic hum",
+        "🤔 Insight: Vision dominates; when removed, acoustic detail explodes—sounds you 'knew' were there but never truly heard"
       ]
     },
     {
-      title: "\ud83d\udd0a Limiti Dinamici del Tuo Equipaggiamento",
-      description: "Testa i confini tecnici del tuo sistema di registrazione",
-      prompt: "Con il tuo recorder (anche smartphone), prova a catturare il suono pi\u00f9 debole possibile e il pi\u00f9 forte possibile senza clipping. Qual \u00e8 il range dinamico effettivo? Record un sussurro a 30dB e poi un grido a 100dB. Il sussurro \u00e8 pieno di rumore? Il grido distorce? Questa conoscenza tecnica \u00e8 fondamentale per recording sul campo efficaci.",
-      duration: "45 min",
+      title: "🎤 Interview the Soundscape",
+      description: "Talk to people about their acoustic environment",
+      prompt: "Interview 3-5 people (neighbors, coworkers, strangers in a public place) about the soundscape around them. Ask: What sounds do you notice most? Which do you like? Which annoy you? Are there sounds you'd miss if they disappeared? Record the interviews (with permission). Compare responses. Do people agree? What does this reveal about subjective perception of shared acoustic space?",
+      duration: "1-2 hours",
       examples: [
-        "\ud83e\udd2b Sussurro 30dB: rumore di fondo 25dB, SNR appena 5dB, quasi inutilizzabile",
-        "\ud83d\udce2 Grido 100dB: clip evidente above 95dB con gain normale",
-        "\ud83d\udcca Range dinamico utile: circa 35-90dB con questo equipment"
-      ]
-    },
-    {
-      title: "\ud83c\udfa4 Confronto Posizionamenti Microfonici",
-      description: "Esplora come la posizione del microphone altera drasticamente la cattura",
-      prompt: "Record la stessa sorgente sonora (fontana, strada trafficata, persona che parla) con il microphone in 8-10 posizioni diverse: near, far, alto, basso, behind ostacolo, in riflesso, in configurazione stereo, mono. How cambia la percezione? La vicinanza esalta dettagli ma perde contesto? La distanza cattura ambiente ma perde definizione? Il posizionamento \u00e8 arte quanto tecnica.",
-      duration: "90 min",
-      examples: [
-        "\ud83d\udccd Posizione 1 (20cm dalla fontana): acqua dominante, dettagli gocce, no contesto",
-        "\ud83d\udccd Posizione 2 (5m): bilanciato, fontana + ambiente urbano, realismo",
-        "\ud83d\udccd Posizione 3 (behind pilastro): riflessioni, suono mediato, artificiale"
-      ]
-    },
-    {
-      title: "\ud83c\udf10 Acustica di Confine",
-      description: "Record esattamente al limite tra due ambienti acustici",
-      prompt: "Find confini netti tra ambienti sonori diversi: porta aperta tra stanza silenziosa e strada rumorosa, limite tra parco e zona industriale, soglia tra bosco e campo aperto. Posiziona il microphone esattamente sul confine. La registrazione cattura simultaneamente entrambi i mondi? How coesistono nella stessa registrazione? Questi \"boundary recordings\" hanno qualit\u00e0 surreali.",
-      duration: "60 min",
-      examples: [
-        "\ud83d\udeaa Soglia porta: interno 30dB (eco, reverb) + esterno 65dB (traffic), discontinuit\u00e0 netta",
-        "\ud83c\udf33 Margine bosco-campo: left uccelli+fruscii, right vento aperto, mix asimmetrico",
-        "\ud83c\udfed Parco-fabbrica: natura vs industria in giustapposizione disturbante"
-      ]
-    }
-  ],
-  'silenzio-memoria': [
-    {
-      title: "\ud83e\udd2b Definizioni del Silenzio",
-      description: "Riflessione filosofica sulla natura dell'assenza sonora",
-      prompt: "Completa questa frase in at least dieci modi diversi: \"Il silenzio \u00e8...\". Le tue risposte possono essere poetiche, tecniche, filosofiche, personali, contraddittorie. Il silenzio \u00e8 l'assenza di suono? Ma noi percepiamo mai vera assenza? Il silenzio \u00e8 uno spazio per ascoltare i suoni sottili? \u00c8 uno stato mentale? \u00c8 relativo al contesto? \u00c8 culturalmente definito? Dopo aver scritto le tue definizioni, passa 10 minuti nel luogo pi\u00f9 silenzioso che can you trovare, poi rivedi e arricchisci le tue risposte.",
-      duration: "30 min",
-      examples: [
-        "\ud83c\udf0c \"Il silenzio \u00e8 lo sfondo su cui all suoni si stagliano\"",
-        "\ud83d\udcad \"Il silenzio \u00e8 l'attenzione rivolta ai suoni pi\u00f9 quiet\"",
-        "\u23f8\ufe0f \"Il silenzio \u00e8 lo spazio tra due eventi sonori, denso di possibilit\u00e0\""
-      ]
-    },
-    {
-      title: "\ud83e\udde0 Memoria Acustica Differita",
-      description: "Allenamento del ricordo sonoro a lungo termine",
-      prompt: "Chiedi a qualcuno di pronunciare una parola inusuale o una breve frase in tua presenza. Listenla attentamente, ma senza ripeterla. Il giorno after, prova a riprodurla esattamente: stesse inflessioni, stesso ritmo, stesso timbro. Poi aspetta tre giorni e riprova. Poi una settimana. Quanto decade la fedelt\u00e0 del ricordo? Quali elementi si preservano meglio: pitch, ritmo, timbro, consonanti, vocali? Questo esercizio rivela come la memoria acustica degrada e trasforma nel tempo.",
-      duration: "7 giorni",
-      examples: [
-        "\ud83d\udcc5 Giorno 1: riproduzione 90% accurata, piccole variazioni di timbro",
-        "\ud83d\udcc5 Giorno 3: pitch ancora corretto, ritmo leggermente accelerato, dettagli timbrici sfumati",
-        "\ud83d\udcc5 Giorno 7: struttura ritmica preservata, pitch approssimato, timbro completamente personalizzato"
-      ]
-    },
-    {
-      title: "\ud83c\udfbc Memoria Tonale Sostenuta",
-      description: "Ritenzione di altezze precise senza riferimento esterno",
-      prompt: "Listen un suono musicale di riferimento (nota di pianoforte, diapason, oscillatore). Fissalo nella memoria. Dopo 5 minuti, senza riascoltare il riferimento, canta quella nota. Verifica l'accuratezza. Ripeti after 10 minuti. Poi after 20. La tua memoria tonale decade linearmente o a gradini? Riesci a mantenere il riferimento per un'ora? Il tuo orecchio assoluto temporaneo come si comporta?",
-      duration: "60 min",
-      examples: [
-        "\u23f1\ufe0f 5 min: accuratezza perfetta, La440 mantenuto",
-        "\u23f1\ufe0f 10 min: deriva di 5 cents verso il basso, quasi impercettibile",
-        "\u23f1\ufe0f 20 min: deriva di 25 cents, nota percepita chiaramente pi\u00f9 bassa"
-      ]
-    },
-    {
-      title: "\ud83e\udd95 Archeologia Sonora Personale",
-      description: "Recupera i suoni estinti della tua biografia acustica",
-      prompt: "Fai un elenco di all suoni che ricordi dalla tua infanzia o giovinezza che ora sono estinti o rarissimi: telefoni a disco, modem 56k, mangianastri, macchine da scrivere, fischi dei treni a vapore, campanelli meccanici, sveglie a carica. Per every suono, descrivi dettagliatamente come lo ricordi: altezza, timbro, ritmo, contesto emotivo. Alcuni li ricordi con precisione assoluta? Altri sono sfumati? Alcuni sono completamente svaniti ma sai che esistevano? Questa \u00e8 la tua archeologia acustica personale.",
-      duration: "45 min",
-      examples: [
-        "\u260e\ufe0f Telefono a disco: click meccanici di ritorno, campanello squillante metallico, tonalit\u00e0 di occupato",
-        "\ud83d\udcfc Mangianastri: motore ronzante, click di avvio, sibilo del nastro, fine cassetta",
-        "\u23f0 Sveglia meccanica: ticking continuous notturno, trillo vibrante violento, molla che si scarica"
-      ]
-    },
-    {
-      title: "\u23f0 Ritmi Circadiani Personali",
-      description: "Traccia come la tua sensibilit\u00e0 acustica varia nelle 24 ore",
-      prompt: "Ogni 3 ore per un'intera giornata (quindi 8 misurazioni), fai un test identico: ascolta lo stesso ambiente per 2 minuti e conta quanti suoni distinti percepisci. La tua acuit\u00e0 uditiva varia? Sei pi\u00f9 sensibile al mattino o sera? Dopo pasti? Durante stanchezza? Create un grafico del tuo ritmo circadiano acustico. La percezione fluttua molto pi\u00f9 di quanto pensiamo.",
-      duration: "24 ore (8 sessioni)",
-      examples: [
-        "\ud83c\udf05 Ore 6:00: 18 suoni distinti, acuit\u00e0 massima, fresco e riposato",
-        "\u2600\ufe0f Ore 12:00: 14 suoni, diminuzione after pranzo, pesantezza",
-        "\ud83c\udf19 Ore 21:00: 16 suoni, recupero serale, pre-sonno vigile"
-      ]
-    },
-    {
-      title: "\ud83e\udde0 Costruzione Ricordo Sonoro Composito",
-      description: "Assembla un paesaggio sonoro dalla memoria di pi\u00f9 visite",
-      prompt: "Visita un luogo 5 volte in momenti diversi, every volta per solo 5 minuti. Non registrare nulla. Poi, solo dalla memoria, descrivi o registra una versione \"composita\" che integra tutti gli elementi di tutte le visite. Quali suoni si preservano meglio in memoria? Questa versione composita \u00e8 pi\u00f9 \"vera\" o pi\u00f9 \"filtrata\" della realt\u00e0?",
-      duration: "5 giorni + 60 min ricostruzione",
-      examples: [
-        "\ud83d\udcdd Visita 1 mattina: uccelli dominanti, traffic leggero",
-        "\ud83d\udcdd Visita 3 sera: voices umane, traffic pesante, senza uccelli",
-        "\ud83c\udfa8 Composito finale: integra tutti elementi ma perde dettagli temporali, diventa \"archetipo\" del luogo"
-      ]
-    },
-    {
-      title: "\ud83d\udd0a Threshold di Rilevamento Personale",
-      description: "Determina la soglia minima di volume che can you percepire",
-      prompt: "Con un assistente che controlla il volume, ascolta un tono semplice (1000Hz) che parte da silenzioso e aumenta lentissimamente. Alza la mano appena lo senti. Poi ripeti partendo da forte e diminuendo fino a scomparsa. La soglia \u00e8 identica? Ripeti con diverse frequenze (100Hz, 500Hz, 2000Hz, 8000Hz). La tua sensibilit\u00e0 varia con la frequenza? Stai mappando la tua curva di soglia uditiva personale.",
-      duration: "45 min",
-      examples: [
-        "\ud83d\udd09 1000Hz: soglia rilevamento a circa 15dB SPL",
-        "\ud83c\udfb5 100Hz: soglia pi\u00f9 alta ~30dB (orecchio meno sensibile ai bassi)",
-        "\ud83e\udd87 8000Hz: soglia ~20dB, ma grande variabilit\u00e0 individuale"
-      ]
-    },
-    {
-      title: "\ud83c\udfbc Melodie Fantasma",
-      description: "Quanto a lungo persiste un'earworm after esposizione?",
-      prompt: "Listen una melodia molto orecchiabile per 30 secondi. Poi cronometra quanto tempo riesce a persistere nella tua \"memoria acustica involontaria\" (earworm). Dopo 10 minuti la senti ancora nella testa? Dopo un'ora? Dopo un giorno? Prova con 5 melodie diverse. Quali persistono pi\u00f9 a lungo? Quelle semplici o complesse? Questo esplora la memoria acustica involontaria.",
-      duration: "48 ore tracking",
-      examples: [
-        "\ud83c\udfb5 Melodia 1 (jingle semplice): persistenza 6 ore, riemergenze spontanee",
-        "\ud83c\udfb6 Melodia 2 (complessa): 30 minuti, poi svanisce",
-        "\ud83d\udd01 Melodia 3 (con testo): 24 ore!, parole rinforzano memoria"
-      ]
-    },
-    {
-      title: "\ud83c\udf2b\ufe0f Ricostruzione da Frammenti",
-      description: "Quanto can you dedurre da brevi campioni",
-      prompt: "Record 60 secondi di un paesaggio sonoro complesso. Poi estrai 10 campioni casuali di solo 2 secondi ciascuno. Listenndo SOLO questi frammenti, can you ricostruire mentalmente il contesto completo? Il cervello \"riempie i buchi\"? How many inferenze corrette vs sbagliate fai? Questo mostra come la memoria e l'aspettativa influenzano la percezione.",
-      duration: "60 min",
-      examples: [
-        "\ud83c\udfaf Frammento 1 (2s): horns \u2192 deduzione corretta: traffic urbano",
-        "\u274c Frammento 5 (2s): chirping \u2192 deduzione errata: pensavo bosco, era parco urbano",
-        "\ud83d\udca1 Frammento 9 (2s): campana \u2192 rivelazione: conferma ipotesi historic center"
-      ]
-    }
-  ],
-  'comunita-ambiente': [
-    {
-      title: "\ud83d\udcca Indagine Statistica sul Disturbo",
-      description: "Raccogli dati quantitativi sulle percezioni acustiche della comunit\u00e0",
-      prompt: "Intervista at least 30 persone nella tua comunit\u00e0 chiedendo di elencare i 3 suoni che li disturbano maggiormente nel loro ambiente quotidiano. Compila i dati in una tabella, identificando pattern demografici (et\u00e0, zona residenziale, occupazione). Quali suoni emergono come pi\u00f9 disturbanti? Esistono differenze generazionali? Le persone in zone diverse hanno fastidi diversi? Create grafici e statistiche per visualizzare i risultati. Questa \u00e8 vera ricerca etnografica sul paesaggio sonoro.",
-      duration: "180 min",
-      examples: [
-        "\ud83d\udd1d Top 3 generale: traffic (67%), vicini rumorosi (45%), lavori edili (38%)",
-        "\ud83d\udc74 Over 60: traffic 80%, musica alta 60%, enginesni 55%",
-        "\ud83d\udc66 Under 30: lavori edili 50%, traffic 45%, campanelli mattutini 30%"
-      ]
-    },
-    {
-      title: "\ud83d\udcdc Regolamento Acustico Ideale",
-      description: "Progetta una normativa antinrumore per la tua comunit\u00e0",
-      prompt: "Basandoti sui dati dell'indagine statistica (o sulle tue osservazioni), redigi un progetto di regolamento-modello contro i rumori urbani. Quali suoni dovrebbero essere regolati? In quali fasce orarie? Con quali limiti di decibel? Quali esenzioni prevedi? How bilanci le esigenze produttive, commerciali, ricreative con il diritto al riposo? Considera: traffic, locali notturni, cantieri, eventi pubblici, campane, allerte sonore. Il regolamento deve essere specifico, applicabile, equilibrato.",
-      duration: "90 min",
-      examples: [
-        "\ud83c\udf19 22:00-07:00: limite 40dB in zone residenziali, esenzione per emergenze",
-        "\ud83c\udfd7\ufe0f Cantieri: 08:00-18:00 nei giorni feriali, vietati domeniche e festivi",
-        "\ud83d\udd14 Campane: preservate come patrimonio culturale, limite 85dB, max 3 min/ora"
-      ]
-    },
-    {
-      title: "\ud83d\udcd0 Percezione vs Realt\u00e0",
-      description: "Confronta stime soggettive con misurazioni oggettive",
-      prompt: "Intervista residenti di una zona chiedendo: \"How many volte al giorno senti [suono specifico: sirene, campane, aerei]?\" Raccogli le stime soggettive. Poi posizionati nello stesso luogo per un'intera giornata e conta effettivamente quante volte il suono si verifica. Quanto differiscono le percezioni dalla realt\u00e0? Le persone sovrastimano i suoni fastidiosi? Sottostimano quelli abituali? Quali bias cognitivi emergono?",
-      duration: "480 min (giornata)",
-      examples: [
-        "\ud83d\udea8 Sirene - Stima media: 25/giorno, Realt\u00e0: 8/giorno (sovrastima 312%)",
-        "\u2708\ufe0f Aerei - Stima media: 50/giorno, Realt\u00e0: 73/giorno (belowstima 46%)",
-        "\ud83d\udd14 Campane - Stima media: 6/giorno, Realt\u00e0: 24/giorno (belowstima 400% - suono ignorato)"
-      ]
-    },
-    {
-      title: "\ud83c\udfdb\ufe0f Le Impronte Sonore della Comunit\u00e0",
-      description: "Identify i soundmarks che definiscono l'identit\u00e0 acustica locale",
-      prompt: "I soundmarks (termine di R.M. Schafer) sono i suoni emblematici di una comunit\u00e0, quelli che la rendono acusticamente unica e riconoscibile. Quali sono i soundmarks della tua citt\u00e0 o quartiere? La campana di una chiesa storica? La siren di una fabbrica? Il mercato del gioved\u00ec? Il treno che passa? Per every soundmark identificato, ricerca la sua storia: da quanto esiste, come si \u00e8 evoluto, cosa significa per la comunit\u00e0, se rischia l'estinzione. Create una mappa sonora del patrimonio acustico locale.",
-      duration: "120 min",
-      examples: [
-        "\ud83d\udd14 Campanile S.Marco Venezia: 5 campane, every combinazione ha significato specifico, 900 anni storia",
-        "\ud83d\ude82 Treno delle 18:23: attraversa centro da 1887, regola orologi locali, parte identit\u00e0 collettiva",
-        "\ud83d\udce2 Banditore mercato: tradizione orale 200 anni, cadenza dialettale unica, rischio estinzione"
-      ]
-    },
-    {
-      title: "\ud83c\udfe1 Migliora l'Acustica Domestica",
-      description: "Introduci un elemento sonoro piacevole nel tuo spazio abitativo",
-      prompt: "Find un suono che migliori genuinamente la qualit\u00e0 acustica della tua abitazione. Potrebbe essere una fontana da tavolo, un carillon eolico, un orologio dal ticking piacevole, una radio sintonizzata su frequenza vuota (rumore bianco naturale), piante che frusciano near a una finestra. Non suoni registrati o artificiali: elementi fisici che producono suoni reali. Introducilo nel tuo spazio e osserva come modifica la tua percezione dell'ambiente domestico nel corso di una settimana.",
-      duration: "7 giorni",
-      examples: [
-        "\u26f2 Piccola fontana zen: mascheramento piacevole del traffic, ritmo irregolare rilassante",
-        "\ud83c\udf90 Carillon eolico in balcone: indica direzione vento, tintinnio casuale, connessione con meteo",
-        "\ud83e\udeb4 Bamb\u00f9 near finestra: rustling delicato con brezza, presenza della natura in citt\u00e0"
-      ]
-    },
-    {
-      title: "\ud83d\udeab Elimina un Disturbo Acustico",
-      description: "Identify e rimuovi una fonte di inquinamento sonoro domestico",
-      prompt: "Individua il suono pi\u00f9 sgradevole o disturbante all'interno della tua abitazione. Potrebbe essere un elettrodomestico rumoroso, una porta cigolante, un rubinetto che gocciola, un ventilatore sbilanciato. Non limitarti a tollerarlo: intervieni fisicamente per eliminarlo o ridurlo drasticamente. Oliare cardini, riparare rubinetti, sostituire apparecchi, isolare sorgenti. Document il prima e il after con registrazioni e descrizioni. Quanto migliora la tua qualit\u00e0 della vita acustica?",
-      duration: "3 giorni",
-      examples: [
-        "\ud83d\udeaa Porta ingresso cigolante: prima 65dB peak ad every apertura, after lubrificazione 35dB",
-        "\ud83d\udca7 Rubinetto gocciolante: 52 gocce/ora, 45dB, eliminato con guarnizione nuova",
-        "\ud83d\udca8 Ventilatore bagno: humming 55dB continuous, sostituito con modello silenzioso 28dB"
-      ]
-    },
-    {
-      title: "\ud83c\udfb5 Aggiungi un Suono alla Tua Persona",
-      description: "Incorpora un elemento acustico piacevole nella tua presenza quotidiana",
-      prompt: "Find un suono piacevole da aggiungere alla tua persona, qualcosa che ti accompagni e diventi parte della tua signature acustica. Potrebbe essere un piccolo campanellino in una borsa, scarpe con suola particolare, un braccialetto che tintinna, una chiave con portachiavi sonoro, vestiti di tessuto frusciate. L'obiettivo \u00e8 scegliere consapevolmente un suono che rifletta la tua identit\u00e0 e che le persone potrebbero associare a te. Portalo per una settimana e osserva le reazioni.",
-      duration: "7 giorni",
-      examples: [
-        "\ud83d\udd14 Piccolo campanellino tibetano su borsa: tintinnio delicato 40dB camminando",
-        "\ud83d\udc5e Scarpe con tacco in legno: click distintivo, ritmo personale riconoscibile",
-        "\ud83d\udcff Bracciale con elementi bamb\u00f9: suono naturale leggero nei movimenti del braccio"
-      ]
-    },
-    {
-      title: "\ud83d\ude4a Elimina un Tuo Suono Fastidioso",
-      description: "Identify e correggi un rumore personale che disturba gli altri",
-      prompt: "Chiedi onestamente a persone vicine se produci some suono abituale che trovano fastidioso. Potrebbe essere: tamburellare con le dita, masticare rumorosamente, trascinare i piedi, schiarirsi spesso la gola, schioccare le dita, far tintinnare chiavi. Senza giustificarti, lavora consapevolmente per eliminare o ridurre questo comportamento acustico per due settimane. Richiedi poi un feedback: c'\u00e8 stato miglioramento? Quanto \u00e8 difficile modificare abitudini sonore radicate?",
-      duration: "14 giorni",
-      examples: [
-        "\ud83e\udd41 Tamburellare dita: prima inconsapevole 15-20 volte/giorno, after 2 settimane 2-3 volte/giorno",
-        "\ud83d\udeb6 Trascinare piedi: modificato appoggio tallone, riduzione 70% del rumore percepito",
-        "\ud83d\udd11 Tintinnio chiavi: spostamento tasche, uso portachiavi silenzioso, eliminazione completa"
-      ]
-    }
-  ],
-  'parchi-spazi': [
-    {
-      title: "\ud83c\udf33 Audit Acustico del Parco",
-      description: "Valuta le qualit\u00e0 sonore di uno spazio verde pubblico",
-      prompt: "Visita lo stesso parco in at least tre momenti diversi (mattina presto, pomeriggio, sera). Per every visita, documenta: quali suoni naturali sono presenti? Quali suoni antropici penetrano dall'esterno? Esistono zone di rifugio acustico dal rumore urbano? Il parco offre variet\u00e0 di esperienze acustiche o \u00e8 omogeneo? Ci sono elementi che producono suoni pleasant (fontane, fruscii)? Compila un rapporto dettagliato che valuti se il parco fornisce genuine attrattive per l'udito oltre che per la vista.",
-      duration: "180 min (3 visite)",
-      examples: [
-        "\ud83c\udf05 Mattina 6:30: uccelli dominanti 70%, traffic far 20%, footsteps joggers 10%",
-        "\u2600\ufe0f Pomeriggio 15:00: voices bambini 50%, traffic 30%, uccelli 15%, fontana 5%",
-        "\ud83c\udf06 Sera 19:00: traffic 60%, voices adulti 25%, uccelli crepuscolari 10%, grilli 5%"
-      ]
-    },
-    {
-      title: "\ud83c\udfa8 Variet\u00e0 Acustica del Paesaggio",
-      description: "Analyze e proponi miglioramenti alla diversit\u00e0 sonora",
-      prompt: "Il parco che hai analizzato possiede variet\u00e0 di ambienti acustici distinti? Zone silenziose, zone vivaci, zone con acqua, zone con elementi risonanti? O \u00e8 acusticamente uniforme? Draw una mappa del parco indicando le diverse zone acustiche. Poi progetta modifiche possibili per arricchire la diversit\u00e0: dove aggiungere fontane, elementi eolici, superfici risonanti, barriere vegetali per creare nicchie silenziose. L'obiettivo \u00e8 creare un paesaggio sonoro stratificato e interessante.",
-      duration: "90 min",
-      examples: [
-        "\ud83d\udd35 Zona silenziosa: angolo nord-est protetto da siepe densa, 35-40dB ambiente",
-        "\ud83d\udfe2 Zona vivace: area giochi, 55-70dB, voices bambini, attrezzature metalliche",
-        "\ud83d\udca7 Proposta fontana: centro parco, masking piacevole del traffic perimetrale"
-      ]
-    },
-    {
-      title: "\ud83d\uddff Scultura Sonora Interattiva",
-      description: "Progetta un'installazione musicale per spazio pubblico",
-      prompt: "Draw il progetto dettagliato di una scultura sonora da installare in un parco. Deve essere: interattiva (azionabile dal pubblico), resistente alle intemperie, sicura, acusticamente interessante, esteticamente integrata. Potrebbe essere: tubi metallici accordati che suonano col vento, xilofono gigante in legno, gong sospeso, arpa eolica, campane tubolari. Specifica materiali, dimensioni, meccanismo di produzione del suono, posizionamento ideale in the park, manutenzione necessaria. Draw schizzi e scrivi una descrizione completa.",
-      duration: "120 min",
-      examples: [
-        "\ud83c\udfb5 Arpa eolica verticale: 12 corde metallo, lunghezza 2m, accordatura pentatonica, installazione area ventosa",
-        "\ud83d\udd14 Foresta di campane tubolari: 8 tubi alluminio lunghezze 50-150cm, percuotibili con martelli morbidi",
-        "\ud83c\udfb9 Xilofono da terra: 13 barre legno duro, disposizione semicircolare, battenti inclusi, accessibile carrozzine"
-      ]
-    },
-    {
-      title: "\ud83c\udfde\ufe0f Il Parco Acustico Ideale",
-      description: "Progetta uno spazio verde con focus sul design sonoro",
-      prompt: "Create il progetto completo di un parco modello dove il paesaggio sonoro \u00e8 considerato prioritario quanto quello visivo. Include: zone silenziose per meditazione, aree con attrazioni acustiche (fontane, sculture sonore, elementi eolici), sentieri con superfici diverse (ghiaia, legno, pietra) per variet\u00e0 di footsteps, vegetazione progettata per fruscii e per attrarre uccelli, barriere acustiche verdi per isolare dal rumore urbano, anfiteatro naturale per eventi. Draw una mappa annotata e scrivi le specifiche di every elemento.",
-      duration: "180 min",
-      examples: [
-        "\ud83e\uddd8 Giardino del silenzio: area 500m\u00b2, circondata da siepe 3m, fontana zen, divieto dispositivi elettronici",
-        "\ud83c\udfaa Anfiteatro naturale: semicerchio 30m diametro, acustica naturale, concerti estivi",
-        "\ud83c\udf3f Sentiero sensoriale: 200m con 5 superfici diverse, pannelli descrittivi elementi acustici"
-      ]
-    },
-    {
-      title: "\ud83d\udee3\ufe0f Ridisegna la Tua Strada",
-      description: "Progetta miglioramenti acustici per il tuo ambiente stradale",
-      prompt: "How modificheresti la tua strada residenziale per migliorarne drasticamente il paesaggio sonoro? Considera: limitazioni di traffic, cambiamenti della pavimentazione, aggiunta di elementi vegetali fonoassorbenti, installazione di fontane pubbliche, creazione di isole pedonali, regolamentazione oraria del traffic pesante. Il progetto deve essere realistico ma ambizioso. Presenta le tue proposte con disegni, giustificazioni acustiche, benefici stimati in termini di riduzione decibel e miglioramento qualit\u00e0 della vita.",
-      duration: "120 min",
-      examples: [
-        "\ud83d\ude97 Limitazione: ZTL 22:00-06:00, riduzione stimata -15dB notturni",
-        "\ud83c\udf33 Barriera verde: doppia fila alberi + siepe, assorbimento 6-8dB traffic",
-        "\u26f2 Fontana piazza: masking piacevole rumori residui, aggregazione sociale"
-      ]
-    },
-    {
-      title: "\u23f0 Tabella Oraria dei Suoni",
-      description: "Regolamentazione temporale delle attivit\u00e0 acustiche",
-      prompt: "Immagina di poter circoscrivere certi suoni a fasce orarie precise per ottimizzare il comfort acustico della tua comunit\u00e0. Create una tabella dettagliata che assegni orari specifici a: raccolta rifiuti, consegne commerciali, lavori edili, tagli erba, eventi musicali, campane, traffic pesante, attivit\u00e0 sportive rumorose. La tabella deve bilanciare le necessit\u00e0 operative con il diritto al riposo, considerando giorni feriali, weekend, festivit\u00e0. Presenta giustificazioni per every scelta temporale.",
-      duration: "90 min",
-      examples: [
-        "\ud83d\uddd1\ufe0f Raccolta rifiuti: 09:00-11:00 giorni feriali (evita sveglia mattutina)",
-        "\ud83d\udd28 Lavori edili: 08:00-13:00 e 14:30-18:00 feriali, vietati sabato pomeriggio e domenica",
-        "\ud83d\udd14 Campane: preservate, ma volume ridotto 25% nelle ore 22:00-07:00"
-      ]
-    },
-    {
-      title: "\ud83d\uddfa\ufe0f Caccia al Tesoro Sonora",
-      description: "Create un gioco esplorativo basato su indizi acustici",
-      prompt: "Progetta una caccia al tesoro per una zona specifica (quartiere, parco, campus) dove tutti gli indizi sono descrizioni sonore. Example: \"Find il luogo dove senti 3 campane diverse\", \"Cerca il punto dove il traffic \u00e8 pi\u00f9 forte\", \"Identify dove scorre acqua corrente\", \"Localizza l'eco pi\u00f9 lunga\". Fornisci ai partecipanti una mappa muta dove annotare le posizioni. L'obiettivo \u00e8 far esplorare il territorio attraverso l'ascolto attivo. Create at least 15 indizi con difficolt\u00e0 crescente e soluzioni verificabili.",
-      duration: "120 min progettazione + 60 min gioco",
-      examples: [
-        "\ud83d\udd0d Indizio facile: \"Find la fontana del parco\" (suono acqua continuous)",
-        "\ud83d\udd0d Indizio medio: \"Where senti campane di 2 chiese sovrapposte?\" (incrocio specifico)",
-        "\ud83d\udd0d Indizio difficile: \"Localizza l'eco che dura pi\u00f9 di 2 secondi\" (belowpasso particolare)"
-      ]
-    },
-    {
-      title: "\ud83c\udfa7 Passeggiata Sonora al Tesoro",
-      description: "Guidatura usando esclusivamente segnali acustici",
-      prompt: "Progetta un percorso in uno spazio che conosci bene. Guida i partecipanti bendati lungo questo percorso usando esclusivamente suoni come indicazioni: battiti di mani per \"vai dritto\", campanellino a left per \"gira a left\", fischio per \"fermati\", shaker per \"gira a right\". I partecipanti devono affidarsi completamente all'ascolto per navigare. Alla fine, rimuovono le bende: sono arrivati dove pensavano? Questo esercizio ribalta la gerarchia sensoriale abituale e rivela quanto dipendiamo dalla vista.",
-      duration: "45 min",
-      examples: [
-        "\ud83d\udc4f 2 battiti lenti = avanza 5 footsteps / 3 battiti veloci = avanza 10 footsteps",
-        "\ud83d\udd14 Campanellino continuous = gira a left 90\u00b0 / Shaker = gira a right 90\u00b0",
-        "\ud83d\udce2 Fischio = stop assoluto / Voce \"ok\" = puoi togliere benda, sei arrivato"
-      ]
-    }
-  ],
-  'esperimenti-creativi': [
-    {
-      title: "\ud83c\udfad Paesaggi Sonori Impossibili",
-      description: "Immagina e descrivi ambienti acustici che non esistono",
-      prompt: "What suonerebbe una foresta di campanelli di vetro? Una piazza dove tutti parlano al contrario? Un oceano di paper? Inventa 5 paesaggi sonori completamente fantastici e impossibili, descrivili in dettaglio. Poi prova a creare versioni approssimate usando voce, oggetti, strumenti. L'immaginazione acustica libera dalla realt\u00e0 rivela nuove possibilit\u00e0 compositive.",
-      duration: "45 min",
-      examples: [
-        "\ud83d\udd14 Foresta cristallina: campanelli multipli mossi da vento, armonizzazioni casuali pentatoniche",
-        "\ud83d\udcc4 Oceano paperceo: onde di fruscii, schiuma di strappi, tempesta di fogli volanti",
-        "\u23ea Piazza retrospettiva: voices riavvolte, footsteps al contrario, temporalit\u00e0 inversa"
-      ]
-    },
-    {
-      title: "\ud83d\udd04 Inversione Temporale",
-      description: "Esplora come i suoni rovesciati rivelano strutture nascoste",
-      prompt: "Record 10-15 suoni diversi (voce, porte, acqua, footsteps, musica). Riproducili al contrario usando software o app. Alcuni diventano irriconoscibili? Altri mantengono identit\u00e0? Un piatto rovesciato suona come uno swell. L'acqua rovesciata \u00e8 aliena. La voce diventa incomprensibile ma mantiene prosodia. Il reverse audio rivela l'asimmetria temporale fondamentale dei suoni naturali.",
-      duration: "60 min",
-      examples: [
-        "\ud83d\udde3\ufe0f Voce forward vs reverse: forward chiara, reverse mantiene ritmo ma perde semantica",
-        "\ud83d\udca7 Acqua gocciolante reverse: suona come gocce che \"risalgono\", innaturale",
-        "\ud83c\udfb5 Piatto cymbal reverse: diventa swell crescente, effetto musicale usato"
-      ]
-    },
-    {
-      title: "\ud83d\udc0c Rallentamento Estremo",
-      description: "Scopri microstrutture allungando suoni brevi",
-      prompt: "Record suoni molto brevi (battito mani, click, goccia, schiocco dita). Rallentali 4x, 8x, 16x usando software. What emerge? Una battuta di mani a 16x diventa un drone evolutivo complesso. Il click contiene risonanze multiple. Il rallentamento estremo rivela che every suono \"semplice\" \u00e8 in realt\u00e0 un universo microtemporale di dettagli sovrapposti.",
-      duration: "60 min",
-      examples: [
-        "\ud83d\udc4f Battuta mani 16x: dura 3 secondi, rivela attacco multiplo percussivo, riverbero corpo",
-        "\ud83d\udca7 Goccia 32x: texture granulare complessa, modulazione timbrica, impatto+rimbalzo separati",
-        "\ud83d\udcf1 Click mouse 8x: risonanza plastica nascosta, doppio attacco, coda metallica"
-      ]
-    },
-    {
-      title: "\ud83c\udfb0 Collage Aleatorio",
-      description: "Giustapponi suoni non correlati per creare significati emergenti",
-      prompt: "Record 20 suoni completamente diversi e non correlati. Riproducili in ordine casuale (tira dadi, usa random generator). Le giustapposizioni casuali creano narrative inattese? Un uccello seguito da traffic suggerisce natura minacciata? Una risata seguita da siren crea tensione drammatica? L'aleatoriet\u00e0 rivela come il cervello cerca pattern e significati anche in sequenze random.",
-      duration: "45 min",
-      examples: [
-        "\ud83c\udfb2 Sequenza 1: campana + risata + siren = narrativa di emergenza during festa?",
-        "\ud83c\udfb2 Sequenza 2: uccello + motore + silenzio = partenza, abbandono?",
-        "\ud83c\udfb2 Sequenza 3: acqua + footsteps + porta = arrivo a casa, rituali quotidiani"
-      ]
-    },
-    {
-      title: "\ud83c\udf08 Traduzione Intermodale",
-      description: "Traduci stimoli visivi in composizioni sonore",
-      prompt: "Choose un'immagine (foto, dipinto, grafico). \"Traduci\" gli elementi visivi in suoni: colori caldi = frequenze basse? Forme spigolose = suoni percussivi? Sfumature = glissandi? Composizione bilanciata = armonie? Create una versione sonora dell'immagine di 2-3 minuti. Pu\u00f2 qualcun altro \"riconoscere\" l'immagine dall'audio? Questo esercizio esplora sinestesia e mapping cross-modale.",
-      duration: "90 min",
-      examples: [
-        "\ud83c\udf05 Tramonto: rosso/arancio = toni bassi caldi, azzurro = frequenze alte, progressione temporale",
-        "\ud83c\udfd9\ufe0f Skyline urbano: grattacieli = note tenute diverse altezze, simmetria = pattern ritmici",
-        "\ud83c\udf0a Hokusai \"Onda\": crescendo drammatico, picco violento, decadimento spumoso"
-      ]
-    },
-    {
-      title: "\ud83c\udfaa Paesaggio Sonoro Emotivo",
-      description: "Create soundscape che evocano emozioni specifiche",
-      prompt: "Componi brevi paesaggi sonori (2 min ciascuno) progettati per evocare emozioni precise: gioia, tristezza, ansia, pace, nostalgia, speranza. Usa solo suoni concreti registrati (no musica). Quali suoni evocano quali emozioni? \u00c8 universale o culturale? La pioggia \u00e8 triste o meditativa? Gli uccelli sono allegri o nostalgici? L'emozione emerge dalle associazioni o dalle qualit\u00e0 acustiche intrinseche?",
-      duration: "120 min",
-      examples: [
-        "\ud83d\ude0a Gioia: risate bambini, uccelli vivaci, acqua zampillante, ritmi veloci",
-        "\ud83d\ude14 Tristezza: pioggia lenta, vento basso, campana singola, spazi vuoti",
-        "\ud83d\ude30 Ansia: traffic caotico, orologi multipli, sirene distanti, crescendo senza risoluzione"
-      ]
-    },
-    {
-      title: "\ud83d\udd2e Profezia Acustica",
-      description: "Prevedi l'evoluzione del paesaggio sonoro nel prossimo minuto",
-      prompt: "Listen il tuo ambiente per 30 secondi, poi scrivi una previsione dettagliata di cosa accadr\u00e0 acusticamente nel prossimo minuto: auto che passer\u00e0? Uccello canter\u00e0? Porta si aprir\u00e0? Verifica quanto sei accurato. Con la pratica migliori? Questo esercizio sviluppa modelli mentali predittivi del paesaggio sonoro, fondamentali per field recordists che anticipano eventi.",
-      duration: "30 min (multipli cicli)",
-      examples: [
-        "\ud83c\udfaf Previsione corretta: semaforo cambier\u00e0 in 40s (ciclicit\u00e0 conosciuta)",
-        "\u274c Previsione errata: pensavo aereo, passato elicottero invece",
-        "\u2705 Sorpresa anticipata: riconosciuto pattern pre-ambulanza (traffic che si ferma) 20s prima siren"
-      ]
-    },
-    {
-      title: "\ud83c\udfbc Partitura Grafica del Quotidiano",
-      description: "Create notazione visuale non-standard di eventi sonori",
-      prompt: "Listen un ambiente per 5 minuti e crea una \"partitura grafica\" personale: usa forme, colori, linee, simboli inventati per rappresentare cosa hai sentito. Non usare notazione musicale standard. Poi scambia la partitura con qualcun altro: pu\u00f2 \"leggere\" ed eseguire la tua partitura? Le partiture grafiche sono ponti tra ascolto e visualizzazione.",
-      duration: "45 min",
-      examples: [
-        "\ud83d\udcca Sistema personale: cerchi = suoni continui, linee = eventi brevi, colore = frequenza, spessore = volume",
-        "\ud83c\udfa8 Partitura risultante: astratta ma contiene info temporale, intensit\u00e0, layering",
-        "\ud83d\udd04 Esecuzione: altra persona interpreta al 60% simile, dettagli divergono ma struttura riconoscibile"
-      ]
-    },
-    {
-      title: "\ud83c\udf0d Soundscape di Una Stanza Vuota",
-      description: "Quanto \u00e8 \"silenzioso\" lo spazio apparentemente vuoto?",
-      prompt: "Enter in una stanza apparentemente silenziosa e vuota. Dedicatei 20 minuti ad ascoltare solo quella stanza. Quanti suoni scopri che esistono ma normalmente ignori? Risonanza strutturale dell'edificio, ventilation impercettibile, elettronica nascosta, suoni da stanze adiacenti filtrati, vibrazioni urbane che permeano le fondamenta. La stanza \"vuota\" \u00e8 un ecosistema acustico complesso.",
-      duration: "20 min",
-      examples: [
-        "\ud83c\udfe2 Stanza ufficio \"vuota\": ventilation 32dB, neon 28dB, traffic filtrato 30dB, PC near 26dB",
-        "\ud83c\udfe0 Camera letto \"silenziosa\": frigorifero cucina 25dB, impianto riscaldamento 22dB, orologio 18dB",
-        "\ud83d\udcca Totale sorgenti in \"silenzio\": 12 suoni continui distinti, nessun vero silenzio"
-      ]
-    },
-    {
-      title: "\ud83c\udfa7 Concerto per Oggetti Quotidiani",
-      description: "Componi musica usando solo oggetti non-musicali",
-      prompt: "Create una composizione di 3-4 minuti usando solo suoni prodotti da oggetti quotidiani non-musicali: bicchieri, posate, chiavi, porte, paper, bottiglie, scatole. Esplora every oggetto: quanti suoni differenti produce? Scrivi una \"partitura\" e prova ad eseguirla ripetutamente. Pu\u00f2 raggiungere coerenza come composizione musicale? Gli oggetti diventano strumenti.",
-      duration: "90 min",
-      examples: [
-        "\ud83c\udf77 Bicchieri: percussione (colpi), tono (bordo sfregato), riempimento (pitch variabile)",
-        "\ud83d\udcc4 Carta: rustling (texture), strappo (percussione), accartocciamento (crescendo)",
-        "\ud83c\udfb5 Risultato: composizione con intro-sviluppo-climax-coda, struttura musicale riconoscibile"
-      ]
-    },
-    {
-      title: "\u23f1\ufe0f Dilatazione e Compressione Temporale",
-      description: "Riassumi o espandi eventi acustici cambiando la scala temporale",
-      prompt: "Record 1 ora di paesaggio sonoro. Create poi una versione compressa a 2 minuti che catturi l'essenza. Poi al contrario: registra 10 secondi e crea un'espansione dettagliata a 5 minuti aggiungendo layers, manipolazioni, estrapolazioni. Questo esercizio esplora editing e composizione time-based.",
-      duration: "120 min",
-      examples: [
-        "\u23e9 1 ora\u21922 min: sampling key moments, crossfade veloci, mantenimento evoluzione generale",
-        "\u23ea 10 sec\u21925 min: rallentamento, layering, loop multipli, esplorazione microtemporale",
-        "\ud83c\udfaf Essenza preservata: entrambe le versioni comunicano \"identit\u00e0\" dell'originale"
-      ]
-    },
-    {
-      title: "\ud83d\udd01 Loop Ipnotico",
-      description: "Scopri come la ripetizione trasforma la percezione",
-      prompt: "Record un suono breve (1-5 secondi). Mettilo in loop perfetto per 10 minuti. Listenlo dall'inizio alla fine. How cambia la tua percezione? Inizialmente lo senti chiaramente. Dopo 2 minuti inizia ad assomigliare a un drone. Dopo 5 minuti entri in trance. Dettagli che non avevi notato emergono. Il loop ripetuto all'infinito diventa meditazione acustica.",
-      duration: "60 min (preparazione + ascolto)",
-      examples: [
-        "\ud83d\udd04 Goccia d'acqua loopata: after 3 min diventa pattern ipnotico, percezione del \"singolo evento\" scompare",
-        "\ud83c\udf00 Sirena loopata: after 5 min diventa quasi musicale, pitch emerge chiaramente",
-        "\ud83c\udfb5 Effetti psicologici: alterazione percezione temporale, emergenza di pattern fantasma"
-      ]
-    },
-    {
-      title: "\ud83c\udf10 Stereofonia Ambientale",
-      description: "Esplora le differenze tra orecchio sinistro e destro",
-      prompt: "Con due registratori (o smartphone), registra simultaneamente orecchio sinistro e destro (microfoni separati a distanza testa). Listen poi le due tracce separate. Quanto differiscono? L'orecchio sinistro ha captato suoni che il destro ha perso? Le differenze di timing e intensit\u00e0 creano la nostra percezione spaziale. Questo esercizio rivela la fondazione della stereofonia naturale.",
-      duration: "60 min",
-      examples: [
-        "\u2b05\ufe0f Orecchio sinistro: traffic +6dB, voce near +8dB",
-        "\u27a1\ufe0f Orecchio destro: uccelli +4dB, porta +10dB",
-        "\ud83c\udfa7 Differenza di timing: sorgenti laterali hanno delay <1ms tra orecchie, ma percepibile"
-      ]
-    },
-    {
-      title: "\ud83c\udfa8 Field Recording come Fotografia",
-      description: "Cattura \"istantanee sonore\" con approccio fotografico",
-      prompt: "How un fotografo cerca la \"foto perfetta\", cerca il \"suono perfetto\": aspetta il momento giusto, il bilanciamento giusto di elementi, la luce (acustica) giusta. Passa 60 minuti cercando di catturare LA registrazione di 30 secondi che cattura perfettamente l'essenza di un luogo. Un solo take, come una fotografia. Quando premare \"rec\"? L'attesa e la scelta del momento sono arte.",
-      duration: "60 min",
-      examples: [
-        "\ud83c\udfaf Momento perfetto: campanile + uccelli + bambini che ridono + vento, tutti simultanei per 25s",
-        "\u23f0 Attesa: 45 minuti di ascolto, solo 3 tentativi, il terzo perfetto",
-        "\ud83c\udfc6 Risultato: singola registrazione che \"dice tutto\" del luogo"
-      ]
-    },
-    {
-      title: "\ud83c\udf19 Paesaggio Sonoro dei Sogni",
-      description: "Ricrea l'acustica irreale e surreale dei sogni",
-      prompt: "I severy hanno paesaggi sonori strani: voices ovattate, echi impossibili, suoni che morphano, spazialit\u00e0 distorta. Prova a ricreare l'atmosfera acustica di un sogno che ricordi, usando manipolazioni (reverb estremi, pitch shift, layering impossibile). Il risultato dovrebbe suonare \"dreamlike\". Questo esplora i confini tra realt\u00e0 acustica e immaginazione.",
-      duration: "90 min",
-      examples: [
-        "\ud83d\udc7b Voci remote: pitch shifted -20%, reverb 8s, filtro passa-basso, risultato spettrale",
-        "\ud83c\udf00 Spazio impossibile: eco che ritorna after 15s (implicherebbe parete a 2.5km)",
-        "\ud83d\udd2e Morfologia fluida: suono che inizia come campana e diventa voce senza transizione netta"
+        "🏘️ Neighbor A: loves morning birds, hates leaf blowers, would miss church bells",
+        "🏘️ Neighbor B: doesn't notice birds, loves lawn mowers (means weekend), hates car alarms",
+        "🤔 Insight: Same environment, radically different perceptions—soundscape is culturally and personally constructed"
       ]
     }
   ]
