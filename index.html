@@ -8163,152 +8163,57 @@
                 const dateStr = date.toLocaleDateString('en-US', { day: '2-digit', month: 'long', year: 'numeric' });
                 const timeStr = ex.time || date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
-                // Build HTML for Word
-                let html = `
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>${ex.exercise.title}</title>
-    <style>
-        body {
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1 {
-            color: #2d5f4f;
-            border-bottom: 3px solid #2d5f4f;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .category {
-            display: inline-block;
-            background: #2d5f4f;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-bottom: 25px;
-        }
-        .section h2 {
-            color: #2d5f4f;
-            font-size: 16px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 5px;
-        }
-        .field {
-            margin-bottom: 10px;
-        }
-        .field strong {
-            color: #2d5f4f;
-        }
-        .notes {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #2d5f4f;
-            border-radius: 4px;
-            white-space: pre-wrap;
-        }
-        .rating {
-            font-size: 20px;
-            color: #f39c12;
-        }
-        ul {
-            margin: 10px 0;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            font-size: 12px;
-            color: #999;
-        }
-    </style>
-</head>
-<body>
-    <h1>${ex.exercise.title}</h1>
-    <div class="category">${ex.exercise.category || 'Soundscape Exercise'}</div>
+                // Prepare content
+                const audioList = ex.audioFiles && ex.audioFiles.length > 0
+                    ? ex.audioFiles.map((audio, i) => `Audio ${i + 1}`).join(', ')
+                    : 'None';
 
-    <div class="section">
-        <h2>📅 Basic Information</h2>
-        <div class="field"><strong>Date:</strong> ${dateStr}</div>
-        <div class="field"><strong>Time:</strong> ${timeStr}</div>
-        <div class="field"><strong>Location:</strong> ${ex.location || 'Not specified'}</div>
-        ${ex.locationCoords && (ex.locationCoords.lat || ex.locationCoords.lon) ?
-          `<div class="field"><strong>GPS Coordinates:</strong> ${ex.locationCoords.lat}, ${ex.locationCoords.lon}</div>` : ''}
-        <div class="field"><strong>Duration:</strong> ${ex.duration || 'Not specified'}</div>
-    </div>
+                const photoList = ex.photoFiles && ex.photoFiles.length > 0
+                    ? ex.photoFiles.map((photo, i) => `Photo ${i + 1}`).join(', ')
+                    : 'None';
 
-    <div class="section">
-        <h2>🌍 Environmental Context</h2>
-        <div class="field"><strong>Environment description:</strong><br>${ex.environment || 'Not specified'}</div>
-        <div class="field"><strong>Weather:</strong> ${ex.weather || 'N/A'}</div>
-        <div class="field"><strong>Noise level:</strong> ${ex.noiseLevel || 'N/A'}</div>
-        <div class="field"><strong>Were you alone:</strong> ${ex.alone || 'N/A'}</div>
-        <div class="field"><strong>Movement:</strong> ${ex.movement || 'N/A'}</div>
-    </div>
+                const content = `
+SOUNDSCAPE STUDIO - EXERCISE REPORT
 
-    ${ex.recordingTools ? `
-    <div class="section">
-        <h2>🎙️ Recording Tools</h2>
-        <div class="field">${ex.recordingTools}</div>
-    </div>
-    ` : ''}
+Title: ${ex.exercise.title}
+Category: ${ex.exercise.category || 'Soundscape Exercise'}
 
-    <div class="section">
-        <h2>📝 Notes and Considerations</h2>
-        <div class="notes">${ex.notes || 'No notes'}</div>
-    </div>
+BASIC INFORMATION
+Date: ${dateStr}
+Time: ${timeStr}
+Location: ${ex.location || 'Not specified'}
+${ex.locationCoords && (ex.locationCoords.lat || ex.locationCoords.lon) ? `GPS Coordinates: ${ex.locationCoords.lat}, ${ex.locationCoords.lon}` : ''}
+Duration: ${ex.duration || 'Not specified'}
 
-    ${(ex.audioFiles && ex.audioFiles.length > 0) || (ex.photoFiles && ex.photoFiles.length > 0) ? `
-    <div class="section">
-        <h2>📎 Media Attachments</h2>
-        ${ex.audioFiles && ex.audioFiles.length > 0 ? `
-        <div class="field">
-            <strong>🎵 Audio Recordings (${ex.audioFiles.length}):</strong>
-            <ul>
-                ${ex.audioFiles.map((audio, i) => `<li>Audio ${i + 1}</li>`).join('')}
-            </ul>
-        </div>
-        ` : ''}
-        ${ex.photoFiles && ex.photoFiles.length > 0 ? `
-        <div class="field">
-            <strong>📸 Photos (${ex.photoFiles.length}):</strong>
-            <ul>
-                ${ex.photoFiles.map((photo, i) => `<li>Photo ${i + 1}</li>`).join('')}
-            </ul>
-        </div>
-        ` : ''}
-    </div>
-    ` : ''}
+ENVIRONMENTAL CONTEXT
+Environment description: ${ex.environment || 'Not specified'}
+Weather: ${ex.weather || 'N/A'}
+Noise level: ${ex.noiseLevel || 'N/A'}
+Were you alone: ${ex.alone || 'N/A'}
+Movement: ${ex.movement || 'N/A'}
 
-    ${ex.tags ? `
-    <div class="section">
-        <div class="field"><strong>🏷️ Tags:</strong> ${ex.tags}</div>
-    </div>
-    ` : ''}
+${ex.recordingTools ? `RECORDING TOOLS\n${ex.recordingTools}\n\n` : ''}
 
-    ${ex.rating > 0 ? `
-    <div class="section">
-        <div class="field"><strong>Rating:</strong><br>
-        <span class="rating">${'★'.repeat(parseInt(ex.rating))}</span></div>
-    </div>
-    ` : ''}
+NOTES AND CONSIDERATIONS
+${ex.notes || 'No notes'}
 
-    <div class="footer">
-        Exercise completed on: ${date.toLocaleString('en-US')}<br>
-        Generated by Soundscape Studio Premium
-    </div>
-</body>
-</html>`;
+MEDIA ATTACHMENTS
+Audio Recordings: ${audioList}
+Photos: ${photoList}
+
+${ex.tags ? `TAGS\n${ex.tags}\n\n` : ''}
+
+${ex.rating > 0 ? `RATING\n${'★'.repeat(parseInt(ex.rating))}\n\n` : ''}
+
+---
+Exercise completed on: ${date.toLocaleString('en-US')}
+Generated by Soundscape Studio Premium
+`;
+
+                // Build HTML for Word (simplified for compatibility)
+                const htmlContent = content.replace(/\n/g, '<br>').replace(/  /g, '&nbsp;&nbsp;');
+                const html = `
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:Arial,sans-serif;margin:40px;line-height:1.6;}</style></head><body><pre style="white-space:pre-wrap;font-family:Arial;">${htmlContent}</pre></body></html>`;
 
                 // Create blob with proper MIME type for .docx
                 const blob = new Blob([html], {
@@ -8826,57 +8731,48 @@
                     return;
                 }
 
-                // Create HTML document with professional styling
-                let html = `<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Soundscape Studio - Exercises Report</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-        h1 { color: #2d5f4f; border-bottom: 3px solid #d4af37; padding-bottom: 10px; }
-        h2 { color: #d4af37; margin-top: 30px; }
-        .exercise { margin-bottom: 40px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-        .meta { color: #666; font-size: 14px; margin-bottom: 10px; }
-        .notes { background: #f9f9f9; padding: 15px; border-left: 4px solid #d4af37; margin-top: 10px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        td { padding: 8px; border-bottom: 1px solid #eee; }
-        td:first-child { font-weight: bold; width: 150px; color: #2d5f4f; }
-    </style>
-</head>
-<body>
-    <h1>🎵 Soundscape Studio - Exercises Report</h1>
-    <p class="meta">Generated on: ${new Date().toLocaleString('en-US')}</p>
-    <p class="meta">Total exercises: ${exercises.length}</p>
-    <hr>
+                // Build text content for all exercises
+                let content = `SOUNDSCAPE STUDIO - EXERCISES REPORT
+
+Generated on: ${new Date().toLocaleString('en-US')}
+Total exercises: ${exercises.length}
+
+================================================================================
+
 `;
 
-                // Add each exercise
                 exercises.forEach((ex, index) => {
                     const date = new Date(ex.timestamp).toLocaleDateString('en-US');
-                    html += `
-    <div class="exercise">
-        <h2>${index + 1}. ${ex.exercise.title}</h2>
-        <table>
-            <tr><td>Date:</td><td>${date}</td></tr>
-            <tr><td>Category:</td><td>${ex.exercise.category || 'N/A'}</td></tr>
-            <tr><td>Difficulty:</td><td>${ex.exercise.difficulty || 'N/A'}</td></tr>
-            <tr><td>Location:</td><td>${ex.locationName || 'Not specified'}</td></tr>
-            ${ex.locationCoords ? `<tr><td>Coordinates:</td><td>${ex.locationCoords.lat}, ${ex.locationCoords.lon}</td></tr>` : ''}
-            <tr><td>Audio Files:</td><td>${ex.audioFiles ? ex.audioFiles.length : 0}</td></tr>
-            <tr><td>Photos:</td><td>${ex.photoFiles ? ex.photoFiles.length : 0}</td></tr>
-        </table>
-        ${ex.notes ? `<div class="notes"><strong>Notes:</strong><br>${ex.notes.replace(/\n/g, '<br>')}</div>` : ''}
-    </div>`;
+                    content += `
+${index + 1}. ${ex.exercise.title}
+----------------------------------------
+Date: ${date}
+Category: ${ex.exercise.category || 'N/A'}
+Difficulty: ${ex.exercise.difficulty || 'N/A'}
+Location: ${ex.locationName || 'Not specified'}
+${ex.locationCoords ? `Coordinates: ${ex.locationCoords.lat}, ${ex.locationCoords.lon}` : ''}
+Audio Files: ${ex.audioFiles ? ex.audioFiles.length : 0}
+Photos: ${ex.photoFiles ? ex.photoFiles.length : 0}
+
+${ex.notes ? `NOTES:\n${ex.notes}\n` : ''}
+
+================================================================================
+
+`;
                 });
 
-                html += `
-</body>
-</html>`;
+                content += `
+Generated with Soundscape Studio Premium
+Professional Field Recording & Composition Toolkit
+`;
+
+                // Create HTML version for better formatting
+                const htmlContent = content.replace(/\n/g, '<br>').replace(/  /g, '&nbsp;&nbsp;');
+                const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:Arial,sans-serif;margin:40px;line-height:1.6;}</style></head><body><pre style="white-space:pre-wrap;font-family:Arial;">${htmlContent}</pre></body></html>`;
 
                 // Create and download file
-                const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
-                const filename = `soundscape-report-${new Date().toISOString().split('T')[0]}.doc`;
+                const blob = new Blob([html], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+                const filename = `soundscape-report-${new Date().toISOString().split('T')[0]}.docx`;
 
                 await downloadOrShareFile(blob, filename, 'Export Word Report');
 
